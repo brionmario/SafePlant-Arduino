@@ -200,14 +200,7 @@
                 <input type="text" name="app_fname" id="app_fname" placeholder="First Name" onKeyPress="removeChecks();">
                 <input type="text" name="app_lname" id="app_lname" placeholder="Last Name" onKeyPress="removeChecks();">
                 <input type="email" name="app_email_address" id="app_email_address" placeholder="Email Address" onKeyPress="removeChecks();">
-                <input type="text" name="app_phone" id="app_phone" placeholder="Phone No">
-                <input type="text" name="datepicker" id="datepicker" placeholder="Appointment Date" onClick="removeChecks();">
-                <select name="gender" id="gender">
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Child</option>
-                </select>
-                <textarea placeholder="Message" name="app_msg" id="app_msg"></textarea>
+                <input type="text" name="app_phone" id="app_phone" placeholder="Phone No"><br>
                 <input type="submit" value="submit" class="btn btn-default btn-rounded" onClick="validateAppoint();">
               </form>
             </div>
@@ -252,20 +245,35 @@
     <section class="meet-the-doctors no-bg-img team-carousel">
       <div class="container">
         <h2 class="light bordered">Our <span>Doctors</span></h2>
-        <div id="team-carousel" class="owl-carousel wrapper-padding-none">
-          <div class="team-member">
-            <div class="team-thumb"> <img src="images/team-member-img1.jpg" class="img-rounded" alt="">
-              <div class="links"><a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google-plus"></i></a></div>
-            </div>
-            <h5><a href="#.">J. Vicente Gaby</a><br>
-              <span>senior doctor at medicom</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
+		
+		<?php
+		$sql = "SELECT * FROM doctors";
+				$result = $con->query($sql);
+				if ($result->num_rows > 0) {
+				// output data of each row
+					while($row = $result->fetch_assoc()) {
+        echo "<div id=\"team-carousel\" class=\"owl-carousel wrapper-padding-none\">";
+         echo "<div class=\"team-member\">";
+          echo  "<div class=\"team-thumb\"> <img src=\"{$row["doc_image"]}\" class=\"img-rounded\" alt=\"\">";
+          //   echo "<div class="\links\">"<a href=\"#.\"><i class=\"fa fa-facebook\"></i></a> <a href=\"#.\"><i class=\"fa fa-twitter\"></i></a> <a href=\"#.\">"<i class=\"fa fa-google-plus\">"</i></a>"</div>";
+            "</div>";
+			
+			
+			
+		
+            echo "<h5>{$row["doc_Name"]}<br>";
+          /*  echo "<span>".($arrayprod['doc_Post'])."</span></h5>";
+        <!--    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
             <a href="member-detail.html"><em>- View Profile</em></a> </div>
           <div class="team-member">
             <div class="team-thumb"> <img src="images/team-member-img2.jpg" class="img-rounded" alt="">
               <div class="links"><a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google-plus"></i></a></div>
-            </div>
-            <h5><a href="#.">J. Vicente Gaby</a><br>
+            </div> -->*/
+}
+				}
+			?>
+      <!--
+		 <h5><a href="#.">J. Vicente Gaby</a><br>
               <span>senior doctor at medicom</span></h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
             <a href="member-detail.html"><em>- View Profile</em></a> </div>
@@ -316,7 +324,7 @@
             <h5><a href="#.">J. Vicente Gaby</a><br>
               <span>senior doctor at medicom</span></h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-            <a href="member-detail.html"><em>- View Profile</em></a> </div>
+            <a href="member-detail.html"><em>- View Profile</em></a> </div> */ -->
         </div>
       </div>
     </section>
