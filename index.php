@@ -321,6 +321,42 @@
       </div>
     </section>
     
+        <section class="medicom-awesome-features-sec" data-stellar-background-ratio="0.3">
+    <div class="featires-overlay"></div>
+    	<div class="container">
+        <div class="text-center">
+        	<h1 class="light">Medicom is <span>Incredibly Awesome</span> Design.</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec</p>
+		</div>
+			<ul class="awesome-features list-unstyled pull-left text-right">
+            	<li><i class="pull-right img-circle fa fa-ambulance"></i><span>Emergency</span>If you need a doctor for to consectetuer</li>
+                <li class="middle"><i class="pull-right img-circle fa fa-eye"></i><span>eye specialist</span>If you need a service</li>
+                <li><i class="pull-right img-circle fa fa-flask"></i><span>Robot therapy</span>If you need a doctor for to consectetuere</li>
+            </ul>
+            <div class="tab-slider">
+            	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="item active text-center">
+                          <img src="images/tab-slider-img.jpg" alt="" title="">
+                        </div>
+                        <div class="item">
+                          <img src="images/tab-slider-img.jpg" alt="" title="">
+                        </div>
+                        <div class="item">
+                          <img src="images/tab-slider-img.jpg" alt="" title="">
+                        </div>
+                      </div>
+				</div>
+            	<span class="hand"></span>
+            </div>
+            <ul class="awesome-features list-unstyled pull-right text-left">
+            	<li><i class="pull-left img-circle fa fa-user-md"></i><span>Emergency</span>If you need a doctor for to consectetuer</li>
+                <li class="middle"><i class="pull-left img-circle fa fa-heart"></i><span>eye specialist</span>If you need a service</li>
+                <li><i class="pull-left img-circle fa fa-tint"></i><span>Robot therapy</span>If you need a doctor for to consectetuer</li>
+            </ul>
+        </div>
+    </section>
+    
     <!-- Latest News============================================= -->
     <section class="latest-news">
       <div class="container">
@@ -393,92 +429,72 @@
             <div class="what-doctor-say clearfix">
               <div id="meet-doctors-carousel" class="owl-carousel meet-doctors-carousel text-center">
                 <div class="item"> <img src="images/doctor-img.png" class="img-circle img-thumbnail list-inline" alt="" title="">
-                  <h4>Dr.Mark Leon<br />
-                    <span>Anesthesiologist</span></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo.
-                    
-                    ornare, augue ut ultricies tristique, </p>
-                </div>
-                <div class="item"> <img src="images/doctor-img.png" class="img-circle img-thumbnail" alt="" title="">
-                  <h4>Dr.Mark Leon<br />
-                    <span>Anesthesiologist</span></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo.
-                    
-                    ornare, augue ut ultricies tristique, </p>
-                </div>
-                <div class="item"> <img src="images/doctor-img.png" class="img-circle img-thumbnail" alt="" title="">
-                  <h4>Dr.Mark Leon<br />
-                    <span>Anesthesiologist</span></h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo.
-                    
-                    ornare, augue ut ultricies tristique, </p>
+                  <h4>Dr.Saman Fernando<br />
+                    <span>Urologist</span></h4>
+                  <p>Dr.Saman has been with us for over a year now and he's contributed immensely to the community.</p>
                 </div>
               </div>
             </div>
             
-            <!--Add Features Here-->
-            <h2 class="bordered light">safe plant <span>Features</span></h2>
+            <!--What to expect-->
+            <h2 class="bordered light">What to expect after a <span>Kidney Transplant</span></h2>
             <div class="panel-group" id="accordion">
+             <!--01-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title active"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> <span><i class="fa fa-plus fa-minus"></i></span>Heart Rate Monitoring</a> </h4>
+                  <h4 class="panel-title active"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> <span><i class="fa fa-plus fa-minus"></i></span>Heart Conditions</a> </h4>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse in">
-                  <div class="panel-body"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
-                    
-                    Page Maker including versions. </div>
+                  <div class="panel-body">Kidney transplant patients are prone to heart conditions. So you have to be very careful and should constantly monitor your heart rate. Pulse should beat 60 to 100 times per minute on average.</div>
                 </div>
               </div>
+              <!--02-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> <span><i class="fa fa-plus"></i></span>Dental Instruments </a> </h4>
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> <span><i class="fa fa-plus"></i></span>Flus</a> </h4>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse">
-                  <div class="panel-body"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
-                    
-                    Page Maker including versions. </div>
+                  <div class="panel-body">Even a simple flu can cause severe damages once you get a transplantation. Body Temperature should be less than 38.5 °C at all times.</div>
                 </div>
               </div>
+              <!--03-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> <span><i class="fa fa-plus"></i></span>Outpatient Rehabilitation </a> </h4>
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> <span><i class="fa fa-plus"></i></span>High Blood Pressure</a> </h4>
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse">
-                  <div class="panel-body"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
-                    
-                    Page Maker including versions. </div>
+                  <div class="panel-body">Medication causes the blood pressure to rise automatically. Average blood pressure should be
+bellow 130/80 mmHg.</div>
                 </div>
               </div>
+              <!--04-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"> <span><i class="fa fa-plus"></i></span>Outpatient Surgery </a> </h4>
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"> <span><i class="fa fa-plus"></i></span>Weight Gain</a> </h4>
                 </div>
                 <div id="collapseFour" class="panel-collapse collapse">
-                  <div class="panel-body"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
-                    
-                    Page Maker including versions. </div>
+                  <div class="panel-body">Weight gain is a common side effect after a kidney transplant. Exercise and physical activity should be a regular part of your life after transplantation.</div>
                 </div>
               </div>
+              <!--05-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"> <span><i class="fa fa-plus"></i></span>Outpatient Rehabilitation </a> </h4>
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"> <span><i class="fa fa-plus"></i></span>Doctor visits</a> </h4>
                 </div>
                 <div id="collapseFive" class="panel-collapse collapse">
-                  <div class="panel-body"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
-                    
-                    Page Maker including versions. </div>
+                  <div class="panel-body">You must meet the surgical team at least twice a week to Inquire about any dose changes, vaccines etc</div>
                 </div>
               </div>
+              <!--06-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix"> <span><i class="fa fa-plus"></i></span>Heart Clinic </a> </h4>
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix"> <span><i class="fa fa-plus"></i></span>Eat Healthy Food</a> </h4>
                 </div>
                 <div id="collapseSix" class="panel-collapse collapse">
-                  <div class="panel-body"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
-                    
-                    Page Maker including versions. </div>
+                  <div class="panel-body">Healthy balanced diet keep patient feeling good. Always eat healthy and nutritious food</div>
                 </div>
               </div>
+              <!--07-->
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven"> <span><i class="fa fa-plus"></i></span>Weight Loss </a> </h4>
@@ -489,44 +505,40 @@
                     Page Maker including versions. </div>
                 </div>
               </div>
+              <!--08-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight"> <span><i class="fa fa-plus"></i></span>Rehabilitation Center </a> </h4>
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight"> <span><i class="fa fa-plus"></i></span>Medication</a> </h4>
                 </div>
                 <div id="collapseEight" class="panel-collapse collapse">
-                  <div class="panel-body"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
-                    
-                    Page Maker including versions. </div>
+                  <div class="panel-body">Anti-rejection medications has to be taken daily in the proper dose and at the right time. Don’t miss your Medicine</div>
                 </div>
               </div>
+              <!--09-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine"> <span><i class="fa fa-plus"></i></span>Outpatient Rehabilitation </a> </h4>
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine"> <span><i class="fa fa-plus"></i></span>Quit bad habbits</a> </h4>
                 </div>
                 <div id="collapseNine" class="panel-collapse collapse">
-                  <div class="panel-body"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
-                    
-                    Page Maker including versions. </div>
+                  <div class="panel-body">Refrain from alcohol, keep healthy weight &amp; quit smoking. Quit all your bad habits</div>
                 </div>
               </div>
+              <!--10-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen"> <span><i class="fa fa-plus"></i></span>Surgery & Transplants </a> </h4>
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen"> <span><i class="fa fa-plus"></i></span>Vaccination</a> </h4>
                 </div>
                 <div id="collapseTen" class="panel-collapse collapse">
-                  <div class="panel-body"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
-                    
-                    Page Maker including versions. </div>
+                  <div class="panel-body"> Vulnerability to germs increase after the surgery. Take necessary vaccines to prevent rejection</div>
                 </div>
               </div>
+              <!--11-->
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseEleven"> <span><i class="fa fa-plus"></i></span>Medical Counseling </a> </h4>
+                  <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseEleven"> <span><i class="fa fa-plus"></i></span>Anxiety and Depression</a> </h4>
                 </div>
                 <div id="collapseEleven" class="panel-collapse collapse">
-                  <div class="panel-body"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Aldus
-                    
-                    Page Maker including versions. </div>
+                  <div class="panel-body">Anxiety and Depression are common among transplant patients. Always seek professional help</div>
                 </div>
               </div>
             </div>
@@ -544,9 +556,7 @@
           <div class="col-md-7">
             <div class="medicom-app-content">
               <h1>Safe Plant App Available</h1>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                
-                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <span>AVAILABLE ON STORES</span> </p>
+              <p class="lead">Stay connected with the community. Download our mobile application today at the following app stores.<span>AVAILABLE ON STORES</span> </p>
               <ul class="list-unstyled app-buttons">
                 <li><a href="#."><img src="images/app-store-btn.png" alt="" title="App Store"></a></li>
                 <li><a href="#."><img src="images/play-store-btn.png" alt="" title="Google App"></a></li>
@@ -565,33 +575,22 @@
         <div class="row">
           <div class="col-md-12">
             <div id="carousel-testimonials" class="owl-carousel slide testimonials-carousel">
-              <div class="item">
-                <h1>What Our patients Say About Us</h1>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec, placerat turpis. Aenean eu gravida arcu, et consectetur
-                  
-                  orci Quisque posuere dolor in malesuada fermentum.</p>
-                <div class="testimonials-patient-detail"> <img src="images/patient-img.png" class="img-circle img-thumbnail" alt="" title="">
-                  <p>fred albert<span>Heart patient</span></p>
-                </div>
-              </div>
-              <div class="item">
-                <h1>What Our patients Say About Us</h1>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec, placerat turpis. Aenean eu gravida arcu, et consectetur
-                  
-                  orci Quisque posuere dolor in malesuada fermentum.</p>
-                <div class="testimonials-patient-detail"> <img src="images/patient-img.png" class="img-circle img-thumbnail" alt="" title="">
-                  <p>fred albert<span>Heart patient</span></p>
-                </div>
-              </div>
-              <div class="item">
-                <h1>What Our patients Say About Us</h1>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec, placerat turpis. Aenean eu gravida arcu, et consectetur
-                  
-                  orci Quisque posuere dolor in malesuada fermentum.</p>
-                <div class="testimonials-patient-detail"> <img src="images/patient-img.png" class="img-circle img-thumbnail" alt="" title="">
-                  <p>fred albert<span>Heart patient</span></p>
-                </div>
-              </div>
+                
+				<!--Getting testimonials from the DB-->
+                <?php
+					$sql = "SELECT * FROM testimonials ORDER BY rand() LIMIT 5";
+					$result = $con->query($sql);
+					if ($result->num_rows > 0) {
+					// output data of each row
+						while($row = $result->fetch_assoc()) {
+							echo '<div class="item">';
+                			echo '<h1>What Our patients Say About Us</h1>';
+							echo "<p>{$row["comment"]}</p>";
+							echo "<div class=\"testimonials-patient-detail\"><img src=\"{$row["img_url"]}\" class=\"img-circle img-thumbnail\" alt=\"Patient Image\" title=\"{$row["name"]}\">";
+							echo "<p>{$row["name"]}<span>{$row["patient_type"]}</span></p></div></div>";
+						}
+					}
+				?>
             </div>
           </div>
         </div>
@@ -602,124 +601,21 @@
   
   <div class="colourfull-row"></div>
   
-  <!-- Footer
+  <!-- Footer============================================= -->
+  <?php include_once("footer.php");	 ?>
 
-	============================================= -->
-  
-  <footer id="footer" class="dark">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3"> 
-          
-          <!-- Footer Widget
-
-					============================================= -->
-          
-          <div class="footer-widget">
-            <h4><span>Safe Plant</span></h4>
-            <ul class="footer-nav list-unstyled clearfix">
-              <li><a href="index.php"><i class="fa fa-long-arrow-right"></i>Home</a></li>
-              <li><a href="blog.php"><i class="fa fa-long-arrow-right"></i>Blog</a></li>
-              <li><a href="pricing.php"><i class="fa fa-long-arrow-right"></i>Pricing</a></li>
-              <li><a href="aboutus.php"><i class="fa fa-long-arrow-right"></i>About Us</a></li>
-              <li><a href="contactus.php"><i class="fa fa-long-arrow-right"></i>Contact Us</a></li>
-              <li><a href="volunteer.php"><i class="fa fa-long-arrow-right"></i>Volunteer</a></li>
-              <li><a href="login.php"><i class="fa fa-long-arrow-right"></i>Log In</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3"> 
-          
-          <!-- Footer Widget
-
-					============================================= -->
-          
-          <div class="footer-widget">
-            <h4><span>newsletter</span></h4>
-            <div class="newsletter clearfix"> <i class="fa fa-envelope"></i>
-              <p class="newsletter-text">Sign up with your name and email to
-                
-                get updates fresh updates.</p>
-              <div class="success" id="message-news" style="display:none;">Thank you! You have successfully subscribed.</div>
-              <form name="newsletter_form" id="newsletter_form" method="post" action="submit.php" onSubmit="return false">
-                <input type="text" name="news_name" id="news_name" placeholder="Your Name" onKeyPress="removeChecks();">
-                <input type="email" name="news_email_address" id="news_email_address" placeholder="Email Address" onKeyPress="removeChecks();">
-                <input type="submit" value="subscribe" class="btn btn-default btn-rounded" onClick="validateNewsletter();">
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3"> 
-          
-          <!-- Footer Widget============================================= -->
-          
-          <div class="footer-widget">
-            <h4><span>Latest Tweets</span></h4>
-            <!--Twitter Widget by Aparecium Labs-->
-            <div class="twitter-widget">
-              <a class="twitter-timeline" href="https://twitter.com/safe_plant" data-width="300"
-  data-height="300" data-chrome="nofooter noborders transparent" data-theme="dark" data-tweet-limit="1">Tweets by SAFE PLANT</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3"> 
-          
-          <!-- Footer Social Media============================================= -->
-          
-          <div class="footer-widget">
-            <h4><span>get in touch</span></h4>
-            <p>We value your feedback deeply and it'll help us in providing a quality service in the future. </p>
-            <div class="contact-widget"> <i class="fa fa-home"></i>
-              <p>No-255, Kalamulla, Kalutara.</p>
-              <i class="fa fa-globe"></i>
-              <p><a href="#.">safeplant.apareciumlabs.com</a></p>
-              <i class="fa fa-envelope"></i>
-              <p><a href="mailto:teamscorpion@apareciumlabs.com?Subject=Website%20Inquiry!">info@safeplant.apareciumlabs.com</a></p>
-              <i class="fa fa-mobile"></i>
-              <p class="phone-number">(+94) 777 933 830</p>
-            </div>
-            <ul class="social3 clearfix">
-              <!--Social Media Buttons-->
-				<?php
-				$sql = "SELECT * FROM social_links";
-				$result = $con->query($sql);
-				if ($result->num_rows > 0) {
-				// output data of each row
-					while($row = $result->fetch_assoc()) {
-                	echo "<li><a href=\"{$row["url"]}\" target=\"_blank\"><i class=\"fa fa-{$row["social_name"]}\" ></i></a></li>";
-					}
-				}
-				?>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Copyright============================================= -->
-    
-    <p class="copyright text-center">Copyright &copy; 2017 Team Scorpion. All right reserved.</p>
-    
-    <!-- Footer Bottom============================================= -->
-    
-    <div class="container">
-      <div class="row">
-        <div class="col-md-2"><a href="#."><img src="images/team-scorpion-footer.png" alt="Team Scorpion" title="Medicom Logo"></a></div>
-        <div class="col-md-10">
-          <p class="footer-bottom-text">We are a passionate group of undergraduate students who believe in modern technology and we are looking forward to make a difference in the community using our knowledge. Technology is often misused in the current society and we are willing to break that hype.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
   
   <!-- back to top --> 
   
-  <a href="#." class="back-to-top" id="back-to-top"><i class="fa fa-angle-up"></i></a> </div>
-<!--end #wrapper--> 
+  <a href="#." class="back-to-top" id="back-to-top"><i class="fa fa-angle-up"></i></a> 
+  
+</div><!--end #wrapper--> 
+
+
 
 <!-- All Javascript ============================================= --> 
 
-<!--Delay Preloader-->
+<!--Delay SafePlant Preloader-->
 <script type="text/javascript">
 	jQuery(document).ready(function ($) {
     $(window).load(function () {
@@ -753,44 +649,33 @@
 <script src="js/jquery.themepunch.plugins.min.js"></script> 
 <script src="js/jquery.themepunch.revolution.min.js"></script> 
 <script src="js/color-switcher.js"></script> 
+
 <script>
 
-	
+	(function () {
 
-		(function () {
+		// Revolution slider
+		var revapi;
 
-			
+		revapi = jQuery('.tp-banner').revolution(
+		{
+			delay:9000,
 
-			// Revolution slider
+			startwidth:1170,
 
-			var revapi;
+			startheight:682,
 
-			revapi = jQuery('.tp-banner').revolution(
+			hideThumbs:200,
 
-			{
+			fullWidth:"on",
 
-				delay:9000,
+			forceFullWidth:"on"
 
-				startwidth:1170,
+		});		
 
-				startheight:682,
+	})();
 
-				hideThumbs:200,
+</script>
 
-				fullWidth:"on",
-
-				forceFullWidth:"on"
-
-			});
-
-
-
-			
-
-		})();
-
-
-
-	</script>
 </body>
 </html>
