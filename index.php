@@ -245,86 +245,29 @@
     <section class="meet-the-doctors no-bg-img team-carousel">
       <div class="container">
         <h2 class="light bordered">Our <span>Doctors</span></h2>
+        	<div id="team-carousel" class="owl-carousel wrapper-padding-none">
 		
 		<?php
-		$sql = "SELECT * FROM doctors";
-				$result = $con->query($sql);
+			$sql = "SELECT * FROM doctors";
+			$result = $con->query($sql);
+				
 				if ($result->num_rows > 0) {
 				// output data of each row
 					while($row = $result->fetch_assoc()) {
-        echo "<div id=\"team-carousel\" class=\"owl-carousel wrapper-padding-none\">";
-         echo "<div class=\"team-member\">";
-          echo  "<div class=\"team-thumb\"> <img src=\"{$row["doc_image"]}\" class=\"img-rounded\" alt=\"\">";
-          //   echo "<div class="\links\">"<a href=\"#.\"><i class=\"fa fa-facebook\"></i></a> <a href=\"#.\"><i class=\"fa fa-twitter\"></i></a> <a href=\"#.\">"<i class=\"fa fa-google-plus\">"</i></a>"</div>";
-            "</div>";
-			
-			
-			
-		
-            echo "<h5>{$row["doc_Name"]}<br>";
-          /*  echo "<span>".($arrayprod['doc_Post'])."</span></h5>";
-        <!--    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-            <a href="member-detail.html"><em>- View Profile</em></a> </div>
-          <div class="team-member">
-            <div class="team-thumb"> <img src="images/team-member-img2.jpg" class="img-rounded" alt="">
-              <div class="links"><a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google-plus"></i></a></div>
-            </div> -->*/
-}
+         				echo "<div class=\"team-member\">";
+          					echo  "<div class=\"team-thumb\"> <img src=\"{$row["doc_image"]}\" class=\"img-rounded\" alt=\"\">";
+							//echo "<div class="\links\">
+						    	//echo "<a href=\"#.\"><i class=\"fa fa-facebook\"></i></a> <a href=\"#.\"><i class=\"fa fa-twitter\"></i></a> <a href=\"#.\">"<i class=\"fa fa-google-plus\">"</i></a>";
+							//echo "</div>"; //<!--end of links-->
+            				echo "</div>"; //<!--End of thumbnail-->
+						
+							echo "<h5><a>{$row["doc_Name"]}<br><span>{$row["doc_Post"]}</a></span></h5>";
+            				echo "<p>{$row["doc_Description"]}</p>";
+            				echo '<a href="member-detail.html"><em>- View Profile</em></a>';
+						echo "</div>"; //<!--End of team member-->
+					}
 				}
 			?>
-      <!--
-		 <h5><a href="#.">J. Vicente Gaby</a><br>
-              <span>senior doctor at medicom</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-            <a href="member-detail.html"><em>- View Profile</em></a> </div>
-          <div class="team-member">
-            <div class="team-thumb"> <img src="images/team-member-img3.jpg" class="img-rounded" alt="">
-              <div class="links"><a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google-plus"></i></a></div>
-            </div>
-            <h5><a href="#.">J. Vicente Gaby</a><br>
-              <span>senior doctor at medicom</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-            <a href="member-detail.html"><em>- View Profile</em></a> </div>
-          <div class="team-member">
-            <div class="team-thumb"> <img src="images/team-member-img1.jpg" class="img-rounded" alt="">
-              <div class="links"><a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google-plus"></i></a></div>
-            </div>
-            <h5><a href="#.">J. Vicente Gaby</a><br>
-              <span>senior doctor at medicom</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-            <a href="member-detail.html"><em>- View Profile</em></a> </div>
-          <div class="team-member">
-            <div class="team-thumb"> <img src="images/team-member-img2.jpg" class="img-rounded" alt="">
-              <div class="links"><a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google-plus"></i></a></div>
-            </div>
-            <h5><a href="#.">J. Vicente Gaby</a><br>
-              <span>senior doctor at medicom</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-            <a href="member-detail.html"><em>- View Profile</em></a> </div>
-          <div class="team-member">
-            <div class="team-thumb"> <img src="images/team-member-img3.jpg" class="img-rounded" alt="">
-              <div class="links"><a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google-plus"></i></a></div>
-            </div>
-            <h5><a href="#.">J. Vicente Gaby</a><br>
-              <span>senior doctor at medicom</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-            <a href="member-detail.html"><em>- View Profile</em></a> </div>
-          <div class="team-member">
-            <div class="team-thumb"> <img src="images/team-member-img1.jpg" class="img-rounded" alt="">
-              <div class="links"><a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google-plus"></i></a></div>
-            </div>
-            <h5><a href="#.">J. Vicente Gaby</a><br>
-              <span>senior doctor at medicom</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-            <a href="member-detail.html"><em>- View Profile</em></a> </div>
-          <div class="team-member">
-            <div class="team-thumb"> <img src="images/team-member-img2.jpg" class="img-rounded" alt="">
-              <div class="links"><a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-google-plus"></i></a></div>
-            </div>
-            <h5><a href="#.">J. Vicente Gaby</a><br>
-              <span>senior doctor at medicom</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-            <a href="member-detail.html"><em>- View Profile</em></a> </div> */ -->
         </div>
       </div>
     </section>
