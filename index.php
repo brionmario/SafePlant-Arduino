@@ -335,7 +335,7 @@
 						  echo "<div class=\"blog-content\">";
 							echo "<h4 class=\"blog-title\"><a href=\"{$row["blog_url"]}\">{$row["blog_title"]}</a></h4>";
 							echo "<p class=\"blog-meta\">By: <a href=\"{$row["admin_url"]}\">{$row["admin"]}</a> | Tags:{$row["tags"]} </p>";
-							echo "<p>{$row["description"]}</p>";
+                        echo "<p>" . substr($row['description'],0,300) . " ....</p>";
 							echo "<a href=\"{$row["blog_url"]}\" class=\"btn btn-default btn-mini btn-rounded\">READ MORE</a> </div>";
 						echo "</article>";
 					}
