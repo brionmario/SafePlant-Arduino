@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="97af673c-a698-4317-969b-56dd2eeb1792" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,12 +21,23 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="314" column="32" lean-forward="true" selection-start-line="314" selection-start-column="32" selection-end-line="314" selection-end-column="32" />
+            <state relative-caret-position="404">
+              <caret line="343" column="20" lean-forward="true" selection-start-line="343" selection-start-column="20" selection-end-line="343" selection-end-column="20" />
               <folding>
-                <marker date="1491981402533" expanded="true" signature="15747:15806" ph="SELECT * FRO... blog_column1_homepage" />
-                <marker date="1491981402533" expanded="true" signature="16954:17013" ph="SELECT * FRO... blog_column2_homepage" />
-                <marker date="1491981402533" expanded="true" signature="27398:27448" ph="SELECT * FRO... testimonials" />
+                <marker date="1491991479803" expanded="true" signature="11974:11995" ph="SELECT * FRO... doctors" />
+                <marker date="1491991479803" expanded="true" signature="15747:15806" ph="SELECT * FRO... blog_column1_homepage" />
+                <marker date="1491991479803" expanded="true" signature="16921:18032" ph="..." />
+                <marker date="1491991479803" expanded="true" signature="16996:17055" ph="SELECT * FRO... blog_column2_homepage" />
+                <marker date="1491991479803" expanded="true" signature="17238:17989" ph="..." />
+                <marker date="1491991479803" expanded="true" signature="17285:17539" ph="..." />
+                <marker date="1491991479803" expanded="true" signature="17377:17516" ph="..." />
+                <marker date="1491991479803" expanded="true" signature="17584:17964" ph="..." />
+                <marker date="1491991479803" expanded="true" signature="18212:18752" ph="..." />
+                <marker date="1491991479803" expanded="true" signature="18352:18752" ph="..." />
+                <marker date="1491991479803" expanded="true" signature="18454:18752" ph="..." />
+                <marker date="1491991479803" expanded="true" signature="18489:18752" ph="..." />
+                <marker date="1491991479803" expanded="true" signature="18607:18678" ph="..." />
+                <marker date="1491991479803" expanded="true" signature="27440:27490" ph="SELECT * FRO... testimonials" />
               </folding>
             </state>
           </provider>
@@ -151,6 +163,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="97af673c-a698-4317-969b-56dd2eeb1792" name="Default" comment="" />
@@ -160,12 +175,12 @@
       <updated>1491398367395</updated>
       <workItem from="1491398371683" duration="1939000" />
       <workItem from="1491665000428" duration="850000" />
-      <workItem from="1491981280855" duration="2426000" />
+      <workItem from="1491981280855" duration="4015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5215000" />
+    <option name="totallyTimeSpent" value="6804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -206,9 +221,20 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491981402533" expanded="true" signature="15747:15806" ph="SELECT * FRO... blog_column1_homepage" />
-            <marker date="1491981402533" expanded="true" signature="16954:17013" ph="SELECT * FRO... blog_column2_homepage" />
-            <marker date="1491981402533" expanded="true" signature="27398:27448" ph="SELECT * FRO... testimonials" />
+            <marker date="1491991479803" expanded="true" signature="11974:11995" ph="SELECT * FRO... doctors" />
+            <marker date="1491991479803" expanded="true" signature="15747:15806" ph="SELECT * FRO... blog_column1_homepage" />
+            <marker date="1491991479803" expanded="true" signature="16921:18032" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="16996:17055" ph="SELECT * FRO... blog_column2_homepage" />
+            <marker date="1491991479803" expanded="true" signature="17238:17989" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="17285:17539" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="17377:17516" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="17584:17964" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18212:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18352:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18454:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18489:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18607:18678" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="27440:27490" ph="SELECT * FRO... testimonials" />
           </folding>
         </state>
       </provider>
@@ -218,21 +244,43 @@
         <state relative-caret-position="3893">
           <caret line="229" column="72" lean-forward="false" selection-start-line="229" selection-start-column="72" selection-end-line="229" selection-end-column="72" />
           <folding>
-            <marker date="1491981402533" expanded="true" signature="15747:15806" ph="SELECT * FRO... blog_column1_homepage" />
-            <marker date="1491981402533" expanded="true" signature="16954:17013" ph="SELECT * FRO... blog_column2_homepage" />
-            <marker date="1491981402533" expanded="true" signature="27398:27448" ph="SELECT * FRO... testimonials" />
+            <marker date="1491991479803" expanded="true" signature="11974:11995" ph="SELECT * FRO... doctors" />
+            <marker date="1491991479803" expanded="true" signature="15747:15806" ph="SELECT * FRO... blog_column1_homepage" />
+            <marker date="1491991479803" expanded="true" signature="16921:18032" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="16996:17055" ph="SELECT * FRO... blog_column2_homepage" />
+            <marker date="1491991479803" expanded="true" signature="17238:17989" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="17285:17539" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="17377:17516" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="17584:17964" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18212:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18352:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18454:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18489:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18607:18678" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="27440:27490" ph="SELECT * FRO... testimonials" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="314" column="32" lean-forward="true" selection-start-line="314" selection-start-column="32" selection-end-line="314" selection-end-column="32" />
+        <state relative-caret-position="404">
+          <caret line="343" column="20" lean-forward="true" selection-start-line="343" selection-start-column="20" selection-end-line="343" selection-end-column="20" />
           <folding>
-            <marker date="1491981402533" expanded="true" signature="15747:15806" ph="SELECT * FRO... blog_column1_homepage" />
-            <marker date="1491981402533" expanded="true" signature="16954:17013" ph="SELECT * FRO... blog_column2_homepage" />
-            <marker date="1491981402533" expanded="true" signature="27398:27448" ph="SELECT * FRO... testimonials" />
+            <marker date="1491991479803" expanded="true" signature="11974:11995" ph="SELECT * FRO... doctors" />
+            <marker date="1491991479803" expanded="true" signature="15747:15806" ph="SELECT * FRO... blog_column1_homepage" />
+            <marker date="1491991479803" expanded="true" signature="16921:18032" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="16996:17055" ph="SELECT * FRO... blog_column2_homepage" />
+            <marker date="1491991479803" expanded="true" signature="17238:17989" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="17285:17539" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="17377:17516" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="17584:17964" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18212:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18352:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18454:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18489:18752" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="18607:18678" ph="..." />
+            <marker date="1491991479803" expanded="true" signature="27440:27490" ph="SELECT * FRO... testimonials" />
           </folding>
         </state>
       </provider>
