@@ -565,19 +565,6 @@ bellow 130/80 mmHg.</div>
 
 
 <!-- All Javascript ============================================= --> 
-
-<!--Delay SafePlant Preloader-->
-<script type="text/javascript">
-	jQuery(document).ready(function ($) {
-    $(window).load(function () {
-        setTimeout(function(){
-            $('#preloader').fadeOut('slow', function () {
-            });
-        },3000);
-
-    });  
-});
-</script>
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/jquery.stellar.js"></script> 
