@@ -276,7 +276,7 @@
     <div class="featires-overlay"></div>
     	<div class="container">
         <div class="text-center">
-        	<h1 class="light">Medicom is <span>Incredibly Awesome</span> Design.</h1>
+        	<h1 class="light">Safe Plant is <span>Incredibly Awesome</span> Design.</h1>
             <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec</p>
 		</div>
 			<ul class="awesome-features list-unstyled pull-left text-right">
@@ -335,7 +335,7 @@
 						  echo "<div class=\"blog-content\">";
 							echo "<h4 class=\"blog-title\"><a href=\"{$row["blog_url"]}\">{$row["blog_title"]}</a></h4>";
 							echo "<p class=\"blog-meta\">By: <a href=\"{$row["admin_url"]}\">{$row["admin"]}</a> | Tags:{$row["tags"]} </p>";
-                        echo "<p>" . substr($row['description'],0,300) . " ....</p>";
+                            echo "<p>" . substr($row['description'],0,300) . " ....</p>";
 							echo "<a href=\"{$row["blog_url"]}\" class=\"btn btn-default btn-mini btn-rounded\">READ MORE</a> </div>";
 						echo "</article>";
 					}
@@ -362,7 +362,7 @@
 						  echo "<div class=\"blog-content\">";
 							echo "<h4 class=\"blog-title\"><a href=\"{$row["blog_url"]}\">{$row["blog_title"]}</a></h4>";
 							echo "<p class=\"blog-meta\">By: <a href=\"{$row["admin_url"]}\">{$row["admin"]}</a> | Tags:{$row["tags"]} </p>";
-							echo "<p>{$row["description"]}</p>";
+                            echo "<p>" . substr($row['description'],0,300) . " ....</p>";
 							echo "<a href=\"{$row["blog_url"]}\" class=\"btn btn-default btn-mini btn-rounded\">READ MORE</a> </div>";
 						echo "</article>";
 					}
@@ -565,19 +565,6 @@ bellow 130/80 mmHg.</div>
 
 
 <!-- All Javascript ============================================= --> 
-
-<!--Delay SafePlant Preloader-->
-<script type="text/javascript">
-	jQuery(document).ready(function ($) {
-    $(window).load(function () {
-        setTimeout(function(){
-            $('#preloader').fadeOut('slow', function () {
-            });
-        },3000);
-
-    });  
-});
-</script>
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/jquery.stellar.js"></script> 

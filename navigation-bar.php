@@ -7,7 +7,7 @@
 		<ul class="nav navbar-nav">
 		
 			<!--Home-->
-			<li class="dropdown active"> <a href="index.php" class="dropdown-toggle">
+			<li class="dropdown"> <a href="index.php" class="dropdown-toggle">
 				<i class="fa fa-home"></i>Home</a>
 			</li>
 			<li class="dropdown"> <a href="blog.php" class="dropdown-toggle" >
