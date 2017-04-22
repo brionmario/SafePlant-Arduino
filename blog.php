@@ -6,7 +6,6 @@
 
 © Aparecium Labs-->
 
-
 <!DOCTYPE html>
 
 <!--Database Connection-->
