@@ -540,7 +540,7 @@ bellow 130/80 mmHg.</div>
 					// output data of each row
 						while($row = $result->fetch_assoc()) {
 							echo '<div class="item">';
-                			echo '<h1>What Our patients Say About Us</h1>';
+                			echo '<h1>What Our atients Say About Us</h1>';
 							echo "<p>{$row["comment"]}</p>";
 							echo "<div class=\"testimonials-patient-detail\"><img src=\"{$row["img_url"]}\" class=\"img-circle img-thumbnail\" alt=\"Patient Image\" title=\"{$row["name"]}\">";
 							echo "<p>{$row["name"]}<span>{$row["patient_type"]}</span></p></div></div>";
