@@ -15,7 +15,7 @@
 <html>
   
 <head>
-    <title>Blog</title>
+    <title>Blog | Safe Plant</title>
     <!-- Mobile Specific Metas================================================== -->
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">

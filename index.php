@@ -27,6 +27,8 @@
 <meta name="keywords" content="">
 <meta name="author" content="">
 
+<script src="https://use.fontawesome.com/cabb0fd36e.js"></script>
+
 <!-- Mobile Specific Metas================================================== -->
 
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -272,41 +274,44 @@
       </div>
     </section>
     
-        <section class="medicom-awesome-features-sec" data-stellar-background-ratio="0.3">
-    <div class="featires-overlay"></div>
-    	<div class="container">
-        <div class="text-center">
-        	<h1 class="light">Safe Plant is <span>Incredibly Awesome</span> Design.</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec</p>
-		</div>
+
+    <!--Prototype section-->
+	<section class="medicom-awesome-features-sec" data-stellar-background-ratio="0.3">
+		<div class="featires-overlay"></div>
+		<div class="container">
+			<div class="text-center">
+				<h1 class="light">Safe Plant has an <span>Incredibly Awesome</span> Design</h1>
+				<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec</p>
+			</div>
+
 			<ul class="awesome-features list-unstyled pull-left text-right">
-            	<li><i class="pull-right img-circle fa fa-ambulance"></i><span>Emergency</span>If you need a doctor for to consectetuer</li>
-                <li class="middle"><i class="pull-right img-circle fa fa-eye"></i><span>eye specialist</span>If you need a service</li>
-                <li><i class="pull-right img-circle fa fa-flask"></i><span>Robot therapy</span>If you need a doctor for to consectetuere</li>
-            </ul>
-            <div class="tab-slider">
-            	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="item active text-center">
-                          <img src="images/tab-slider-img.jpg" alt="" title="">
-                        </div>
-                        <div class="item">
-                          <img src="images/tab-slider-img.jpg" alt="" title="">
-                        </div>
-                        <div class="item">
-                          <img src="images/tab-slider-img.jpg" alt="" title="">
-                        </div>
-                      </div>
+				<li><i class="pull-right img-circle fa fa-heartbeat"></i><span>Heart Rate</span>Checks and notifies if abnormal</li>
+				<li class="middle"><i class="pull-right img-circle fa fa-thermometer-quarter"></i><span>Body Temperature</span>Constantly monitors for flus</li>
+				<li><i class="pull-right img-circle fa fa-user-md"></i><span>Blood Pressure</span>Displays if normal or extreme</li>
+			</ul>
+			<div class="tab-slider">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="item active text-center">
+							<img src="images/watch-slide1.png" alt="" title="">
+						</div>
+						<div class="item">
+							<img src="images/watch-slide1.png" alt="" title="">
+						</div>
+						<div class="item">
+							<img src="images/watch-slide1.png" alt="" title="">
+						</div>
+					</div>
 				</div>
-            	<span class="hand"></span>
-            </div>
-            <ul class="awesome-features list-unstyled pull-right text-left">
-            	<li><i class="pull-left img-circle fa fa-user-md"></i><span>Emergency</span>If you need a doctor for to consectetuer</li>
-                <li class="middle"><i class="pull-left img-circle fa fa-heart"></i><span>eye specialist</span>If you need a service</li>
-                <li><i class="pull-left img-circle fa fa-tint"></i><span>Robot therapy</span>If you need a doctor for to consectetuer</li>
-            </ul>
-        </div>
-    </section>
+				<span class="hand"></span>
+			</div>
+			<ul class="awesome-features list-unstyled pull-right text-left">
+				<li><i class="pull-left img-circle fa fa-bicycle"></i><span>Activity Tracker</span>Shows the number of steps, distance and calories.</li>
+				<li class="middle"><i class="pull-left img-circle fa fa-plus-square"></i><span>Emergency SOS</span>Able to notify in case of emergencies</li>
+				<li><i class="pull-left img-circle fa fa-battery-full"></i><span>Longer Batery Life</span>Lasts 48h minimum on full charge</li>
+			</ul>
+		</div>
+	</section>
     
     <!-- Latest News============================================= -->
     <section class="latest-news">
