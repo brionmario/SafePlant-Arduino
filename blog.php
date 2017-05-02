@@ -15,6 +15,7 @@
 <html>
   
 <head>
+    <link rel="shortcut icon" href="images/favicon.png">
     <title>Blog | Safe Plant</title>
     <!-- Mobile Specific Metas================================================== -->
 

@@ -276,7 +276,7 @@
     
 
     <!--Prototype section-->
-	<section class="medicom-awesome-features-sec" data-stellar-background-ratio="0.3">
+	<section class="medicom-awesome-features-sec" data-stellar-background-ratio="0.01">
 		<div class="featires-overlay"></div>
 		<div class="container">
 			<div class="text-center">
