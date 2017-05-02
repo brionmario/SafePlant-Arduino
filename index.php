@@ -11,7 +11,7 @@
 
 <!--Database Connection-->
 <?php 
-	include_once("../../../config/connection_safeplant/db_connect.php");	
+	include_once("config/connection_safeplant/db_connect.php");	
 ?>
 <html lang=”en”>
 <head>

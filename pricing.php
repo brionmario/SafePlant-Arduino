@@ -10,7 +10,7 @@
 
 <!--Database Connection-->
 <?php
-include_once("../../../config/connection_safeplant/db_connect.php");
+include_once("config/connection_safeplant/db_connect.php");
 ?>ped by,
 <html>
 <head>
