@@ -20,7 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * Created by brionsilva on 07/03/2017.
+ * Created by hasil on 07/03/2017.
  */
 
 public class Bluetooth extends Activity {
