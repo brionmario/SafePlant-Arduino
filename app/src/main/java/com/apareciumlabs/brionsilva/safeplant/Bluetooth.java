@@ -198,7 +198,7 @@ public class Bluetooth extends Activity {
             String address = info.substring(info.length() - 17);
 
             // Make an intent to start next activity while taking an extra which is the MAC address.
-            Intent i = new Intent(Bluetooth.this, homeScreen.class);
+            Intent i = new Intent(Bluetooth.this, HomeScreen.class);
             i.putExtra("EXTRA_DEVICE_ADDRESS", address);
             Toast.makeText(getApplicationContext(),"Connecting to "+address,Toast.LENGTH_SHORT).show();
             startActivity(i);

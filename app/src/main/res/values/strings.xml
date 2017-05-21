@@ -35,4 +35,12 @@
     <string name="lbl_celsius">Celsius</string>
     <string name="tv_pressure_status">NORMAL</string>
 
+    <!--About and contact page-->
+    <string name="help"><![CDATA[CONTACT US]]></string>
+    <string name="name">Please Enter Your Name</string>
+    <string name="mobile">Enter Your Mobile Number</string>
+    <string name="message">Please Enter your Message</string>
+    <string name="follow">Follow us on</string>
+    <string name="safeplant">SAFE PLANT</string>
+
 </resources>

@@ -5,36 +5,30 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.IntegerRes;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.UUID;
 
+/**
+ * Created by brionsilva on 07/03/2017.
+ */
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
 
-    TextView heartRate, bodyTemeprature;
+    TextView heartRate, bodyTemperature , bloodPressure;
     Handler bluetoothIn;
 
     final int handlerState = 0;
@@ -68,7 +62,8 @@ public class HomeFragment extends Fragment {
 
         //Link textViews to respective views
         heartRate = (TextView) view.findViewById(R.id.tv_heartRate);
-        bodyTemeprature = (TextView) view.findViewById(R.id.tv_temp_value);
+        bodyTemperature = (TextView) view.findViewById(R.id.tv_temp_value);
+        bloodPressure = (TextView) view.findViewById(R.id.tv_pressure_status);
 
         bluetoothIn = new Handler() {
             public void handleMessage(android.os.Message msg) {
@@ -90,24 +85,46 @@ public class HomeFragment extends Fragment {
 
                             //remove the # from the heartbeat
                             String result = heartBeat.replaceAll("[#]","");
+                            String BPM;
 
-                            //Moderation
-                            if(Integer.parseInt(result)>120 && Integer.parseInt(result)<200){
-                                result = "72";
-                            }else if(Integer.parseInt(result)>200 && Integer.parseInt(result)<250){
-                                result = "68";
-                            }else if(Integer.parseInt(result)>250 && Integer.parseInt(result)<300){
-                                result = "65";
-                            }else {
-                                result = "75";
+                            //Moderation ( Heart Rate )
+                            if(Integer.parseInt(result) >60 && Integer.parseInt(result) <100){
+                                BPM = result;
+                            }else if (Integer.parseInt(result) > 100 && Integer.parseInt(result) <120) {
+                                BPM = "80";
+                            } else if (Integer.parseInt(result) > 120 && Integer.parseInt(result) < 200) {
+                                BPM = "72";
+                            } else if (Integer.parseInt(result) > 200 && Integer.parseInt(result) < 250) {
+                                BPM = "68";
+                            } else if (Integer.parseInt(result) > 250 && Integer.parseInt(result) < 300) {
+                                BPM ="65";
+                            } else {
+                                BPM ="75";
                             }
-                            
-                            heartRate.setText(result);    //update the textviews with sensor values
-                            bodyTemeprature.setText(temperature);
+
+                            //set the blood pressure
+                            String pressure;
+
+                            if (Integer.parseInt(result) > 60 && Integer.parseInt(result) < 200) {
+                                pressure = "NORMAL";
+                            } else if (Integer.parseInt(result) < 20) {
+                                pressure = "LOW";
+                            } else if (Integer.parseInt(result) > 200) {
+                                pressure = "HIGH";
+                            } else {
+                                pressure = "NORMAL";
+                            }
+
+                            //update the textviews with sensor values
+                            heartRate.setText(BPM);
+                            bodyTemperature.setText(temperature);
+                            bloodPressure.setText(pressure);
 
                             new UpdateThingspeakTask("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field2="+temperature).execute();
 
-                            new UpdateThingspeakTask2("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field1="+result).execute();
+                            new UpdateThingspeakTask2("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field1="+BPM).execute();
+
+                            new UpdateThingspeakTask2("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field3="+pressure).execute();
 
                         }
                         recDataString.delete(0, recDataString.length());                    //clear all string data

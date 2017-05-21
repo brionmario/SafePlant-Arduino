@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class loginScreen extends AppCompatActivity {
+public class LoginScreen extends AppCompatActivity {
 
     EditText username, password;
     TextView loginError;
@@ -41,7 +41,7 @@ public class loginScreen extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),
                             "Redirecting...",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getBaseContext(),
-                            homeScreen.class);
+                            HomeScreen.class);
                     startActivity(intent);
                 }else{
 

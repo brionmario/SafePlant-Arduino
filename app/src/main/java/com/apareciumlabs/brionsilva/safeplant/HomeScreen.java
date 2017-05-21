@@ -17,7 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class homeScreen extends AppCompatActivity
+public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -91,7 +91,7 @@ public class homeScreen extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            Toast.makeText(getApplicationContext(),"You clicked Home",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"You clicked Home",Toast.LENGTH_SHORT).show();
 
             HomeFragment homeFragment = new HomeFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -100,7 +100,7 @@ public class homeScreen extends AppCompatActivity
                     homeFragment.getTag()).commit();
 
         }else if (id == R.id.nav_scheduler) {
-            Toast.makeText(getApplicationContext(),"You clicked Scheduler",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"You clicked Scheduler",Toast.LENGTH_SHORT).show();
 
             SchedulerFragment schedulerFragment = new SchedulerFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -121,9 +121,21 @@ public class homeScreen extends AppCompatActivity
         }else if (id == R.id.nav_donate) {
             Toast.makeText(getApplicationContext(),"You clicked Donate",Toast.LENGTH_SHORT).show();
         }else if (id == R.id.nav_about) {
-            Toast.makeText(getApplicationContext(),"You clicked About",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"You clicked About",Toast.LENGTH_SHORT).show();
+
+            AboutFragment schedulerFragment = new AboutFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
+                    schedulerFragment,
+                    schedulerFragment.getTag()).commit();
         }else if (id == R.id.nav_contact) {
-            Toast.makeText(getApplicationContext(),"You clicked Contact",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"You clicked Contact",Toast.LENGTH_SHORT).show();
+
+            ContactFragment schedulerFragment = new ContactFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
+                    schedulerFragment,
+                    schedulerFragment.getTag()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

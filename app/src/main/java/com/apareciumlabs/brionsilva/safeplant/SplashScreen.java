@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ProgressBar;
 
-public class splashScreen extends AppCompatActivity {
-    private final int DURATION =5000;
+public class SplashScreen extends AppCompatActivity {
+    private final int DURATION = 5000;
     private Thread mSplashThread;
     private ProgressBar progressBar = null;
 
@@ -29,7 +29,7 @@ public class splashScreen extends AppCompatActivity {
                         progressBar.setProgress(100);
                         finish();
                         Intent intent = new Intent(getBaseContext(),
-                                loginScreen.class);
+                                LoginScreen.class);
                         startActivity(intent);
                     }
                 }
