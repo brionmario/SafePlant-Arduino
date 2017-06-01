@@ -11,7 +11,7 @@
 <!--Database Connection-->
 <?php
 include_once("config/connection_safeplant/db_connect.php");
-?>ped by,
+?>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -21,7 +21,7 @@ include_once("config/connection_safeplant/db_connect.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 	<!--theme colour-->
-	<link rel="stylesheet" id="color" href="css/blue.css">
+	<link rel="stylesheet" id="color" href="css/red.css">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -47,11 +47,11 @@ include_once("config/connection_safeplant/db_connect.php");
  
   </head>
   <body class="fixed-header">
-
+   
     <div id="wrapper">
     
     
-      <!-- Header============================================= -->
+	  <!-- Header============================================= -->
 	  <header id="header" class="medicom-header medical-nav"> 
 
 		<!-- Top Row============================================= -->
@@ -68,8 +68,8 @@ include_once("config/connection_safeplant/db_connect.php");
     
     <section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
     	<div class="container">
-        	<h1 class="entry-title">PRICING</h1>
-        	<h4>Check out our pricing <span>&ensp;packages</span></h4>
+        	<h1 class="entry-title">Prising</h1>
+        	<h4>Check out our pricing<span>&ensp;packages</span></h4>
         </div>
     </section>
     <br>
