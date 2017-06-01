@@ -86,9 +86,9 @@ include_once("config/connection_safeplant/db_connect.php");
                 	<div class="pricing-table2">
                     	<div class="table-heading">
                             <p class="price">
-                                <span>$</span><strong>15</strong>.99
+                                <span>$</span><strong>20</strong>.99
                             </p>
-                            <h3>standard<span>monthly plan</span></h3>
+                            <h3>standard<span>edition</span></h3>
                         </div>
                         <ul class="list-unstyled">
                         	<li>Theme Update</li>
@@ -98,16 +98,16 @@ include_once("config/connection_safeplant/db_connect.php");
                         	<li>70MB Monthly Traffic</li>
                         	<li>24/7 Live Support</li>
                         </ul>
-                        <a href="#." class="btn btn-dark btn-rounded">sign up</a>
+                        <a href="index.php#order_section" class="btn btn-dark btn-rounded">Order Now</a>
                     </div>
                 </div>
                 <div class="col-md-6">
                 	<div class="pricing-table2 highlight">
                     	<div class="table-heading">
                             <p class="price">
-                                <span>$</span><strong>15</strong>.99
+                                <span>$</span><strong>25</strong>.99
                             </p>
-                            <h3>standard<span>monthly plan</span></h3>
+                            <h3>intermediate<span>monthly plan</span></h3>
                         </div>
                         <ul class="list-unstyled">
                         	<li>Theme Update</li>
@@ -117,7 +117,7 @@ include_once("config/connection_safeplant/db_connect.php");
                         	<li>70MB Monthly Traffic</li>
                         	<li>24/7 Live Support</li>
                         </ul>
-                        <a href="#." class="btn btn-default btn-rounded">sign up</a>
+                        <a href="index.php#order_section" class="btn btn-default btn-rounded">Order Now</a>
                     </div>
                 </div>
             </div>

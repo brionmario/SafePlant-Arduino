@@ -187,7 +187,7 @@
     
     <!-- Appointment============================================= -->
     
-    <section class="appointment-sec text-center">
+    <section class="appointment-sec text-center" id="order_section">
       <div class="container">
         <h1>Order Now!</h1>
         <p class="lead">Is aftercare a nightmare for you?<br/>Stop worrying. Order yourself a "Safe Plant" wristband today. Just starting at $19.99</p>
@@ -198,12 +198,27 @@
           <div class="col-md-6">
             <div class="appointment-form clearfix">
               <div class="success" id="message-app" style="display:none;"></div>
-              <form name="appoint_form" id="appoint_form" method="post" action="submit.php" onSubmit="return false">
+              <form name="order_form" id="appoint_form" method="post" action="Forms/ordernow_form.php" >
                 <input type="text" name="app_fname" id="app_fname" placeholder="First Name" onKeyPress="removeChecks();">
                 <input type="text" name="app_lname" id="app_lname" placeholder="Last Name" onKeyPress="removeChecks();">
                 <input type="email" name="app_email_address" id="app_email_address" placeholder="Email Address" onKeyPress="removeChecks();">
                 <input type="text" name="app_phone" id="app_phone" placeholder="Phone No"><br>
-                <input type="submit" value="submit" class="btn btn-default btn-rounded" onClick="validateAppoint();">
+                  <select name="option" >
+                      <option value=>---Please Select Your Color---</option>
+                      <option value="1">Black</option>
+                      <option value="2">White</option>
+                  </select>
+                  <select name="quantity" style="float: right">
+                      <option value=>---Please Select Quantity---</option>
+                  <?php
+
+                      for($x=1;$x<=100;$x++)
+                      {
+                        echo  "<option value=".$x.">".$x." </option >";
+                  }
+                      ?>
+                  </select>
+                <input type="submit" value="Order Now" class="btn btn-default btn-rounded" >
               </form>
             </div>
           </div>

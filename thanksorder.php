@@ -16,7 +16,7 @@
   
 <head>
     <link rel="shortcut icon" href="images/favicon.png">
-    <title>Blog | Safe Plant</title>
+    <title>Thanks | Safe Plant</title>
     <!-- Mobile Specific Metas================================================== -->
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -81,127 +81,29 @@
 		</div>
 	  </header>
     
-    
     <section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
     	<div class="container">
-        	<h1 class="entry-title">Blog</h1>
-        	<h4>Stay tuned for daily<span>&ensp;updates</span></h4>
+        	<h1 class="entry-title">THANK YOU</h1>
         </div>
     </section>
     <br>
     
-<div class="sub-page-content">
-	<div class="container">
-		<div class="row blog-wrapper">
+    <div class="sub-page-content">
+		<div class="container">
+			<center><div id="page_caption">
+				<div class="page_title_wrapper">
+					<br>
+					<h4 class="text-uppercase">Thank for your order!</h4><br>
+					<p style="font-size:16px">Your order is confirmed and we'll let you know when it's on the way.<br> Click <a href="index.php"><b style="color: #FF0004">here</b></a> to go to the home page.</p>
 
-			<div class="col-md-6 clearfix">
-				<!--Article Left-->
-               <?php
-				$sql = "SELECT * FROM blog_page_column1 ORDER BY rand()";
-				$result = $con->query($sql);
-				if ($result->num_rows > 0) {
-				// output data of each row
-					while($row = $result->fetch_assoc()) {
-						echo '<article class="blog-item blog-full-width">';
-							echo '<div class="blog-thumbnail">';
-								echo '<div id="carousel-blog" class="carousel slide default" data-ride="carousel">';
-									//<!-- Indicators -->
-									echo '<ol class="carousel-indicators">';
-										echo '<li data-target="#carousel-blog" data-slide-to="0" class="active"></li>';
-										echo '<li data-target="#carousel-blog" data-slide-to="1"></li>';
-										echo '<li data-target="#carousel-blog" data-slide-to="2"></li>';
-									echo '</ol>';
-
-									//<!-- Wrapper for slides -->
-									echo '<div class="carousel-inner text-center">';
-										echo '<div class="item active">';
-											echo "<img src=\"{$row["img_url1"]}\" alt=\"\" title=\"\">";
-										echo '</div>';
-										echo '<div class="item">';
-											echo "<img src=\"{$row["img_url2"]}\" alt=\"\" title=\"\">";
-										echo '</div>';
-										echo '<div class="item">';
-											echo "<img src=\"{$row["img_url3"]}\" alt=\"\" title=\"\">";
-										echo '</div>';
-									echo '</div>';
-								echo '</div>';
-							echo '</div>';
-							echo '<div class="blog-full-width-date">';
-								echo "<p class=\"day\">{$row["day"]}</p>";
-								echo "<p class=\"monthyear\">{$row["month_year"]}</p>";
-								echo '<a href="#"><i class="fa fa-comments"></i>0</a>';
-							echo '</div>';
-							echo '<div class="blog-content">';
-								echo "<h4 class=\"blog-title\"><a href=\"#\">{$row["title"]}</a></h4>";
-								echo "<p class=\"blog-meta\">By: <a href=\"#\">{$row["admin"]}</a> | Tags: <a href=\"#\">{$row["tags"]}</a></p>";
-                        echo "<p>" . substr($row['description'],0,600) . " ....</p>";
-								echo "<a href=\"{$row["blog_url"]}\" class=\"btn btn-default btn-mini btn-rounded\">READ MORE</a>";
-							echo '</div>';
-					echo '</article>';
-					}
-				}
-				?>
-			</div>
-			<div class="col-md-6 clearfix">
-			   <!--Article right-->
-               <?php
-				$sql = "SELECT * FROM blog_page_column2 ORDER BY rand()";
-				$result = $con->query($sql);
-				if ($result->num_rows > 0) {
-				// output data of each row
-					while($row = $result->fetch_assoc()) {
-						echo '<article class="blog-item blog-full-width">';
-							echo '<div class="blog-thumbnail">';
-								echo '<div id="carousel-blog" class="carousel slide default" data-ride="carousel">';
-									//<!-- Indicators -->
-									echo '<ol class="carousel-indicators">';
-										echo '<li data-target="#carousel-blog" data-slide-to="0" class="active"></li>';
-										echo '<li data-target="#carousel-blog" data-slide-to="1"></li>';
-										echo '<li data-target="#carousel-blog" data-slide-to="2"></li>';
-									echo '</ol>';
-
-									//<!-- Wrapper for slides -->
-									echo '<div class="carousel-inner text-center">';
-										echo '<div class="item active">';
-											echo "<img src=\"{$row["img_url1"]}\" alt=\"\" title=\"\">";
-										echo '</div>';
-										echo '<div class="item">';
-											echo "<img src=\"{$row["img_url2"]}\" alt=\"\" title=\"\">";
-										echo '</div>';
-										echo '<div class="item">';
-											echo "<img src=\"{$row["img_url3"]}\" alt=\"\" title=\"\">";
-										echo '</div>';
-									echo '</div>';
-								echo '</div>';
-							echo '</div>';
-							echo '<div class="blog-full-width-date">';
-								echo "<p class=\"day\">{$row["day"]}</p>";
-								echo "<p class=\"monthyear\">{$row["month_year"]}</p>";
-								echo '<a href="#"><i class="fa fa-comments"></i>0</a>';
-							echo '</div>';
-							echo '<div class="blog-content">';
-								echo "<h4 class=\"blog-title\"><a href=\"#\">{$row["title"]}</a></h4>";
-								echo "<p class=\"blog-meta\">By: <a href=\"#\">{$row["admin"]}</a> | Tags: <a href=\"#\">{$row["tags"]}</a></p>";
-                        echo "<p>" . substr($row['description'],0,600) . " ....</p>";
-								echo "<a href=\"{$row["blog_url"]}\" class=\"btn btn-default btn-mini btn-rounded\">READ MORE</a>";
-							echo '</div>';
-					echo '</article>';
-					}
-				}
-				?>
-			</div>
+				</div>
+			</div></center>
 		</div>
-	</div>
-
-
-
-	<div class="clr"></div>
-</div> <!--end sub-page-content-->
-    
-
+          
+    	<div class="clr"></div>    
+    </div><!--end sub-page-content-->
     
     <div class="colourfull-row"></div>
-      <div class="colourfull-row"></div>
   
 	  <!-- Footer============================================= -->
 	  <?php include_once("footer.php");	 ?>
