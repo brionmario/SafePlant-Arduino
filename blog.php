@@ -90,168 +90,113 @@
     </section>
     <br>
     
-    <div class="sub-page-content">
-        
-        <div class="container">
-        	<div class="row blog-wrapper">
-            	
-                    <div class="col-md-6 clearfix">
-                        <article class="blog-item blog-full-width">
-                            <div class="blog-thumbnail">
-                            <img alt="" src="images/blog-2-column-img1.jpg">
-                            </div>
-                            <div class="blog-full-width-date">
-                                <p class="day">28</p><p class="monthyear">FEB 2014</p>
-                                <a href="#."><i class="fa fa-comments"></i>15</a>
-                            </div>
-                            <div class="blog-content">
-                            <h4 class="blog-title"><a href="#">Latest Blog Graphic Image Post</a></h4>
-                            <p class="blog-meta">By: <a href="#">admin</a> | Tags: <a href="#">Graphic</a>, <a href="#">illustration</a>, <a href="#">Logo</a></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl.</p>
+<div class="sub-page-content">
+	<div class="container">
+		<div class="row blog-wrapper">
 
-<p>Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris. Natoque facilisis magna aptent morbi parturient facilisis facilisis condimentum justo ante habitant nulla blandit congue egestas mauris [...]</p>
-                            <a href="#." class="btn btn-default btn-mini btn-rounded">READ MORE</a>
-                            </div>
-                        </article>
-                 
-                        <article class="blog-item blog-full-width">
-                            <div class="blog-thumbnail">
-                            <div id="carousel-blog" class="carousel slide default" data-ride="carousel">
-                              <!-- Indicators -->
-                              <ol class="carousel-indicators">
-                                <li data-target="#carousel-blog" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-blog" data-slide-to="1"></li>
-                                <li data-target="#carousel-blog" data-slide-to="2"></li>
-                              </ol>
-                            
-                              <!-- Wrapper for slides -->
-                              <div class="carousel-inner text-center">
-                                <div class="item active">
-                                  <img src="images/blog-2-column-img1.jpg" alt="" title="">
-                                </div>
-                                <div class="item">
-                                  <img src="images/blog-2-column-img2.jpg" alt="" title="">
-                                </div>
-                                <div class="item">
-                                  <img src="images/blog-2-column-img3.jpg" alt="" title="">
-                                </div>
-                              </div>
-                            </div>
-                                        </div>
-                                        <div class="blog-full-width-date">
-                                            <p class="day">28</p><p class="monthyear">FEB 2014</p>
-                                            <a href="#."><i class="fa fa-comments"></i>15</a>
-                                        </div>
-                                        <div class="blog-content">
-                                        <h4 class="blog-title"><a href="#">Latest Blog Graphic Image Post</a></h4>
-                                        <p class="blog-meta">By: <a href="#">admin</a> | Tags: <a href="#">Graphic</a>, <a href="#">illustration</a>, <a href="#">Logo</a></p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl.</p>
-        
-        <p>Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris. Natoque facilisis magna aptent morbi parturient facilisis facilisis condimentum justo ante habitant nulla blandit congue egestas mauris [...]</p>
-                                        <a href="#." class="btn btn-default btn-mini btn-rounded">READ MORE</a>
-                                        </div>
-                                    </article>
-                       
-                        <article class="blog-item blog-full-width last">
-                                        <div class="blog-thumbnail">
-                                        <img alt="" src="images/blog-2-column-img4.jpg">
-                                        </div>
-                                        <div class="blog-full-width-date">
-                                            <p class="day">28</p><p class="monthyear">FEB 2014</p>
-                                            <a href="#."><i class="fa fa-comments"></i>15</a>
-                                        </div>
-                                        <div class="blog-content">
-                                        <h4 class="blog-title"><a href="#">Latest Blog Graphic Image Post</a></h4>
-                                        <p class="blog-meta">By: <a href="#">admin</a> | Tags: <a href="#">Graphic</a>, <a href="#">illustration</a>, <a href="#">Logo</a></p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl.</p>
-        
-        <p>Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris. Natoque facilisis magna aptent morbi parturient facilisis facilisis condimentum justo ante habitant nulla blandit congue egestas mauris [...]</p>
-                                        <a href="#." class="btn btn-default btn-mini btn-rounded">READ MORE</a>
-                                        </div>
-                                    </article>
-                    </div>
-        	<div class="col-md-6 clearfix">
-                <article class="blog-item blog-full-width">
-                                <div class="blog-thumbnail">
-                                <img alt="" src="images/blog-2-column-img5.jpg">
-                                </div>
-                                <div class="blog-full-width-date">
-                                	<p class="day">28</p><p class="monthyear">FEB 2014</p>
-                                    <a href="#."><i class="fa fa-comments"></i>15</a>
-                                </div>
-                                <div class="blog-content">
-                                <h4 class="blog-title"><a href="#">Latest Blog Graphic Image Post</a></h4>
-                                <p class="blog-meta">By: <a href="#">admin</a> | Tags: <a href="#">Graphic</a>, <a href="#">illustration</a>, <a href="#">Logo</a></p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl.</p>
+			<div class="col-md-6 clearfix">
+				<!--Article Left-->
+               <?php
+				$sql = "SELECT * FROM blog_page_column1";
+				$result = $con->query($sql);
+				if ($result->num_rows > 0) {
+				// output data of each row
+					while($row = $result->fetch_assoc()) {
+						echo '<article class="blog-item blog-full-width">';
+							echo '<div class="blog-thumbnail">';
+								echo '<div id="carousel-blog" class="carousel slide default" data-ride="carousel">';
+									//<!-- Indicators -->
+									echo '<ol class="carousel-indicators">';
+										echo '<li data-target="#carousel-blog" data-slide-to="0" class="active"></li>';
+										echo '<li data-target="#carousel-blog" data-slide-to="1"></li>';
+										echo '<li data-target="#carousel-blog" data-slide-to="2"></li>';
+									echo '</ol>';
 
-<p>Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris. Natoque facilisis magna aptent morbi parturient facilisis facilisis condimentum justo ante habitant nulla blandit congue egestas mauris [...]</p>
-                                <a href="#." class="btn btn-default btn-mini btn-rounded">READ MORE</a>
-                                </div>
-                            </article>
-                
-                <article class="blog-item blog-full-width">
-                                <div class="blog-thumbnail">
-                                <div id="carousel-blog2" class="carousel slide default" data-ride="carousel">
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel-blog2" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-blog2" data-slide-to="1"></li>
-                        <li data-target="#carousel-blog2" data-slide-to="2"></li>
-                      </ol>
-                    
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner text-center">
-                        <div class="item active">
-                          <img src="images/blog-2-column-img6.jpg" alt="" title="">
-                        </div>
-                        <div class="item">
-                          <img src="images/blog-2-column-img1.jpg" alt="" title="">
-                        </div>
-                        <div class="item">
-                          <img src="images/blog-2-column-img2.jpg" alt="" title="">
-                        </div>
-                      </div>
-					</div>
-                                </div>
-                                <div class="blog-full-width-date">
-                                	<p class="day">28</p><p class="monthyear">FEB 2014</p>
-                                    <a href="#."><i class="fa fa-comments"></i>15</a>
-                                </div>
-                                <div class="blog-content">
-                                <h4 class="blog-title"><a href="#">Latest Blog Graphic Image Post</a></h4>
-                                <p class="blog-meta">By: <a href="#">admin</a> | Tags: <a href="#">Graphic</a>, <a href="#">illustration</a>, <a href="#">Logo</a></p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl.</p>
+									//<!-- Wrapper for slides -->
+									echo '<div class="carousel-inner text-center">';
+										echo '<div class="item active">';
+											echo "<img src=\"{$row["img_url1"]}\" alt=\"\" title=\"\">";
+										echo '</div>';
+										echo '<div class="item">';
+											echo "<img src=\"{$row["img_url2"]}\" alt=\"\" title=\"\">";
+										echo '</div>';
+										echo '<div class="item">';
+											echo "<img src=\"{$row["img_url3"]}\" alt=\"\" title=\"\">";
+										echo '</div>';
+									echo '</div>';
+								echo '</div>';
+							echo '</div>';
+							echo '<div class="blog-full-width-date">';
+								echo "<p class=\"day\">{$row["day"]}</p>";
+								echo "<p class=\"monthyear\">{$row["month_year"]}</p>";
+								echo '<a href="#"><i class="fa fa-comments"></i>0</a>';
+							echo '</div>';
+							echo '<div class="blog-content">';
+								echo "<h4 class=\"blog-title\"><a href=\"#\">{$row["title"]}</a></h4>";
+								echo "<p class=\"blog-meta\">By: <a href=\"#\">{$row["admin"]}</a> | Tags: <a href=\"#\">{$row["tags"]}</a></p>";
+								echo "<p>{$row["description"]}</p>";
+								echo "<a href=\"{$row["blog_url"]}\" class=\"btn btn-default btn-mini btn-rounded\">READ MORE</a>";
+							echo '</div>';
+					echo '</article>';
+					}
+				}
+				?>
+			</div>
+			<div class="col-md-6 clearfix">
+			   <!--Article right-->
+               <?php
+				$sql = "SELECT * FROM blog_page_column1";
+				$result = $con->query($sql);
+				if ($result->num_rows > 0) {
+				// output data of each row
+					while($row = $result->fetch_assoc()) {
+						echo '<article class="blog-item blog-full-width">';
+							echo '<div class="blog-thumbnail">';
+								echo '<div id="carousel-blog" class="carousel slide default" data-ride="carousel">';
+									//<!-- Indicators -->
+									echo '<ol class="carousel-indicators">';
+										echo '<li data-target="#carousel-blog" data-slide-to="0" class="active"></li>';
+										echo '<li data-target="#carousel-blog" data-slide-to="1"></li>';
+										echo '<li data-target="#carousel-blog" data-slide-to="2"></li>';
+									echo '</ol>';
 
-<p>Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris. Natoque facilisis magna aptent morbi parturient facilisis facilisis condimentum justo ante habitant nulla blandit congue egestas mauris [...]</p>
-                                <a href="#." class="btn btn-default btn-mini btn-rounded">READ MORE</a>
-                                </div>
-                            </article>
-				
-                <article class="blog-item blog-full-width last">
-                                <div class="blog-thumbnail">
-                                <img alt="" src="images/blog-2-column-img3.jpg">
-                                </div>
-                                <div class="blog-full-width-date">
-                                	<p class="day">28</p><p class="monthyear">FEB 2014</p>
-                                    <a href="#."><i class="fa fa-comments"></i>15</a>
-                                </div>
-                                <div class="blog-content">
-                                <h4 class="blog-title"><a href="#">Latest Blog Graphic Image Post</a></h4>
-                                <p class="blog-meta">By: <a href="#">admin</a> | Tags: <a href="#">Graphic</a>, <a href="#">illustration</a>, <a href="#">Logo</a></p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl.</p>
+									//<!-- Wrapper for slides -->
+									echo '<div class="carousel-inner text-center">';
+										echo '<div class="item active">';
+											echo "<img src=\"{$row["img_url1"]}\" alt=\"\" title=\"\">";
+										echo '</div>';
+										echo '<div class="item">';
+											echo "<img src=\"{$row["img_url2"]}\" alt=\"\" title=\"\">";
+										echo '</div>';
+										echo '<div class="item">';
+											echo "<img src=\"{$row["img_url3"]}\" alt=\"\" title=\"\">";
+										echo '</div>';
+									echo '</div>';
+								echo '</div>';
+							echo '</div>';
+							echo '<div class="blog-full-width-date">';
+								echo "<p class=\"day\">{$row["day"]}</p>";
+								echo "<p class=\"monthyear\">{$row["month_year"]}</p>";
+								echo '<a href="#"><i class="fa fa-comments"></i>0</a>';
+							echo '</div>';
+							echo '<div class="blog-content">';
+								echo "<h4 class=\"blog-title\"><a href=\"#\">{$row["title"]}</a></h4>";
+								echo "<p class=\"blog-meta\">By: <a href=\"#\">{$row["admin"]}</a> | Tags: <a href=\"#\">{$row["tags"]}</a></p>";
+								echo "<p>{$row["description"]}</p>";
+								echo "<a href=\"{$row["blog_url"]}\" class=\"btn btn-default btn-mini btn-rounded\">READ MORE</a>";
+							echo '</div>';
+					echo '</article>';
+					}
+				}
+				?>
+			</div>
+		</div>
+	</div>
 
-<p>Pellentesque pellentesque tempor tellus eget hendrerit. Morbi id aliquam ligula. Aliquam id dui sem. Proin rhoncus consequat nisl, eu ornare mauris. Natoque facilisis magna aptent morbi parturient facilisis facilisis condimentum justo ante habitant nulla blandit congue egestas mauris [...]</p>
-                                <a href="#." class="btn btn-default btn-mini btn-rounded">READ MORE</a>
-                                </div>
-                            </article>
-            </div>
-        </div>
-        </div>
-		
-        
-    
-    <div class="clr"></div>    
-    </div><!--end sub-page-content-->
+
+
+	<div class="clr"></div>
+</div> <!--end sub-page-content-->
     
 
     

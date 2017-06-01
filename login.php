@@ -120,13 +120,16 @@
 										</label>
 
 									</div>
+									<div style="margin-top:10px">
+										<input value="Login" type="submit" id="btn-login" href="#" class="btn btn-success" />
+									</div>
 								</div>
 
 
 								<div style="margin-top:10px" class="form-group">
 									<!-- Button -->
 									<div class="col-sm-12 controls">
-										<input value="Login" type="submit" id="btn-login" href="#" class="btn btn-success" />
+										
 									</div>
 								</div>
 							</center>

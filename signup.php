@@ -110,51 +110,58 @@
 							<label for="firstname" class="input-label">First Name</label>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"></span>
-								<input id="first_name" type="text" class="form-control" name="f_name" value="" placeholder="first name">
+								<input id="first_name" type="text" class="form-control" name="f_name" value="" placeholder="Enter First Name" required />
 							</div>
 
 							<label for="lastname" class="input-label">Last Name</label>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"></span>
-								<input id="last_name" type="text" class="form-control" name="l_name" value="" placeholder="last name">
+								<input id="last_name" type="text" class="form-control" name="l_name" value="" placeholder="Enter Last Name" required />
 							</div>
 							
 							<label for="username" class="input-label">Username</label>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"></span>
-								<input id="signup_username" type="text" class="form-control" name="username" value="" placeholder="username ">
+								<input id="signup_username" type="text" class="form-control" name="username" value="" placeholder="username" required />
 							</div>
 
                             <label for="user_email" class="input-label">Email</label>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"></span>
-                                <input id="email" type="text" class="form-control" name="email" value="" placeholder=" email">
+                                <input id="email" type="email" class="form-control" name="email" value="" placeholder=" email" required />
                             </div>
 
 							<label for="password" class="input-label">Password</label>
 							<div style="margin-bottom: 25px" class="input-group">
 								<span class="input-group-addon"></span>
-								<input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+								<input id="login-password" type="password" class="form-control" name="password" placeholder="password" required />
 							</div>
 
                             <label for="reg_num" class="input-label">Registration Number</label>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"></span>
-                                <input id="regnum" type="text" class="form-control" name="regnum" value="" placeholder="registration number">
+                                <input id="regnum" type="text" class="form-control" name="regnum" value="" placeholder="Enter Registration Number" required />
                             </div>
 
                             <label for="hospital" class="input-label">Hospital</label>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"></span>
-                                <input id="hospital" type="text" class="form-control" name="hospital" value="" placeholder="hospital">
+                                <input id="hospital" type="text" class="form-control" name="hospital" value="" placeholder="Enter the Hospital where you work" required />
                             </div>
 
 
 							<center>
+								<div class="input-group">
+									<div style="margin-top:10px">
+										<input value="Signup" type="submit" id="btn-signup" href="#" class="btn btn-success" />
+									</div>
+								</div>
+
+
 								<div style="margin-top:10px" class="form-group">
 									<!-- Button -->
 									<div class="col-sm-12 controls">
-										<input value="Signup" type="submit" id="btn-login" href="#" class="btn btn-success" />
+										
 									</div>
 								</div>
 							</center>
@@ -163,7 +170,7 @@
 							<div class="form-group">
 								<div class="col-md-12 control">
 									<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
-										<p>If you've already registered, <a href="login.php" title="">Login here</a></p>
+										<center><p>If you've already registered, <a href="login.php" title="">Login here</a></p></center>
 									</div>
 								</div>
 							</div>
