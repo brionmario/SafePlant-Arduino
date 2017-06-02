@@ -7,8 +7,8 @@
 © Aparecium Labs-->
 
 <!DOCTYPE html>
-<!--Database Connection-->
 
+<!--Database Connection-->
 <?php 
 	include_once("config/connection_safeplant/db_connect.php");	
 ?>
@@ -16,7 +16,7 @@
   
 <head>
     <link rel="shortcut icon" href="images/favicon.png">
-    <title>Signup | Safe Plant</title>
+    <title>Patients | Safe Plant</title>
     <!-- Mobile Specific Metas================================================== -->
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -60,12 +60,7 @@
 	<!-- Header Scripts================================================== -->
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
- 	<style>
-	.input-label{
-		color: black;
-		font-weight: 700;
-		}
-	</style>
+ 
   </head>
   <body class="fixed-header">
    
@@ -89,104 +84,49 @@
     
     <section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
     	<div class="container">
-        	<h1 class="entry-title">Signup</h1>
-        	<h4>Start contributing for a greater cause.<span style="color: red">&ensp;Sign up now.</span></h4>
+        	<h1 class="entry-title">OUR PATIENTS</h1>
+        	<h4>Welcome<span style="color: red">
+        	<?php 
+				if(!empty($_SESSION['userlog'])){
+					$userName = $_SESSION["userlog"] ; 
+					if(isset($_SESSION["userlog"])){
+						echo "{$userName}";
+					}
+				}
+		 	?>
+       		</span></h4>
         </div>
     </section>
     <br>
     
-	<div class="sub-page-content">
-		<div class="container">
-			<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-				<div class="panel panel-info">
-
-					<div style="padding-top:30px" class="panel-body">
-
-						<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-
-						<form action="Forms/signup_form.php" id="loginform" class="form-horizontal" method="post" role="form">
-
-						
-							<label for="firstname" class="input-label">First Name</label>
-							<div style="margin-bottom: 25px" class="input-group">
-								<span class="input-group-addon"></span>
-								<input id="first_name" type="text" class="form-control" name="f_name" value="" placeholder="Enter First Name" required />
-							</div>
-
-							<label for="lastname" class="input-label">Last Name</label>
-							<div style="margin-bottom: 25px" class="input-group">
-								<span class="input-group-addon"></span>
-								<input id="last_name" type="text" class="form-control" name="l_name" value="" placeholder="Enter Last Name" required />
-							</div>
-							
-							<label for="username" class="input-label">Username</label>
-							<div style="margin-bottom: 25px" class="input-group">
-								<span class="input-group-addon"></span>
-								<input id="signup_username" type="text" class="form-control" name="username" value="" placeholder="username" required />
-							</div>
-
-                            <label for="user_email" class="input-label">Email</label>
-                            <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"></span>
-                                <input id="email" type="email" class="form-control" name="email" value="" placeholder=" email" required />
-                            </div>
-
-							<label for="password" class="input-label">Password</label>
-							<div style="margin-bottom: 25px" class="input-group">
-								<span class="input-group-addon"></span>
-								<input id="login-password" type="password" class="form-control" name="password" placeholder="Password" required />
-							</div>
-                            
-                            <label for="confirmPassword" class="input-label">Confirm Password</label>
-							<div style="margin-bottom: 25px" class="input-group">
-								<span class="input-group-addon"></span>
-								<input id="confirm_login-password" type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required />
-							</div>
-
-                            <label for="reg_num" class="input-label">Registration Number</label>
-                            <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"></span>
-                                <input id="regnum" type="text" class="form-control" name="regnum" value="" placeholder="Enter Registration Number" required />
-                            </div>
-
-                            <label for="hospital" class="input-label">Hospital</label>
-                            <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"></span>
-                                <input id="hospital" type="text" class="form-control" name="hospital" value="" placeholder="Enter the Hospital where you work" required />
-                            </div>
-
-
-							<center>
-								<div class="input-group">
-									<div style="margin-top:10px">
-										<input value="Signup" name="submit" type="submit" id="btn-signup" href="#" class="btn btn-success" />
-									</div>
-								</div>
-
-
-								<div style="margin-top:10px" class="form-group">
-									<!-- Button -->
-									<div class="col-sm-12 controls">
-										
-									</div>
-								</div>
-							</center>
-
-
-							<div class="form-group">
-								<div class="col-md-12 control">
-									<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
-										<center><p>If you've already registered, <a href="login.php" title="">Login here</a></p></center>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-          
-    	<div class="clr"></div>    
+    <div class="sub-page-content">
+        <div class="container">
+     		<div class="row">
+           		<br/>
+            	<?php
+					$sql = "SELECT * FROM users_patients";
+					$result = $con->query($sql);
+				
+					if ($result->num_rows > 0) {
+					// output data of each row
+						while($row = $result->fetch_assoc()) {
+							echo '<div class="col-md-6 padding-bottom-60 clearfix">';
+								echo "<a href=\"{$row["data_url"]}\" target=\"_blank\"><div class=\"doctors-img\"><img src=\"{$row["img_url"]}\" width=\"234\" alt=\"\" title=\"\"></div></a>";
+								echo '<div class="doctors-detail">';
+										echo "<a href=\"{$row["data_url"]}\" target=\"_blank\"><h4>{$row["first_name"]}&ensp;{$row["last_name"]}<span>{$row["age"]} Years Old</span></h4></a>";
+										echo "<p><label class=\"heading\">Operation</label><label class=\"detail\">{$row["operated"]}</label></p>";
+										echo "<p><label class=\"heading\">Weight</label><label class=\"detail\">{$row["weight"]} KG</label></p>";
+										echo "<p><label class=\"heading\">Status</label><label class=\"detail\">{$row["status"]}</label></p>";
+										echo "<p><label class=\"heading\">Memo</label><label class=\"detail\">{$row["memo"]}</label></p>";
+								echo '</div>';
+							echo '</div>';
+						}
+					}
+				?>
+            </div>       
+        </div>
+    
+    <div class="clr"></div>    
     </div><!--end sub-page-content-->
     
 

@@ -1,9 +1,10 @@
 <!--Developed by, 
 
-▀▀█▀▀▒█▀▀▀░█▀▀█▒█▀▄▀█　▒█▀▀▀█▒█▀▀█▒█▀▀▀█▒█▀▀█▒█▀▀█▀█▀▒█▀▀▀█▒█▄░▒█░▒█░░▒█▀▀▀▒█▄▄█▒█▒█▒█　░▀▀▀▄▄▒█░░░▒█░░▒█▒█▄▄▀▒█▄▄█▒█░▒█░░▒█▒█▒█▒█░▒█░░▒█▄▄▄▒█░▒█▒█░░▒█　▒█▄▄▄█▒█▄▄█▒█▄▄▄█▒█░▒█▒█░░░▄█▄▒█▄▄▄█▒█░░▀█
+▀▀█▀▀ ▒█▀▀▀ ░█▀▀█ ▒█▀▄▀█ 　 ▒█▀▀▀█ ▒█▀▀█ ▒█▀▀▀█ ▒█▀▀█ ▒█▀▀█ ▀█▀ ▒█▀▀▀█ ▒█▄░▒█ 
+░▒█░░ ▒█▀▀▀ ▒█▄▄█ ▒█▒█▒█ 　 ░▀▀▀▄▄ ▒█░░░ ▒█░░▒█ ▒█▄▄▀ ▒█▄▄█ ▒█░ ▒█░░▒█ ▒█▒█▒█ 
+░▒█░░ ▒█▄▄▄ ▒█░▒█ ▒█░░▒█ 　 ▒█▄▄▄█ ▒█▄▄█ ▒█▄▄▄█ ▒█░▒█ ▒█░░░ ▄█▄ ▒█▄▄▄█ ▒█░░▀█ 
 
-©
-Aparecium Labs -->
+© Aparecium Labs-->
 
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ Aparecium Labs -->
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="icon" type="image/png" href="images/favicon.png">
-	
+
 	<title>About Us | Safe Plant</title>
 
 	<meta name="description" content="">
@@ -72,110 +73,58 @@ Aparecium Labs -->
 	<!-- Document Wrapper============================================= -->
 	<div id="wrapper" class="clearfix">
 
-	  <!-- Header============================================= -->
-	  <header id="header" class="medicom-header medical-nav"> 
+		<!-- Header============================================= -->
+		<header id="header" class="medicom-header medical-nav">
 
-		<!-- Top Row============================================= -->
-		<div class="solid-row" style="background-color:#e54242"></div>
-		<div class="container">
-
-			<!--Navigation bar begining-->
-			<?php include_once("navigation-bar.php"); ?>
-			<!--End of navigation bar-->
-
-		</div>
-	  </header>
-
-	<!-- Sub Page Banner============================================= -->
-	
-		<section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
-
-
-
-			<div class="overlay"></div>
-
-
-
+			<!-- Top Row============================================= -->
+			<div class="solid-row" style="background-color:#e54242"></div>
 			<div class="container">
 
-				<h1 class="entry-title">about us</h1>
-
-				<p>Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+				<!--Navigation bar begining-->
+				<?php include_once("navigation-bar.php"); ?>
+				<!--End of navigation bar-->
 
 			</div>
+		</header>
 
+		<!-- Sub Page Banner============================================= -->
 
-
+		<section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
+			<div class="overlay"></div>
+			<div class="container">
+				<h1 class="entry-title">about us</h1>
+				<p>We want to change the world</p>
+			</div>
 		</section>
 
-
-
-
-
-
-
-		<!-- Sub Page Content
-
-			============================================= -->
+		<!-- Sub Page Content============================================= -->
 
 		<div id="sub-page-content">
-
-
-
-
-
 			<div class="container big-font">
-
 				<h2 class="light bordered main-title">who <span>we are</span></h2>
-
 				<div class="media pull-right"><a href="http://vimeo.com/36031564" class="fancybox-media"><img src="images/video-icon.png" class="img-rounded" alt="" title=""></a>
 				</div>
 
-				<p>Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
-
-				<p>veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sedgnciunt. Sed ut perspiciatis unde omnis accusantium doloremque laudantium ab illo inventore.</p>
+				<p>We are a passionate group of undergraduate students who believe in modern technology and we are looking forward to make a difference in the community using our knowledge. Technology is often misused in the current society and we are willing to break that hype.</p>
 
 				<a href="#." class="btn btn-default btn-rounded">read more</a>
 
 			</div>
 
-
-
-
-
 			<div class="height20"></div>
-
-
-
-
 
 			<!-- Meet the Doctor============================================= -->
 
 			<section class="meet-the-doctors text-center">
-
-
-
 				<div class="container">
-
-
-
 					<h1 class="light">meet the <span>perfect specialists</span> team</h1>
-
 					<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat nibh euismod tincidunt ut laoreet dolore magna.</p>
-
-
-
 					<div class="team-member-description one">
-
 						<div class="team-member-desc-inner team-desc">
-
 							<h5>Dr.Kylee Leewan<span>Physical Therapist</span></h5>
-
 							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised...<a href="member-detail.html">Read more</a>
 							</p>
-
 							<ul class="list-unstyled social2 white">
-
 								<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a>
 								</li>
 
@@ -188,19 +137,12 @@ Aparecium Labs -->
 							</ul>
 
 							<span class="pointing-arrow"></span>
-
 						</div>
-
 						<a href="#." class="team-des-btn"><i class="fa fa-plus"></i></a>
-
 					</div>
-
-
 
 					<div class="team-member-description two">
-
 						<div class="team-member-desc-inner team-desc">
-
 							<h5>Dr.Kylee Leewan<span>Physical Therapist</span></h5>
 
 							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised...<a href="member-detail.html">Read more</a>
@@ -220,51 +162,12 @@ Aparecium Labs -->
 							</ul>
 
 							<span class="pointing-arrow"></span>
-
 						</div>
-
 						<a href="#." class="team-des-btn"><i class="fa fa-plus"></i></a>
-
 					</div>
-
-
-
-					<div class="team-member-description three">
-
-						<div class="team-member-desc-inner team-desc">
-
-							<h5>Dr.Kylee Leewan<span>Physical Therapist</span></h5>
-
-							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised...<a href="member-detail.html">Read more</a>
-							</p>
-
-							<ul class="list-unstyled social2 white">
-
-								<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a>
-								</li>
-
-								<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a>
-								</li>
-
-								<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a>
-								</li>
-
-							</ul>
-
-							<span class="pointing-arrow"></span>
-
-						</div>
-
-						<a href="#." class="team-des-btn"><i class="fa fa-plus"></i></a>
-
-					</div>
-
-
 
 					<div class="team-member-description four">
-
 						<div class="team-member-desc-inner team-desc">
-
 							<h5>Dr.Kylee Leewan<span>Physical Therapist</span></h5>
 
 							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised...<a href="member-detail.html">Read more</a>
@@ -284,24 +187,18 @@ Aparecium Labs -->
 							</ul>
 
 							<span class="pointing-arrow"></span>
-
 						</div>
-
 						<a href="#." class="team-des-btn"><i class="fa fa-plus"></i></a>
-
 					</div>
 
 
 
 					<div class="team-member-description five">
-
 						<div class="team-member-desc-inner team-desc">
-
 							<h5>Dr.Kylee Leewan<span>Physical Therapist</span></h5>
-
 							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised...<a href="member-detail.html">Read more</a>
 							</p>
-
+							
 							<ul class="list-unstyled social2 white">
 
 								<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a>
@@ -771,6 +668,8 @@ Aparecium Labs -->
 
 								
 
+
+
 								</div>
 
 
@@ -806,6 +705,8 @@ Aparecium Labs -->
 								  </h4>
 
 								
+
+
 
 								</div>
 
@@ -845,6 +746,8 @@ Aparecium Labs -->
 
 								
 
+
+
 								</div>
 
 
@@ -882,6 +785,8 @@ Aparecium Labs -->
 								  </h4>
 
 								
+
+
 
 								</div>
 
@@ -935,9 +840,9 @@ Aparecium Labs -->
 
 
 		<div class="colourfull-row"></div>
-		
+
 		<!-- Footer============================================= -->
-	    <?php include_once("footer.php");	 ?>
+		<?php include_once("footer.php");	 ?>
 
 
 

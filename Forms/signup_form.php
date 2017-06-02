@@ -1,32 +1,53 @@
-<?PHP
-ob_start();
-session_start();
 
-//--DB connection english
-include_once("../config/connection_safeplant/db_connect.php");   
+<?php
+if ( isset( $_POST[ "submit" ] ) ) {
 
-$firstName = $_POST["f_name"];
-$lastName = $_POST["l_name"];
-$userName = $_POST["username"];
-$email = $_POST["email"];	
-$password = $_POST["password"];	 
-$regisNumber = $_POST["regnum"];
-$hospital = $_POST["hospital"];
-	  
-//inject to db	  
+	session_start();
+	$firstName = $_POST["f_name"];
+	$lastName = $_POST["l_name"];
+	$userName = $_POST["username"];
+	$email = $_POST["email"];	
+	$password = $_POST["password"];	 
+	$confirm_password = $_POST["confirm_password"];	
+	$regisNumber = $_POST["regnum"];
+	$hospital = $_POST["hospital"];
 
-	  //query to insert data in to the databse
-	$sql="INSERT INTO users_doctors ". " (first_name,last_name,username,user_email,password,reg_num,hospital)
-	VALUES ". "('$firstName','$lastName','$userName','$email','$password','$regisNumber','$hospital')";
+		if($password == $confirm_password){
 
-	//error code if the query fails to connect the db 
-	if (!mysqli_query($con,$sql))
-  	{
-  		die('Error: ' . mysqli_error($con));
-  	}
-//end of db injection
+			//--DB connection english
+			include_once("../config/connection_safeplant/db_connect.php");
 
-header("Location:../login.php");
-ob_end_flush();
+			$check="SELECT username FROM users_doctors WHERE username='$userName'";
+
+			//Execute select SQL Querry
+			$logPermition = mysqli_query( $con, $check );
+
+			//read sigle row of result set
+			$row = mysqli_fetch_array( $logPermition );
+
+			if($row['username'] == $userName){
+				echo "<script type='text/javascript'>confirm('The username you selected has already been taken.Please select a different username and try again!'); window.location.replace(\"../signup.php\");</script>";
+
+			}else{
+
+				$sql="INSERT INTO users_doctors ". " (first_name,last_name,username,user_email,password,reg_num,hospital)
+			VALUES ". "('$firstName','$lastName','$userName','$email','$password','$regisNumber','$hospital')";
+			$result = mysqli_query($con,$sql);
+
+			//error code if the query fails to connect the db 
+			if (!mysqli_query($con,$sql))
+			{
+				die('Error: ' . mysqli_error($con));
+			} else{
+				header('Location:../thanks.php');
+				mysqli_close($con);
+			}
+
+		} 
+			
+	}else{
+			echo '<script type="text/javascript">alert("Passwords does not match! Please re-enter."); window.location.replace("../signup.php");</script>';
+	}
+}
 
 ?>
