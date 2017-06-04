@@ -12,9 +12,7 @@
 <?php 
 	include_once("config/connection_safeplant/db_connect.php");	
 ?>
-<html>
-  
-<head>
+<html><head>
     <link rel="shortcut icon" href="images/favicon.png">
     <title>Signup | Safe Plant</title>
     <!-- Mobile Specific Metas================================================== -->
@@ -58,13 +56,47 @@
 		<![endif]-->
 
 	<!-- Header Scripts================================================== -->
-
-	<script src="js/modernizr-2.6.2.min.js"></script>
- 	<style>
+   <script src="js/modernizr-2.6.2.min.js"></script>
+   
+	
+ 	<style type="text/css">
 	.input-label{
 		color: black;
 		font-weight: 700;
 		}
+	</style>
+	
+	<style type="text/css">
+	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+	.form-control, .thumbnail {
+		border-radius: 2px;
+	}
+	.btn-danger {
+		background-color: #B73333;
+	}
+
+	/* File Upload */
+	.fake-shadow {
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	}
+	.fileUpload {
+		position: relative;
+		overflow: hidden;
+	}
+	.fileUpload #logo-id {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		font-size: 33px;
+		cursor: pointer;
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	.img-preview {
+		max-width: 100%;
+	}
 	</style>
   </head>
   <body class="fixed-header">
@@ -104,7 +136,7 @@
 
 						<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
-						<form action="Forms/signup_form.php" id="loginform" class="form-horizontal" method="post" role="form">
+						<form action="Forms/signup_form.php" id="loginform" class="form-horizontal" method="post" role="form" enctype="multipart/form-data">
 
 						
 							<label for="firstname" class="input-label">First Name</label>
@@ -142,6 +174,24 @@
 								<span class="input-group-addon"></span>
 								<input id="confirm_login-password" type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required />
 							</div>
+
+							<label for="avatar" class="input-label">Add a profile picture</label>
+							<div class="input-group">
+								<div class="main-img-preview">
+									<img class="thumbnail img-preview" src="images/doctors/avatar.jpg" title="Preview Logo">
+								</div>
+								<div class="input-group">
+									<input id="avatar" class="form-control fake-shadow" placeholder="Choose File" disabled="disabled">
+									<div class="input-group-btn">
+										<div class="fileUpload btn btn-danger fake-shadow">
+											<span><i class="glyphicon glyphicon-upload"></i>Upload Photo</span>
+											<input id="logo-id" name="photo" type="file" class="attachment_upload">
+										</div>
+									</div>
+								</div>
+								<p class="help-block">* Recommended - 718px X 718px</p>
+							</div>
+                            <br>
 
                             <label for="reg_num" class="input-label">Registration Number</label>
                             <div style="margin-bottom: 25px" class="input-group">
@@ -198,6 +248,7 @@
 	  
     </div><!--end #wrapper-->
     
+
     <script src="js/jquery.html"></script>
     <script src="js/bootstrap.min.html"></script>
     <script src="js/jquery.anythingslider.html"></script>
@@ -229,6 +280,35 @@
 	<script src="js/jquery.themepunch.plugins.min.js"></script> 
 	<script src="js/jquery.themepunch.revolution.min.js"></script> 
 	<script src="js/color-switcher.js"></script> 
+    
+    <!--Image upload snippet-->
+    <script type="text/javascript">
+
+		$(document).ready(function() {
+		var brand = document.getElementById('logo-id');
+		brand.className = 'attachment_upload';
+		brand.onchange = function() {
+			document.getElementById('avatar').value = this.value.substring(12);
+		};
+
+		// Source: http://stackoverflow.com/a/4459419/6396981
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+
+				reader.onload = function(e) {
+					$('.img-preview').attr('src', e.target.result);
+				};
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+		$("#logo-id").change(function() {
+			readURL(this);
+		});
+	});
+
+	</script>
+   
     <script type="text/javascript">
 		jQuery(function($){
 			// parallaax

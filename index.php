@@ -118,7 +118,7 @@
             </div>
             <div class="caption sft big_white" data-x="0" data-y="265" data-speed="1000" data-start="1700" data-easing="easeOutExpo"> <strong>Kidney Specialists</strong> </div>
             <div class="caption sfr medium_grey" data-x="0" data-y="340" data-speed="1000" data-start="2500" data-easing="easeOutExpo">We work with the best Urologists in the country.<br>Stand a chance to gain feedback from the best.</div>
-            <div class="caption sfb" data-x="0" data-y="410" data-speed="2500" data-start="2500" data-easing="easeOutExpo"> <a href="index5.html" class="btn btn-rounded btn-bordered">Learn More</a></div>
+            <div class="caption sfb" data-x="0" data-y="410" data-speed="2500" data-start="2500" data-easing="easeOutExpo"> <a href="#" class="btn btn-rounded btn-bordered">Learn More</a></div>
           </li>
           
           <!-- Slide Right
@@ -127,11 +127,8 @@
           
           <li data-transition="slideright" data-slotamount="6" data-thumb=""> <img src="images/emergency-services.jpg" alt="image" />
             <div class="caption sft" data-x="500" data-y="180" data-speed="2000" data-start="1300" data-easing="easeOutBack"><img src="images/emergency-services-icon.png" alt=""></div>
-            <div class="caption sft big_white" data-x="260" data-y="290" data-speed="1500" data-start="1700" data-easing="easeOutExpo"><strong>emergency services</strong></div>
-            <div class="caption sfb medium_grey text-center" data-x="140" data-y="370" data-speed="1500" data-start="2500" data-easing="easeOutExpo">If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut<br>
-              volutpat eros  adipiscing elit Ut volutpat. 
-              
-              aliquam erat volutpat.</div>
+            <div class="caption sft big_white" data-x="260" data-y="290" data-speed="1500" data-start="1700" data-easing="easeOutExpo"><strong>Health Monitoring</strong></div>
+            <div class="caption sfb medium_grey text-center" data-x="140" data-y="370" data-speed="1500" data-start="2500" data-easing="easeOutExpo">Are you looking for a all round portable health monitor? <br>Then you are in safe hands. Stop spending thousands just to check your vitals. <br>Do it at home with SAFE PLANT.</div>
             <div class="caption sfb" data-x="492" data-y="450" data-speed="2000" data-start="3000" data-easing="easeOutExpo"><a href="index5.html" class="btn btn-rounded btn-bordered">all in one</a></div>
           </li>
           
@@ -141,8 +138,8 @@
             <div class="caption sfl" data-x="0" data-y="180" data-speed="1500" data-start="1300" data-easing="easeOutBack"><img src="images/better-technology-icon.png" alt=""></div>
             <div class="caption sfr" data-x="600" data-y="0" data-speed="900" data-start="1500" data-easing="easeOutExpo"> <img src="images/tech-women.png" alt=""/></div>
             <div class="caption sft big_white" data-x="0" data-y="265" data-speed="1500" data-start="1700" data-easing="easeOutExpo"><strong>better technology</strong></div>
-            <div class="caption sfr medium_grey" data-x="0" data-y="340" data-speed="1500" data-start="2500" data-easing="easeOutExpo">If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur<br>
-              adipiscing elit. Ut volutpat eros  adipiscing elit Ut volutpat. </div>
+            <div class="caption sfr medium_grey" data-x="0" data-y="340" data-speed="1500" data-start="2500" data-easing="easeOutExpo">We have used cutting edge, reliable technologies to develop Safe Plant.<br>
+              Experience snappy performance which will never let you down. </div>
             <div class="caption sfb" data-x="0" data-y="410" data-speed="300" data-start="2500" data-easing="easeOutExpo"><a href="index5.html" class="btn btn-rounded btn-bordered">all in one</a></div>
           </li>
         </ul>
@@ -215,7 +212,7 @@
                       for($x=1;$x<=100;$x++)
                       {
                         echo  "<option value=".$x.">".$x." </option >";
-                  }
+                  		}
                       ?>
                   </select>
                 <input type="submit" value="Order Now" class="btn btn-default btn-rounded" >
@@ -240,17 +237,17 @@
           </div>
           <div class="col-md-3 col-xs-6">
             <div class="counter"> <span class="quantity-counter2 highlight">0</span>
-              <h6 class="counter-details">our staff</h6>
+              <h6 class="counter-details">Pre Orders</h6>
             </div>
           </div>
           <div class="col-md-3 col-xs-6">
             <div class="counter"> <span class="quantity-counter3 highlight">0</span>
-              <h6 class="counter-details">clinic rooms</h6>
+              <h6 class="counter-details">Testimonials</h6>
             </div>
           </div>
           <div class="col-md-3 col-xs-6">
             <div class="counter"> <span class="quantity-counter4 highlight">0</span>
-              <h6 class="counter-details">machines</h6>
+              <h6 class="counter-details">Partners</h6>
             </div>
           </div>
         </div>
@@ -280,7 +277,7 @@
 						
 							echo "<h5><a>{$row["doc_Name"]}<br><span>{$row["doc_Post"]}</a></span></h5>";
             				echo "<p>{$row["doc_Description"]}</p>";
-            				echo '<a href="member-detail.html"><em>- View Profile</em></a>';
+            				echo '<a href="#"><em>- View Profile</em></a>';
 						echo "</div>"; //<!--End of team member-->
 					}
 				}
@@ -296,7 +293,7 @@
 		<div class="container">
 			<div class="text-center">
 				<h1 class="light">Safe Plant has an <span>Incredibly Awesome</span> Design</h1>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Nam vitae felis pretium, euismod ipsum nec</p>
+				<p class="lead">Not just the design. Check out the awesome features that are inbuilt.</p>
 			</div>
 
 			<ul class="awesome-features list-unstyled pull-left text-right">
@@ -555,7 +552,7 @@ bellow 130/80 mmHg.</div>
 					// output data of each row
 						while($row = $result->fetch_assoc()) {
 							echo '<div class="item">';
-                			echo '<h1>What Our atients Say About Us</h1>';
+                			echo '<h1>What Our Patients Say About Us</h1>';
 							echo "<p>{$row["comment"]}</p>";
 							echo "<div class=\"testimonials-patient-detail\"><img src=\"{$row["img_url"]}\" class=\"img-circle img-thumbnail\" alt=\"Patient Image\" title=\"{$row["name"]}\">";
 							echo "<p>{$row["name"]}<span>{$row["patient_type"]}</span></p></div></div>";

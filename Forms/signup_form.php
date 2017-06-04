@@ -11,6 +11,11 @@ if ( isset( $_POST[ "submit" ] ) ) {
 	$confirm_password = $_POST["confirm_password"];	
 	$regisNumber = $_POST["regnum"];
 	$hospital = $_POST["hospital"];
+	$pic = $_FILES['photo']['name'];
+    $pic_loc = $_FILES['photo']['tmp_name'];
+    $folder="images/Doctors/";
+     
+
 
 		if($password == $confirm_password){
 
@@ -30,8 +35,14 @@ if ( isset( $_POST[ "submit" ] ) ) {
 
 			}else{
 
-				$sql="INSERT INTO users_doctors ". " (first_name,last_name,username,user_email,password,reg_num,hospital)
-			VALUES ". "('$firstName','$lastName','$userName','$email','$password','$regisNumber','$hospital')";
+				if(move_uploaded_file($pic_loc,$folder.$pic)){
+					echo "<script>alert('successfully uploaded');</script>";
+				 }else{
+					echo "<script>alert('error while uploading file');</script>";
+				 }
+				
+				$sql="INSERT INTO users_doctors ". " (first_name,last_name,username,user_email,password,reg_num,hospital,img_url)
+			VALUES ". "('$firstName','$lastName','$userName','$email','$password','$regisNumber','$hospital','$folder$pic')";
 			$result = mysqli_query($con,$sql);
 
 			//error code if the query fails to connect the db 

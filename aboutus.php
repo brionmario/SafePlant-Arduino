@@ -90,7 +90,6 @@
 		<!-- Sub Page Banner============================================= -->
 
 		<section class="sub-page-banner text-center" data-stellar-background-ratio="0.3">
-			<div class="overlay"></div>
 			<div class="container">
 				<h1 class="entry-title">about us</h1>
 				<p>We want to change the world</p>
@@ -102,7 +101,7 @@
 		<div id="sub-page-content">
 			<div class="container big-font">
 				<h2 class="light bordered main-title">who <span>we are</span></h2>
-				<div class="media pull-right"><a href="http://vimeo.com/36031564" class="fancybox-media"><img src="images/video-icon.png" class="img-rounded" alt="" title=""></a>
+				<div class="media pull-right"><a href="https://www.youtube.com/watch?v=i9l6dRHZusU" class="fancybox-media"><img src="images/video-icon.png" class="img-rounded" alt="" title=""></a>
 				</div>
 
 				<p>We are a passionate group of undergraduate students who believe in modern technology and we are looking forward to make a difference in the community using our knowledge. Technology is often misused in the current society and we are willing to break that hype.</p>

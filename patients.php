@@ -90,7 +90,7 @@
 				if(!empty($_SESSION['userlog'])){
 					$userName = $_SESSION["userlog"] ; 
 					if(isset($_SESSION["userlog"])){
-						echo "{$userName}";
+						echo "Dr.{$userName}";
 					}
 				}
 		 	?>
