@@ -116,21 +116,19 @@
 
 			<section class="meet-the-doctors text-center">
 				<div class="container">
-					<h1 class="light">meet the <span>perfect specialists</span> team</h1>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat nibh euismod tincidunt ut laoreet dolore magna.</p>
+					<h1 class="light">meet the <span>perfect developer</span> team</h1>
+					<p class="lead">Projects we have completed demonstrate what we know <br> future projects decide what we will learn.</p>
 					<div class="team-member-description one">
 						<div class="team-member-desc-inner team-desc">
-							<h5>Dr.Kylee Leewan<span>Physical Therapist</span></h5>
-							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised...<a href="member-detail.html">Read more</a>
-							</p>
+							<h5>Brion Mario<span>Developer</span></h5>
 							<ul class="list-unstyled social2 white">
-								<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a>
+								<li><a href="https://twitter.com/brion_mario" target="_blank" class="fb"><i class="fa fa-twitter"></i></a>
 								</li>
 
-								<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a>
+								<li><a href="https://www.facebook.com/brion.mario" target="_blank" class="twitter"><i class="fa fa-facebook"></i></a>
 								</li>
 
-								<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a>
+								<li><a href="https://www.linkedin.com/in/brion-mario/" target="_blank" class="fb"><i class="fa fa-linkedin"></i></a>
 								</li>
 
 							</ul>
@@ -142,20 +140,17 @@
 
 					<div class="team-member-description two">
 						<div class="team-member-desc-inner team-desc">
-							<h5>Dr.Kylee Leewan<span>Physical Therapist</span></h5>
-
-							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised...<a href="member-detail.html">Read more</a>
-							</p>
+							<h5>Hasitha Walpola<span>Developer</span></h5>
 
 							<ul class="list-unstyled social2 white">
 
-								<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a>
+								<li><a href="https://twitter.com/hasi_walpola" target="_blank" class="fb"><i class="fa fa-twitter"></i></a>
 								</li>
 
-								<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a>
+								<li><a href="https://www.facebook.com/hasitha.hiran" target="_blank" class="twitter"><i class="fa fa-facebook"></i></a>
 								</li>
 
-								<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a>
+								<li><a href="https://www.linkedin.com/in/hasitha-walpola/" target="_blank" class="fb"><i class="fa fa-linkedin"></i></a>
 								</li>
 
 							</ul>
@@ -167,20 +162,17 @@
 
 					<div class="team-member-description four">
 						<div class="team-member-desc-inner team-desc">
-							<h5>Dr.Kylee Leewan<span>Physical Therapist</span></h5>
-
-							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised...<a href="member-detail.html">Read more</a>
-							</p>
+							<h5>Pavith Buddhima<span>Developer</span></h5>
 
 							<ul class="list-unstyled social2 white">
 
-								<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a>
+								<li><a href="https://twitter.com/pavith_buddhima" target="_blank" class="fb"><i class="fa fa-twitter"></i></a>
 								</li>
 
-								<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a>
+								<li><a href="https://www.facebook.com/pavithbuddhima96" target="_blank" class="twitter"><i class="fa fa-facebook"></i></a>
 								</li>
 
-								<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a>
+								<li><a href="https://www.linkedin.com/in/pavith-gunasekara/" target="_blank" class="fb"><i class="fa fa-linkedin"></i></a>
 								</li>
 
 							</ul>
@@ -194,19 +186,17 @@
 
 					<div class="team-member-description five">
 						<div class="team-member-desc-inner team-desc">
-							<h5>Dr.Kylee Leewan<span>Physical Therapist</span></h5>
-							<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised...<a href="member-detail.html">Read more</a>
-							</p>
+							<h5>Thilan Lasitha<span>Developer</span></h5>
 							
 							<ul class="list-unstyled social2 white">
 
-								<li><a href="#." class="fb"><i class="fa fa-twitter"></i></a>
+								<li><a href="https://twitter.com/ThilanLasitha95" target="_blank" class="fb"><i class="fa fa-twitter"></i></a>
 								</li>
 
-								<li><a href="#." class="twitter"><i class="fa fa-facebook"></i></a>
+								<li><a href="https://www.facebook.com/thilan.oconner" target="_blank" class="twitter"><i class="fa fa-facebook"></i></a>
 								</li>
 
-								<li><a href="#." class="g-plus"><i class="fa fa-google-plus"></i></a>
+								<li><a href="https://www.linkedin.com/in/thilan-lasitha-510650121/" target="_blank" class="fb"><i class="fa fa-linkedin"></i></a>
 								</li>
 
 							</ul>
@@ -218,361 +208,72 @@
 						<a href="#." class="team-des-btn"><i class="fa fa-plus"></i></a>
 
 					</div>
-
-
-
-					<div id="team-carousel" class="owl-carousel two">
-
-
-
-						<div class="team-member">
-
-							<div class="team-thumb">
-
-								<img src="images/team-member-img1.jpg" class="img-rounded" alt="">
-
-								<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
-
-									<a href="#."><i class="fa fa-twitter"></i></a>
-
-									<a href="#."><i class="fa fa-google-plus"></i></a>
-								</div>
-
-							</div>
-
-							<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-
-							<a href="member-detail.html"><em>- View Profile</em></a>
-
-						</div>
-
-
-
-						<div class="team-member">
-
-							<div class="team-thumb">
-
-								<img src="images/team-member-img2.jpg" class="img-rounded" alt="">
-
-								<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
-
-									<a href="#."><i class="fa fa-twitter"></i></a>
-
-									<a href="#."><i class="fa fa-google-plus"></i></a>
-								</div>
-
-							</div>
-
-							<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-
-							<a href="member-detail.html"><em>- View Profile</em></a>
-
-						</div>
-
-
-
-						<div class="team-member">
-
-							<div class="team-thumb">
-
-								<img src="images/team-member-img3.jpg" class="img-rounded" alt="">
-
-								<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
-
-									<a href="#."><i class="fa fa-twitter"></i></a>
-
-									<a href="#."><i class="fa fa-google-plus"></i></a>
-								</div>
-
-							</div>
-
-							<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-
-							<a href="member-detail.html"><em>- View Profile</em></a>
-
-						</div>
-
-
-
-						<div class="team-member">
-
-							<div class="team-thumb">
-
-								<img src="images/team-member-img1.jpg" class="img-rounded" alt="">
-
-								<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
-
-									<a href="#."><i class="fa fa-twitter"></i></a>
-
-									<a href="#."><i class="fa fa-google-plus"></i></a>
-								</div>
-
-							</div>
-
-							<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-
-							<a href="member-detail.html"><em>- View Profile</em></a>
-
-						</div>
-
-
-
-						<div class="team-member">
-
-							<div class="team-thumb">
-
-								<img src="images/team-member-img2.jpg" class="img-rounded" alt="">
-
-								<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
-
-									<a href="#."><i class="fa fa-twitter"></i></a>
-
-
-
-									<a href="#."><i class="fa fa-google-plus"></i></a>
-								</div>
-
-							</div>
-
-							<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-
-							<a href="member-detail.html"><em>- View Profile</em></a>
-
-						</div>
-
-
-
-						<div class="team-member">
-
-							<div class="team-thumb">
-
-								<img src="images/team-member-img3.jpg" class="img-rounded" alt="">
-
-								<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
-
-									<a href="#."><i class="fa fa-twitter"></i></a>
-
-									<a href="#."><i class="fa fa-google-plus"></i></a>
-								</div>
-
-							</div>
-
-							<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-
-							<a href="member-detail.html"><em>- View Profile</em></a>
-
-						</div>
-
-
-
-						<div class="team-member">
-
-							<div class="team-thumb">
-
-								<img src="images/team-member-img1.jpg" class="img-rounded" alt="">
-
-								<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
-
-									<a href="#."><i class="fa fa-twitter"></i></a>
-
-									<a href="#."><i class="fa fa-google-plus"></i></a>
-								</div>
-
-							</div>
-
-							<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-
-							<a href="member-detail.html"><em>- View Profile</em></a>
-
-						</div>
-
-
-
-						<div class="team-member">
-
-							<div class="team-thumb">
-
-								<img src="images/team-member-img2.jpg" class="img-rounded" alt="">
-
-								<div class="links"><a href="#."><i class="fa fa-facebook"></i></a>
-
-									<a href="#."><i class="fa fa-twitter"></i></a>
-
-									<a href="#."><i class="fa fa-google-plus"></i></a>
-								</div>
-
-							</div>
-
-							<h5><a href="#.">J. Vicente Gaby</a><br><span>senior doctor at medicom</span></h5>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec eros eget nisl fringilla commodo. Maecenas ornare, augue ut ultricies tristique, enim lectus pretium quam, quis bibendum metus tellus sed magna. Donec eu dolor.</p>
-
-							<a href="member-detail.html"><em>- View Profile</em></a>
-
-						</div>
-
-
-
-					</div>
-
-
-
 				</div>
-
 			</section>
-
-
-
-
-
 
 
 			<!-- Features============================================= -->
 
 			<section class="features">
-
-
-
 				<div class="container">
-
-
-
 					<div class="row">
-
-
-
 						<div class="col-md-6">
-
-
-
 							<div class="feature">
-
 								<i class="pull-left feature-icon fa fa-user-md"></i>
-
 								<div class="feature-content">
 
-									<h5><a href="#.">Creative doctors</a></h5>
+									<h5><a href="#.">Expert doctors</a></h5>
 
-									<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
-
-									<a href="#."><dfn>- Learn more</dfn></a>
+									<p>We are partnering with the best doctors in the country who are specialized in Kidney related diseases and disorders.</p>
 
 								</div>
-
 							</div>
-
-
-
 						</div>
 
-
-
 						<div class="col-md-6">
-
-
-
 							<div class="feature">
-
 								<i class="pull-left feature-icon fa fa-clock-o"></i>
-
 								<div class="feature-content">
 
 									<h5><a href="#.">24/7 Live Support</a></h5>
 
-									<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
-
-									<a href="#."><dfn>- Learn more</dfn></a>
+									<p>Atleast one of our staff members will be online even at midnight. So please feel free to contact us via chat or email.</p>
 
 								</div>
-
 							</div>
-
-
-
 						</div>
-
-
-
 					</div>
 
 
 
 					<div class="row">
-
 						<div class="col-md-6">
-
-
-
 							<div class="feature">
-
 								<i class="pull-left feature-icon fa fa-tint"></i>
-
 								<div class="feature-content">
 
-									<h5><a href="#.">cancer care</a></h5>
+									<h5><a href="#.">After Care</a></h5>
 
-									<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
-
-									<a href="#."><dfn>- Learn more</dfn></a>
+									<p>We believe in sustainable products and services. Once our products are sold, we go out of our way to provide help and support.</p>
 
 								</div>
-
 							</div>
-
-
-
 						</div>
-
-
 
 						<div class="col-md-6">
-
-
-
 							<div class="feature">
-
 								<i class="pull-left feature-icon fa fa-phone-square"></i>
-
 								<div class="feature-content">
 
-									<h5><a href="#.">emergency services</a></h5>
+									<h5><a href="#.">Damage Repairs</a></h5>
 
-									<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining popularised only five Power of centuries.</p>
-
-									<a href="#."><dfn>- Learn more</dfn></a>
-
+									<p>We understand that our valuable customer base finds it difficult to come to us incase of any damages to the product. So just give us a call and we'll send a technician to your door step.</p>
+									
 								</div>
-
 							</div>
-
-
-
 						</div>
-
-
-
 					</div>
-
-
-
 				</div>
-
-
-
 			</section>
 
 
@@ -583,252 +284,63 @@
 
 
 
-			<!-- Our Hospitals and Why Choose Medicom============================================= -->
+			<!-- Our success============================================= -->
 
 			<div class="container padding-top-35 clearfix">
-
-
-
 				<div class="row">
-
-
-
 					<div class="col-md-6">
-
-
-
-						<h2 class="light bordered">our <span>hospital</span></h2>
-
-
-
+					
+						<h2 class="light bordered">our <span>success</span></h2>
 						<div class="slider-mini no-margin-bottom">
-
-
-
 							<div id="our-hospital" class="owl-carousel text-center">
 
-
-
-								<div class="item">
-
+								<div class="item active">
 									<img src="images/hospital-img.jpg" alt="" title="">
-
 								</div>
-
-
 
 								<div class="item">
-
 									<img src="images/hospital-img2.jpg" alt="" title="">
-
 								</div>
-
-
+								
+								<div class="item">
+									<img src="images/hospital-img3.jpg" alt="" title="">
+								</div>
+								
+								<div class="item">
+									<img src="images/hospital-img4.jpg" alt="" title="">
+								</div>
 
 							</div>
-
-
-
 						</div>
-
-
-
 					</div>
-
-
 
 					<div class="col-md-6">
 
-
-
-						<h2 class="light bordered">why <span>choose medicom</span></h2>
-
-
-
+						<h2 class="light bordered">why <span>choose Safe Plant</span></h2>
 						<div class="panel-group accordian-style2" id="accordion2">
-
-
-
 							<div class="panel panel-default">
-
-
-
 								<div class="panel-heading">
-
 									<h4 class="panel-title">
-
 									<a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-
-									  <i class="fa fa-medkit"></i>our responsibility<i class="fa fa-angle-down pull-right"></i>
-
+									  <i class="fa fa-eye"></i>Our Vision<i class="fa fa-angle-down pull-right"></i>
 									</a>
-
 								  </h4>
-
-								
-
-
-
 								</div>
-
-
 
 								<div id="collapseOne" class="panel-collapse collapse in">
-
 									<div class="panel-body">
 
-										Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.<br/><br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde sed quia consequuntur. Page Maker including versions.
+										<p>Our vision is to empower Sri Lankans creating a better everyday life. Our business idea supports this vision by offering a wide range of well-designed feasible products that'll help Sri Lanka to reach global markets and bring one step closer to being the IT hub of the South East Asia.</p>
+										<p>Providing exceptional service to our customers and clients is just the start. Our mission is to enrich and nourish lives, so when we interact with millions of people and communities across the globe, we strive to ensure we’re serving them with integrity, respect and in the most responsible way possible.</p>
+										<p>Every day, we work to develop innovative product and service solutions that put our social responsibility goals into action. We focus our energies on initiatives that support our diverse workforce, protect our environment, advance consumer health and wellness and strengthen our communities.</p>
 
 									</div>
-
 								</div>
-
 							</div>
-
-
-
-							<div class="panel panel-default">
-
-
-
-								<div class="panel-heading">
-
-									<h4 class="panel-title">
-
-									<a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-
-									  <i class="fa fa-heart"></i>heart specialist<i class="fa fa-angle-down pull-right"></i>
-
-									</a>
-
-								  </h4>
-
-								
-
-
-
-								</div>
-
-
-
-								<div id="collapseTwo" class="panel-collapse collapse">
-
-									<div class="panel-body">
-
-										Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.<br/><br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde sed quia consequuntur. Page Maker including versions.
-
-									</div>
-
-								</div>
-
-
-
-							</div>
-
-
-
-							<div class="panel panel-default">
-
-
-
-								<div class="panel-heading">
-
-									<h4 class="panel-title">
-
-									<a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-
-									  <i class="fa fa-eye"></i>eye specialist<i class="fa fa-angle-down pull-right"></i>
-
-									</a>
-
-								  </h4>
-
-								
-
-
-
-								</div>
-
-
-
-								<div id="collapseThree" class="panel-collapse collapse">
-
-									<div class="panel-body">
-
-										Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.<br/><br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde sed quia consequuntur. Page Maker including versions.
-
-									</div>
-
-								</div>
-
-
-
-							</div>
-
-
-
-							<div class="panel panel-default">
-
-
-
-								<div class="panel-heading">
-
-									<h4 class="panel-title">
-
-									<a data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-
-									  <i class="fa fa-mobile"></i>responsive design<i class="fa fa-angle-down pull-right"></i>
-
-									</a>
-
-								  </h4>
-
-								
-
-
-
-								</div>
-
-
-
-								<div id="collapseFour" class="panel-collapse collapse">
-
-									<div class="panel-body">
-
-										Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.<br/><br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde sed quia consequuntur. Page Maker including versions.
-
-									</div>
-
-								</div>
-
-
-
-							</div>
-
-
-
 						</div>
-
-
-
 					</div>
-
-
-
 				</div>
-
-
-
 			</div>
-
-
-
-
-
-
-
-
-
 		</div>
 		<!--end sub-page-content-->
 

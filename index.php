@@ -196,16 +196,16 @@
             <div class="appointment-form clearfix">
               <div class="success" id="message-app" style="display:none;"></div>
               <form name="order_form" id="appoint_form" method="post" action="Forms/ordernow_form.php" >
-                <input type="text" name="app_fname" id="app_fname" placeholder="First Name" onKeyPress="removeChecks();">
-                <input type="text" name="app_lname" id="app_lname" placeholder="Last Name" onKeyPress="removeChecks();">
-                <input type="email" name="app_email_address" id="app_email_address" placeholder="Email Address" onKeyPress="removeChecks();">
-                <input type="text" name="app_phone" id="app_phone" placeholder="Phone No"><br>
-                  <select name="option" >
+                <input type="text" name="app_fname" id="app_fname" placeholder="First Name" onKeyPress="removeChecks();" required>
+                <input type="text" name="app_lname" id="app_lname" placeholder="Last Name" onKeyPress="removeChecks();" required>
+                <input type="email" name="app_email_address" id="app_email_address" placeholder="Email Address" onKeyPress="removeChecks();" required>
+                <input type="text" name="app_phone" id="app_phone" placeholder="Phone No" required><br>
+                  <select name="option" required>
                       <option value=>---Please Select Your Color---</option>
                       <option value="1">Black</option>
                       <option value="2">White</option>
                   </select>
-                  <select name="quantity" style="float: right">
+                  <select name="quantity" style="float: right" required>
                       <option value=>---Please Select Quantity---</option>
                   <?php
 
