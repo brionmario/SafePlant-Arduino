@@ -28,14 +28,14 @@ class DB_Functions {
      */
     public function storeUser($name, $email, $password) {
 
-        $stmt = $this->conn->prepare("INSERT INTO users_patients(first_name, user_email, password, created_at) VALUES(?, ?, ?, NOW())");
+        $stmt = $this->conn->prepare("INSERT INTO users(first_name, user_email, password, created_at) VALUES(?, ?, ?, NOW())");
         $stmt->bind_param("sssss", $name, $email, $password);
         $result = $stmt->execute();
         $stmt->close();
 
         // check for successful store
         if ($result) {
-            $stmt = $this->conn->prepare("SELECT * FROM users_patients WHERE email = ?");
+            $stmt = $this->conn->prepare("SELECT * FROM users WHERE email = ?");
             $stmt->bind_param("s", $email);
             $stmt->execute();
             $user = $stmt->get_result()->fetch_assoc();
@@ -52,7 +52,7 @@ class DB_Functions {
      */
     public function getUserByEmailAndPassword($email, $password) {
 
-        $stmt = $this->conn->prepare("SELECT * FROM users_patients WHERE email = ?");
+        $stmt = $this->conn->prepare("SELECT * FROM users WHERE email = ?");
 
         $stmt->bind_param("s", $email);
 
@@ -74,7 +74,7 @@ class DB_Functions {
      * Check user is existed or not
      */
     public function isUserExisted($email) {
-        $stmt = $this->conn->prepare("SELECT email from users_patients WHERE email = ?");
+        $stmt = $this->conn->prepare("SELECT email from users WHERE email = ?");
 
         $stmt->bind_param("s", $email);
 
