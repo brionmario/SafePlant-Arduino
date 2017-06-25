@@ -57,6 +57,13 @@ volatile int IBI = 600;             // holds the time between beats, must be see
 volatile boolean Pulse = false;     // true when pulse wave is high, false when it's low
 volatile boolean QS = false;        // becomes true when Arduoino finds a beat.
 
+//Blood Pressure Variable
+String bloodPressure;
+
+//Strings to hold date and time
+String date = "Thu 29 Jun";
+String time = "14:15";
+
 //kidney logo array
 const unsigned char LOGO1[] PROGMEM = {
   0x00, 0xc0, 0x7f, 0x00, 0x00, 0x00, 0xf0, 0xff, 0x03, 0x00, 0x00, 0xf8,
@@ -172,7 +179,7 @@ void drawSP(void) {
 void drawTeam(void) {
   u8g.setFont(u8g_font_9x15);
   u8g.drawStr(20, 25, "Powered By");
-  u8g.drawStr(0, 50, "Aparecium Labs");
+  u8g.drawStr(5, 50, "Team Scorpion");
 }
 
 void setup(void) {
@@ -229,87 +236,9 @@ void HRPage() {
   u8g.setFont(u8g_font_osr18n);
   u8g.setPrintPos(70, 60);
 
-  /**Moderation**/
-  if(BPM >= 60 && BPM < 100){
-    u8g.print(BPM);
-    
-  //Less than normal  
-  }else if (BPM >= 55 && BPM < 60) {
-    u8g.print("61");
-  }else if (BPM >= 50 && BPM < 55) {
-    u8g.print("63");
-  }else if (BPM >= 45 && BPM < 50) {
-    u8g.print("59");
-  }else if (BPM >= 40 && BPM < 45) {
-    u8g.print("62");
-  }else if (BPM >= 35 && BPM < 40) {
-    u8g.print("57");
-  }else if (BPM >= 30 && BPM < 35) {
-    u8g.print("65");
-  }else if (BPM >= 25 && BPM < 30) {
-    u8g.print("70");
-  }else if (BPM >= 20 && BPM < 25) {
-    u8g.print("58");
-  }else if (BPM >= 15 && BPM < 20) {
-    u8g.print("74");
-  }else if (BPM >= 10 && BPM < 15) {
-    u8g.print("73");
-  }else if (BPM >= 5 && BPM < 10) {
-    u8g.print("77");
-  }else if (BPM >= 0 && BPM < 5) {
-    u8g.print("65");
-  }else if (BPM < 0) {
-    u8g.print("55");
-
-  //Higher than Normal
-  }else if (BPM >= 100 && BPM < 105) {
-    u8g.print("79");
-  }else if (BPM >= 105 && BPM < 110) {
-    u8g.print("81");
-  }else if (BPM >= 110 && BPM < 115) {
-    u8g.print("83");
-  }else if (BPM >= 115 && BPM < 120) {
-    u8g.print("85");
-  }else if (BPM >= 125 && BPM < 130) {
-    u8g.print("87");
-  }else if (BPM >= 130 && BPM < 135) {
-    u8g.print("89");
-  }else if (BPM >= 135 && BPM < 150) {
-    u8g.print("90");
-  }else if (BPM >= 150 && BPM < 170) {
-    u8g.print("92");
-  }else if (BPM >= 170 && BPM < 190) {
-    u8g.print("93");
-  }else if (BPM >= 190 && BPM < 210) {
-    u8g.print("78");
-  }else if (BPM >= 210 && BPM < 220) {
-    u8g.print("79");
-  }else if (BPM >= 220 && BPM < 225) {
-    u8g.print("80");
-  }else if (BPM >= 225 && BPM < 230) {
-    u8g.print("76");
-  }else if (BPM >= 230 && BPM < 240) {
-    u8g.print("84");
-  }else if (BPM >= 240 && BPM < 250) {
-    u8g.print("69");
-  }else if (BPM >= 250 && BPM < 300) {
-    u8g.print("85");
-  }else if (BPM >= 300 && BPM < 350) {
-    u8g.print("83");
-  }else if (BPM >= 350 && BPM < 400) {
-    u8g.print("99");
-  }else if (BPM >= 400 && BPM < 500) {
-    u8g.print("92");
-  }else if (BPM >= 500 && BPM < 600) {
-    u8g.print("79");
-  }else if (BPM > 600 && BPM < 1000) {
-    u8g.print("68");
-  } else if (BPM > 1000) {
-    u8g.print("94");
-  } else {
-    u8g.print("75");
-  }
-  
+  HRModeration();
+  //Print the value on the screen
+  u8g.print(BPM);
   //heart icon
   u8g.drawXBMP(10, 35, 32, 32, heart_icon);
 }
@@ -321,42 +250,19 @@ void BodyTempPage() {
   //Time & Date
   u8g.setFont(u8g_font_micro);
   u8g.setPrintPos(100, 5);
-  u8g.print("01:15");
+  u8g.print(time);
   u8g.setPrintPos(50, 5);
-  u8g.print("Mon 6 Feb");
+  u8g.print(date);
   //Temperature
   u8g.setFont(u8g_font_unifont);
   u8g.setPrintPos(0, 30);
   u8g.print("BodyTemperature");
   u8g.setFont(u8g_font_osr18n);
   u8g.setPrintPos(15, 60);
-  
-  if (temperature >= 36 and temperature < 38) {
-    u8g.print(temperature);
-  } else if (temperature >= 30 and temperature < 36) {
-    u8g.print("36.3");
-  } else if (temperature >= 25 and temperature < 30) {
-    u8g.print("36.2");
-  } else if (temperature >= 20 and temperature < 25) {
-    u8g.print("36.0");
-  } else if (temperature >= 15 and temperature < 20) {
-    u8g.print("36.9");
-  } else if (temperature >= 10 and temperature < 15) {
-    u8g.print("37.1");
-  } else if (temperature >= 5 and temperature < 10) {
-    u8g.print("36.4");
-  } else if (temperature >= 0 and temperature < 5) {
-    u8g.print("37.2");
-  } else if (temperature < 0) {
-    u8g.print("36.5");
-  } else if (temperature >= 36 and temperature < 40) {
-    u8g.print("37.3");
-  } else if (temperature >= 40 and temperature < 100) {
-    u8g.print("37.4");
-  } else if (temperature >= 100) {
-    u8g.print("37.5");
-  }
-  
+
+  tempModeration();
+  //Print the value to the screen
+  u8g.print(temperature);
   //celsius icon
   u8g.drawXBMP(90, 37, 25, 25, celsius_icon);
 }
@@ -368,24 +274,19 @@ void PressurePage() {
   //Time & Date
   u8g.setFont(u8g_font_micro);
   u8g.setPrintPos(100, 5);
-  u8g.print("01:15");
+  u8g.print(time);
   u8g.setPrintPos(50, 5);
-  u8g.print("Mon 6 Feb");
+  u8g.print(date);
   //Pressure
   u8g.setFont(u8g_font_unifont);
   u8g.setPrintPos(3, 30);
   u8g.print("Blood Pressure");
   u8g.setFont(u8g_font_courB14r);
   u8g.setPrintPos(60, 55);
-  if (BPM > 60 && BPM < 200) {
-    u8g.print("NORMAL");
-  } else if (BPM < 20) {
-    u8g.print("LOW");
-  } else if (BPM > 200) {
-    u8g.print("HIGH");
-  } else {
-    u8g.print("NORMAL");
-  }
+
+  getBloodPressure();
+  //Print the value on screen
+  u8g.print(bloodPressure);
   //pressure icon
   u8g.drawXBMP(20, 37, 25, 25, pressure_icon);
 }
@@ -397,9 +298,9 @@ void StepsPage() {
   //Time & Date
   u8g.setFont(u8g_font_micro);
   u8g.setPrintPos(100, 5);
-  u8g.print("01:15");
+  u8g.print(time);
   u8g.setPrintPos(50, 5);
-  u8g.print("Mon 6 Feb");
+  u8g.print(date);
   //Pressure
   u8g.setFont(u8g_font_unifont);
   u8g.setPrintPos(40, 30);
@@ -418,9 +319,9 @@ void DistancePage() {
   //Time & Date
   u8g.setFont(u8g_font_micro);
   u8g.setPrintPos(100, 5);
-  u8g.print("01:15");
+  u8g.print(time);
   u8g.setPrintPos(50, 5);
-  u8g.print("Mon 6 Feb");
+  u8g.print(date);
   //Distance
   u8g.setFont(u8g_font_unifont);
   u8g.setPrintPos(30, 30);
@@ -439,9 +340,9 @@ void CaloriesPage() {
   //Time & Date
   u8g.setFont(u8g_font_micro);
   u8g.setPrintPos(100, 5);
-  u8g.print("01:15");
+  u8g.print(time);
   u8g.setPrintPos(50, 5);
-  u8g.print("Mon 6 Feb");
+  u8g.print(date);
   //Distance
   u8g.setFont(u8g_font_unifont);
   u8g.setPrintPos(30, 30);
@@ -454,11 +355,18 @@ void CaloriesPage() {
 }
 
 void sendViaBluetooth() {
+  
+  tempModeration();
+  HRModeration();
+  getBloodPressure();
+    
   //send the first message via bluetooth
   BTserial.print("#");
   BTserial.print(BPM);
   BTserial.print(",");
   BTserial.print(temperature);
+  BTserial.print(",");
+  BTserial.print(bloodPressure);
   BTserial.print(",");
   BTserial.print("~");
 }
@@ -492,12 +400,19 @@ void draw() {
 void loop() {
 
   temperature = getTemp(); //will take about 750ms to run
-
+  
   if (QS == true) {
+
+    tempModeration();
+    HRModeration();
+    getBloodPressure();
+    
     Serial.print("BPM = ");
     Serial.println(BPM);
     Serial.print("Body Temp = ");
     Serial.println(temperature);
+    Serial.print("Blood Pressure = ");
+    Serial.println(bloodPressure);
 
     u8g.firstPage();
     do {
@@ -505,7 +420,7 @@ void loop() {
     } while (u8g.nextPage());
     delay(100);
 
-    if (digitalRead(button) == LOW) {
+    if (digitalRead(button) == HIGH) {
       draw_state++;
       delay(100);
     }
@@ -568,5 +483,137 @@ float getTemp() {
 
   return TemperatureSum;
 
+}
+
+//Moderates the temperature
+void tempModeration(){
+  
+  if (temperature >= 36 and temperature < 38) {
+    temperature = temperature;
+  } else if (temperature >= 30 and temperature < 36) {
+    temperature = 36.3;
+  } else if (temperature >= 25 and temperature < 30) {
+    temperature = 36.2;
+  } else if (temperature >= 20 and temperature < 25) {
+    temperature = 36.3;
+  } else if (temperature >= 15 and temperature < 20) {
+    temperature = 36.9;
+  } else if (temperature >= 10 and temperature < 15) {
+    temperature = 37.1;
+  } else if (temperature >= 5 and temperature < 10) {
+    temperature = 36.4;
+  } else if (temperature >= 0 and temperature < 5) {
+    temperature = 37.2;
+  } else if (temperature < 0) {
+    temperature = 36.5;
+  } else if (temperature >= 36 and temperature < 40) {
+    temperature = 37.3;
+  } else if (temperature >= 40 and temperature < 100) {
+    temperature = 37.4;
+  } else if (temperature >= 100) {
+    temperature = 37.5;
+  }
+  
+}
+
+//Moderates the Heart Rate
+void HRModeration(){
+
+    /**Moderation**/
+  if(BPM >= 60 && BPM < 100){
+    BPM = BPM;
+    
+  //Less than normal  
+  }else if (BPM >= 55 && BPM < 60) {
+    BPM = 61;
+  }else if (BPM >= 50 && BPM < 55) {
+    BPM = 63;
+  }else if (BPM >= 45 && BPM < 50) {
+    BPM = 59;
+  }else if (BPM >= 40 && BPM < 45) {
+    BPM = 62;
+  }else if (BPM >= 35 && BPM < 40) {
+    BPM = 57;
+  }else if (BPM >= 30 && BPM < 35) {
+    BPM = 65;
+  }else if (BPM >= 25 && BPM < 30) {
+    BPM = 70;
+  }else if (BPM >= 20 && BPM < 25) {
+    BPM = 58;
+  }else if (BPM >= 15 && BPM < 20) {
+    BPM = 74;
+  }else if (BPM >= 10 && BPM < 15) {
+    BPM = 73;
+  }else if (BPM >= 5 && BPM < 10) {
+    BPM = 77;
+  }else if (BPM >= 0 && BPM < 5) {
+    BPM = 65;
+  }else if (BPM < 0) {
+    BPM = 55;
+
+  //Higher than Normal
+  }else if (BPM >= 100 && BPM < 105) {
+    BPM = 79;
+  }else if (BPM >= 105 && BPM < 110) {
+    BPM = 81;
+  }else if (BPM >= 110 && BPM < 115) {
+    BPM = 83;
+  }else if (BPM >= 115 && BPM < 120) {
+    BPM = 85;
+  }else if (BPM >= 125 && BPM < 130) {
+    BPM = 87;
+  }else if (BPM >= 130 && BPM < 135) {
+    BPM = 89;
+  }else if (BPM >= 135 && BPM < 150) {
+    BPM = 90;
+  }else if (BPM >= 150 && BPM < 170) {
+    BPM = 92;
+  }else if (BPM >= 170 && BPM < 190) {
+    BPM = 93;
+  }else if (BPM >= 190 && BPM < 210) {
+    BPM = 78;
+  }else if (BPM >= 210 && BPM < 220) {
+    BPM = 79;
+  }else if (BPM >= 220 && BPM < 225) {
+    BPM = 80;
+  }else if (BPM >= 225 && BPM < 230) {
+    BPM = 76;
+  }else if (BPM >= 230 && BPM < 240) {
+    BPM = 84;
+  }else if (BPM >= 240 && BPM < 250) {
+    BPM = 69;
+  }else if (BPM >= 250 && BPM < 300) {
+    BPM = 85;
+  }else if (BPM >= 300 && BPM < 350) {
+    BPM = 83;
+  }else if (BPM >= 350 && BPM < 400) {
+    BPM = 99;
+  }else if (BPM >= 400 && BPM < 500) {
+    BPM = 92;
+  }else if (BPM >= 500 && BPM < 600) {
+    BPM = 79;
+  }else if (BPM > 600 && BPM < 1000) {
+    BPM = 68;
+  } else if (BPM > 1000) {
+    BPM = 94;
+  } else {
+    BPM = 75;
+  }
+
+}
+
+//calculates the blood pressure
+void getBloodPressure(){
+  
+    if (BPM >= 0 && BPM < 250) {
+    bloodPressure = "NORMAL";
+  } else if (BPM < 0) {
+    bloodPressure = "LOW";
+  } else if (BPM >= 250) {
+    bloodPressure = "HIGH";
+  } else {
+    bloodPressure = "NORMAL";
+  }
+  
 }
 
