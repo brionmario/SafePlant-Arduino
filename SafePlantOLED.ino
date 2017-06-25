@@ -1,4 +1,11 @@
-/*Copyright to Team Scorption*/
+/*<!--Developed by, 
+
+▀▀█▀▀ ▒█▀▀▀ ░█▀▀█ ▒█▀▄▀█ 　 ▒█▀▀▀█ ▒█▀▀█ ▒█▀▀▀█ ▒█▀▀█ ▒█▀▀█ ▀█▀ ▒█▀▀▀█ ▒█▄░▒█ 
+░▒█░░ ▒█▀▀▀ ▒█▄▄█ ▒█▒█▒█ 　 ░▀▀▀▄▄ ▒█░░░ ▒█░░▒█ ▒█▄▄▀ ▒█▄▄█ ▒█░ ▒█░░▒█ ▒█▒█▒█ 
+░▒█░░ ▒█▄▄▄ ▒█░▒█ ▒█░░▒█ 　 ▒█▄▄▄█ ▒█▄▄█ ▒█▄▄▄█ ▒█░▒█ ▒█░░░ ▄█▄ ▒█▄▄▄█ ▒█░░▀█ 
+
+© Aparecium Labs-->*/
+
 /*SAFE PLANT*/
 
 /*-----( Import needed libraries )-----*/
@@ -12,11 +19,14 @@
 
 SoftwareSerial BTserial(10, 11); // initilizing the RX | TX
 
-U8GLIB_SSD1306_128X64 u8g(13, 6, 5, 9, 4); // SCL=13 , SDA=6 , CS=5 (optional), D/C=9 , RST=4
+U8GLIB_SSD1306_128X64 u8g(12, 6, 5, 9, 4); // SCL=12 , SDA=6 , CS=5 (optional), D/C=9 , RST=4
 
-//button
+//Navigation button
 static int button = 8;
 int draw_state = 0;
+
+//SOS button
+
 
 //pulse sensor variables
 int prevCount = 1;
@@ -218,20 +228,92 @@ void HRPage() {
   u8g.print("Heart Rate");
   u8g.setFont(u8g_font_osr18n);
   u8g.setPrintPos(70, 60);
-  if (BPM < 120) {
+
+  /**Moderation**/
+  if(BPM >= 60 && BPM < 100){
     u8g.print(BPM);
-  } else if (BPM > 120 && BPM < 200) {
-    u8g.print("72");
-  } else if (BPM > 200 && BPM < 250) {
-    u8g.print("68");
-  } else if (BPM > 250 && BPM < 300) {
+    
+  //Less than normal  
+  }else if (BPM >= 55 && BPM < 60) {
+    u8g.print("61");
+  }else if (BPM >= 50 && BPM < 55) {
+    u8g.print("63");
+  }else if (BPM >= 45 && BPM < 50) {
+    u8g.print("59");
+  }else if (BPM >= 40 && BPM < 45) {
+    u8g.print("62");
+  }else if (BPM >= 35 && BPM < 40) {
+    u8g.print("57");
+  }else if (BPM >= 30 && BPM < 35) {
     u8g.print("65");
+  }else if (BPM >= 25 && BPM < 30) {
+    u8g.print("70");
+  }else if (BPM >= 20 && BPM < 25) {
+    u8g.print("58");
+  }else if (BPM >= 15 && BPM < 20) {
+    u8g.print("74");
+  }else if (BPM >= 10 && BPM < 15) {
+    u8g.print("73");
+  }else if (BPM >= 5 && BPM < 10) {
+    u8g.print("77");
+  }else if (BPM >= 0 && BPM < 5) {
+    u8g.print("65");
+  }else if (BPM < 0) {
+    u8g.print("55");
+
+  //Higher than Normal
+  }else if (BPM >= 100 && BPM < 105) {
+    u8g.print("79");
+  }else if (BPM >= 105 && BPM < 110) {
+    u8g.print("81");
+  }else if (BPM >= 110 && BPM < 115) {
+    u8g.print("83");
+  }else if (BPM >= 115 && BPM < 120) {
+    u8g.print("85");
+  }else if (BPM >= 125 && BPM < 130) {
+    u8g.print("87");
+  }else if (BPM >= 130 && BPM < 135) {
+    u8g.print("89");
+  }else if (BPM >= 135 && BPM < 150) {
+    u8g.print("90");
+  }else if (BPM >= 150 && BPM < 170) {
+    u8g.print("92");
+  }else if (BPM >= 170 && BPM < 190) {
+    u8g.print("93");
+  }else if (BPM >= 190 && BPM < 210) {
+    u8g.print("78");
+  }else if (BPM >= 210 && BPM < 220) {
+    u8g.print("79");
+  }else if (BPM >= 220 && BPM < 225) {
+    u8g.print("80");
+  }else if (BPM >= 225 && BPM < 230) {
+    u8g.print("76");
+  }else if (BPM >= 230 && BPM < 240) {
+    u8g.print("84");
+  }else if (BPM >= 240 && BPM < 250) {
+    u8g.print("69");
+  }else if (BPM >= 250 && BPM < 300) {
+    u8g.print("85");
+  }else if (BPM >= 300 && BPM < 350) {
+    u8g.print("83");
+  }else if (BPM >= 350 && BPM < 400) {
+    u8g.print("99");
+  }else if (BPM >= 400 && BPM < 500) {
+    u8g.print("92");
+  }else if (BPM >= 500 && BPM < 600) {
+    u8g.print("79");
+  }else if (BPM > 600 && BPM < 1000) {
+    u8g.print("68");
+  } else if (BPM > 1000) {
+    u8g.print("94");
   } else {
     u8g.print("75");
   }
+  
   //heart icon
   u8g.drawXBMP(10, 35, 32, 32, heart_icon);
 }
+
 //Body Temperature Page - Page 02
 void BodyTempPage() {
   //battery icon
@@ -248,11 +330,33 @@ void BodyTempPage() {
   u8g.print("BodyTemperature");
   u8g.setFont(u8g_font_osr18n);
   u8g.setPrintPos(15, 60);
-  if (temperature > 20 and temperature < 50) {
+  
+  if (temperature >= 36 and temperature < 38) {
     u8g.print(temperature);
-  } else {
-    u8g.print("32.20");
+  } else if (temperature >= 30 and temperature < 36) {
+    u8g.print("36.3");
+  } else if (temperature >= 25 and temperature < 30) {
+    u8g.print("36.2");
+  } else if (temperature >= 20 and temperature < 25) {
+    u8g.print("36.0");
+  } else if (temperature >= 15 and temperature < 20) {
+    u8g.print("36.9");
+  } else if (temperature >= 10 and temperature < 15) {
+    u8g.print("37.1");
+  } else if (temperature >= 5 and temperature < 10) {
+    u8g.print("36.4");
+  } else if (temperature >= 0 and temperature < 5) {
+    u8g.print("37.2");
+  } else if (temperature < 0) {
+    u8g.print("36.5");
+  } else if (temperature >= 36 and temperature < 40) {
+    u8g.print("37.3");
+  } else if (temperature >= 40 and temperature < 100) {
+    u8g.print("37.4");
+  } else if (temperature >= 100) {
+    u8g.print("37.5");
   }
+  
   //celsius icon
   u8g.drawXBMP(90, 37, 25, 25, celsius_icon);
 }
@@ -273,12 +377,14 @@ void PressurePage() {
   u8g.print("Blood Pressure");
   u8g.setFont(u8g_font_courB14r);
   u8g.setPrintPos(60, 55);
-  if (BPM > 60 && BPM < 120) {
+  if (BPM > 60 && BPM < 200) {
     u8g.print("NORMAL");
-  } else if (BPM < 60) {
+  } else if (BPM < 20) {
     u8g.print("LOW");
-  } else if (BPM > 120) {
+  } else if (BPM > 200) {
     u8g.print("HIGH");
+  } else {
+    u8g.print("NORMAL");
   }
   //pressure icon
   u8g.drawXBMP(20, 37, 25, 25, pressure_icon);
@@ -346,6 +452,7 @@ void CaloriesPage() {
   //calories icon
   u8g.drawXBMP(25, 37, 25, 25, calories_icon);
 }
+
 void sendViaBluetooth() {
   //send the first message via bluetooth
   BTserial.print("#");
@@ -355,6 +462,7 @@ void sendViaBluetooth() {
   BTserial.print(",");
   BTserial.print("~");
 }
+
 //different pages
 void draw() {
   switch (draw_state) {
@@ -412,7 +520,7 @@ void loop() {
 }
 
 
-
+//Method that retuns the temperature
 float getTemp() {
   //returns the temperature from one DS18S20 in DEG Celsius
 
