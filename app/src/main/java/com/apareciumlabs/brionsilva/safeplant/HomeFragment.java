@@ -1,13 +1,21 @@
 package com.apareciumlabs.brionsilva.safeplant;
 
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
+import android.support.v7.app.AlertDialog;
+import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +25,7 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Random;
 import java.util.UUID;
 
 /**
@@ -43,6 +52,7 @@ public class HomeFragment extends Fragment {
 
     // String for MAC address, passed from the previous intent
     private static String address;
+    private int UNIQUE_ID;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -77,42 +87,38 @@ public class HomeFragment extends Fragment {
                         int dataLength = dataInPrint.length(); //get length of data received
                         //txtStringLength.setText("String Length = " + String.valueOf(dataLength));
 
-                        if (recDataString.charAt(0) == '#')                             //if it starts with # we know it is what we are looking for
+                        if (recDataString.charAt(0) == '#')   //if it starts with # we know it is what we are looking for
                         {
                             String[] msgArray = recDataString.toString().split(",");
-                            String heartBeat = msgArray[0];           //get sensor value from string between indices 1-5
+                            String heartBeat = msgArray[0];
                             String temperature = msgArray[1];
+                            String pressure = msgArray[2];
+                            String stateSOS = msgArray[3];
 
                             //remove the # from the heartbeat
-                            String result = heartBeat.replaceAll("[#]","");
-                            String BPM;
+                            String BPM = heartBeat.replaceAll("[#]","");
 
-                            //Moderation ( Heart Rate )
-                            if(Integer.parseInt(result) >60 && Integer.parseInt(result) <100){
-                                BPM = result;
-                            }else if (Integer.parseInt(result) > 100 && Integer.parseInt(result) <120) {
-                                BPM = "80";
-                            } else if (Integer.parseInt(result) > 120 && Integer.parseInt(result) < 200) {
-                                BPM = "72";
-                            } else if (Integer.parseInt(result) > 200 && Integer.parseInt(result) < 250) {
-                                BPM = "68";
-                            } else if (Integer.parseInt(result) > 250 && Integer.parseInt(result) < 300) {
-                                BPM ="65";
-                            } else {
-                                BPM ="75";
+                            //Notifying the user in case of any abnormalities
+                            if (Integer.parseInt(BPM) > 100) {
+
+                                createNotification("Heart rate is high", "Alert - Heart Rate",
+                                        "Your heart rate is quite high. Please consult a doctor." , HomeScreen.class , R.raw.alert_sound);
+
+                            } else if (Integer.parseInt(BPM) < 60) {
+
+                                createNotification("Heart rate is Low", "Alert - Heart Rate",
+                                        "Your heart rate is getting pretty low. Please consult a doctor." , HomeScreen.class , R.raw.alert_sound);
+
                             }
 
-                            //set the blood pressure
-                            String pressure;
-
-                            if (Integer.parseInt(result) > 60 && Integer.parseInt(result) < 200) {
-                                pressure = "NORMAL";
-                            } else if (Integer.parseInt(result) < 20) {
-                                pressure = "LOW";
-                            } else if (Integer.parseInt(result) > 200) {
-                                pressure = "HIGH";
-                            } else {
-                                pressure = "NORMAL";
+                            if(stateSOS.equals("1")){
+                                Toast.makeText(getContext(),"SOS not clicked",Toast.LENGTH_SHORT).show();
+                            } else if (stateSOS.equals("0")){
+                                //send the distress SMS
+                                sendSMS();
+                                Toast.makeText(getContext(),"SOS clicked",Toast.LENGTH_SHORT).show();
+                                createNotification("Emergency", "Alert - SOS",
+                                        "Hang on. Help is on the way. SMS sent to the emergency contact." , HomeScreen.class , R.raw.alert_sos);
                             }
 
                             //update the textviews with sensor values
@@ -124,12 +130,12 @@ public class HomeFragment extends Fragment {
 
                             new UpdateThingspeakTask2("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field1="+BPM).execute();
 
-                            new UpdateThingspeakTask2("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field3="+pressure).execute();
+                            new UpdateThingspeakTask2("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field3="+ pressureToThingspeak(pressure)).execute();
 
                         }
+
                         recDataString.delete(0, recDataString.length());                    //clear all string data
-                        // strIncom =" ";
-                        dataInPrint = " ";
+
                     }
                 }
             }
@@ -257,5 +263,113 @@ public class HomeFragment extends Fragment {
             }
         }
 
+    }
+
+    /**
+     * This method returns an integer value based on the blood
+     * pressure to be sent to the thingspeak cloud.
+     * @param pressure Blood pressure of the patient
+     * @return 0 if Normal, 1 if High, -1 if Low and -1000 in any other cases
+     */
+    public int pressureToThingspeak(String pressure){
+
+        int a;
+
+        switch (pressure){
+            case "NORMAL":{
+                a = 0;
+                break;
+            }
+            case "HIGH":{
+                a = 1;
+                break;
+            }
+            case "LOW":{
+                a = -1;
+                break;
+            }
+            default:{
+                a = -1000;
+                break;
+            }
+        }
+
+        return a;
+    }
+
+    /**
+     * This method creates a notification
+     *
+     * @param notificationTitle Title of the notification
+     * @param notificationTicker Ticker Title
+     * @param notificationBody Notification body context
+     * @param targetActivity Activity that the notification opens when it's clicked
+     *
+     */
+    public void createNotification(String notificationTitle, String notificationTicker,
+                                   String notificationBody , Class targetActivity , int alertType) {
+
+        //creating a random id
+        Random random = new Random();
+        UNIQUE_ID = random.nextInt(10000+1);
+
+        NotificationCompat.Builder builder =
+                new NotificationCompat.Builder(getContext())
+                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setTicker(notificationTicker)
+                        .setSound(Uri.parse("android.resource://" + getActivity().getPackageName() + "/" + alertType))
+                        .setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 })
+                        .setContentTitle(notificationTitle)
+                        .setWhen(System.currentTimeMillis())
+                        .setContentText(notificationBody);
+
+        //creating the target intent
+        Intent notificationIntent = new Intent(getContext(), targetActivity);
+        PendingIntent contentIntent = PendingIntent.getActivity(getContext(), 0, notificationIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.setContentIntent(contentIntent);
+
+        //build the notification
+        NotificationManager manager = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(UNIQUE_ID, builder.build());
+
+    }
+
+    /**
+     * This method sends a SMS when the SOS button is clicked
+     **/
+    public void sendSMS(){
+
+        SmsManager smsManager = SmsManager.getDefault();
+        try {
+            smsManager.sendTextMessage("0777933830",null,"Test",null,null);
+
+        } catch (Exception e){
+            errorDialog("Sorry! Couldn't send the SMS.");
+        }
+
+    }
+
+    /**
+     * This function creates a dialog box which takes
+     * @param error String parameter which is passed
+     * @Author Brion Mario
+     */
+    public void errorDialog(String error)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext() , R.style.BrionDialogTheme);
+        builder.setMessage(error);
+        builder.setCancelable(true);
+
+        builder.setPositiveButton(
+                "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

@@ -108,10 +108,14 @@ public class HomeScreen extends AppCompatActivity
                     schedulerFragment,
                     schedulerFragment.getTag()).commit();
 
-        } else if (id == R.id.nav_mySchedule) {
-            Toast.makeText(getApplicationContext(),"You clicked MySchedule",Toast.LENGTH_SHORT).show();
-        }else if (id == R.id.nav_askQuestion) {
-            Toast.makeText(getApplicationContext(),"You clicked Question",Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_askQuestion) {
+            //Toast.makeText(getApplicationContext(),"You clicked Question",Toast.LENGTH_SHORT).show();
+
+            AskQuestionFragment schedulerFragment = new AskQuestionFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
+                    schedulerFragment,
+                    schedulerFragment.getTag()).commit();
         } else if (id == R.id.nav_feedback) {
             Toast.makeText(getApplicationContext(),"You clicked Feedback",Toast.LENGTH_SHORT).show();
         }else if (id == R.id.nav_tips) {
@@ -119,7 +123,13 @@ public class HomeScreen extends AppCompatActivity
         }else if (id == R.id.nav_changeAccount) {
             Toast.makeText(getApplicationContext(),"You clicked Change Account",Toast.LENGTH_SHORT).show();
         }else if (id == R.id.nav_donate) {
-            Toast.makeText(getApplicationContext(),"You clicked Donate",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"You clicked Donate",Toast.LENGTH_SHORT).show();
+
+            DonateFragment schedulerFragment = new DonateFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
+                    schedulerFragment,
+                    schedulerFragment.getTag()).commit();
         }else if (id == R.id.nav_about) {
             //Toast.makeText(getApplicationContext(),"You clicked About",Toast.LENGTH_SHORT).show();
 

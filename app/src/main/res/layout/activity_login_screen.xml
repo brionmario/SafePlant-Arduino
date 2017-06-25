@@ -17,8 +17,9 @@
         android:id="@+id/imageView"
         android:src="@drawable/loginlogo"
         android:scaleType="fitStart"
-        android:layout_above="@+id/login_error_text"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
 
     <!--username textfield-->
     <EditText
@@ -54,39 +55,45 @@
         android:textColorHint="@color/darkGrey"
         android:backgroundTint="@android:color/darker_gray"/>
 
-    <!--login button-->
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:text="@string/login_button_text"
-        android:id="@+id/login_button"
-        android:background="@drawable/custom_button_login"
-        android:layout_marginTop="38dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_below="@+id/login_password"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:gravity="center">
 
-    <!--error msg text-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/Red"
-        android:id="@+id/login_error_text"
-        android:layout_above="@+id/login_username"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="22dp" />
+        <!--login button-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_button_text"
+            android:id="@+id/login_button"
+            android:background="@color/transparentGrey"
+            android:layout_marginBottom="10dp"/>
 
-    <!--create account-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/Red"
-        android:text="@string/login_createAccount"
-        android:id="@+id/login_createaccount"
-        android:layout_below="@+id/login_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/join_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparentGrey"
+            android:text="@string/join_button_text"
+            android:layout_below="@+id/login_button"
+            android:layout_marginBottom="10dp"/>
+
+
+        <!--password recovery-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkGrey"
+            android:text="@string/login_forgot"
+            android:id="@+id/btnLinkToRegisterScreen"/>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

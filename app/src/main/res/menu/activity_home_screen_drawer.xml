@@ -11,10 +11,6 @@
             android:icon="@drawable/ic_schedule_black_24dp"
             android:title="Scheduler" />
         <item
-            android:id="@+id/nav_mySchedule"
-            android:icon="@drawable/ic_event_black_24dp"
-            android:title="My Schedule" />
-        <item
             android:id="@+id/nav_askQuestion"
             android:icon="@drawable/ic_question_answer_black_24dp"
             android:title="Ask a Question" />

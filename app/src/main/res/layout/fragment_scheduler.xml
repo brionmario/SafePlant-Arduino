@@ -24,10 +24,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/linearLayout"
-            android:layout_below="@+id/calendarView"
-            android:layout_alignRight="@+id/calendarView"
-            android:layout_alignEnd="@+id/calendarView"
-            android:layout_marginTop="39dp">
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="31dp">
 
 
             <LinearLayout
@@ -38,24 +37,17 @@
                 <Button
                     android:id="@+id/createAppointmentButton"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@color/darkGrey"
-                    android:textColor="@color/white"
                     android:text="@string/createAppointment" />
 
 
                 <Button
                     android:id="@+id/viewEditButton"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="-3dp"
-                    android:textColor="@color/white"
-                    android:background="@color/darkGrey"
+                    android:layout_marginTop="-8dp"
                     android:text="@string/viewEdit" />
             </LinearLayout>
 
@@ -67,21 +59,15 @@
                 <Button
                     android:id="@+id/deleteAppointmentButton"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@color/darkGrey"
-                    android:textColor="@color/white"
                     android:text="@string/deleteAppointment" />
 
                 <Button
                     android:id="@+id/moveAppointmentButton"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:layout_margin="5dp"
-                    android:background="@color/darkGrey"
-                    android:textColor="@color/white"
                     android:text="@string/moveAppointment" />
             </LinearLayout>
 
