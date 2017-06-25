@@ -26,6 +26,7 @@ static int button = 8;
 int draw_state = 0;
 
 //SOS button
+static int buttonSOS = 7;
 
 
 //pulse sensor variables
@@ -184,6 +185,7 @@ void drawTeam(void) {
 
 void setup(void) {
   pinMode(button, INPUT_PULLUP);
+  pinMode(buttonSOS, INPUT_PULLUP);
   Serial.begin(9600);
   BTserial.begin(9600); //start the bluetooth connection
 
@@ -368,6 +370,8 @@ void sendViaBluetooth() {
   BTserial.print(",");
   BTserial.print(bloodPressure);
   BTserial.print(",");
+  BTserial.print(getSOSState());
+  BTserial.print(",");
   BTserial.print("~");
 }
 
@@ -420,11 +424,17 @@ void loop() {
     } while (u8g.nextPage());
     delay(100);
 
+    //Action for the navigation button
     if (digitalRead(button) == HIGH) {
       draw_state++;
       delay(100);
+    } if (digitalRead(button) == LOW) {
+      delay(5000);
     }
     draw_state %= 6;
+
+    //Action for the SOS button
+    
 
     //call the blutooth function to send the message
     sendViaBluetooth();
@@ -615,5 +625,15 @@ void getBloodPressure(){
     bloodPressure = "NORMAL";
   }
   
+}
+
+//get the SOS button state 
+int getSOSState(){
+
+  if (digitalRead(buttonSOS) == HIGH) {
+    return 1;
+  }else if (digitalRead(buttonSOS) == LOW){
+    return 0;
+  }
 }
 
