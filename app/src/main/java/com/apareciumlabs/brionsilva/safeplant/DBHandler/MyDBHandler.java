@@ -1,4 +1,4 @@
-package com.apareciumlabs.brionsilva.safeplant.Scheduler;
+package com.apareciumlabs.brionsilva.safeplant.DBHandler;
 
 /**
  * Copyright (c) 2017. Aparecium Labs.  http://www.apareciumlabs.com
@@ -15,14 +15,19 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.apareciumlabs.brionsilva.safeplant.Scheduler.Appointment;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MyDBHandler extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "MAD_DB.db";
+    private static final String DATABASE_NAME = "Safe_Plant.db";
     public static final String TABLE_APPOINTMENTS = "appointments";
+    public static final String TABLE_PATIENTS = "patients";
+
 
     //Columns of the appointment table
     public static final String COLUMN_ID = "_id";
@@ -30,6 +35,10 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_TIME = "time";
     public static final String COLUMN_TITLE = "title";
     public static final String COLUMN_DETAILS = "details";
+
+    //Columns of the patients table
+    public static final String COLUMN_PATIENT_ID = "_id";
+    public static final String COLUMN_SOS = "sos";
 
     /**
      * Database information will be passed to the superclass
@@ -60,8 +69,13 @@ public class MyDBHandler extends SQLiteOpenHelper {
                 COLUMN_TITLE + " TEXT ," +
                 COLUMN_DETAILS + " TEXT " +
                 ");";
+        String query2 = " CREATE TABLE " + TABLE_PATIENTS + "(" +
+                COLUMN_PATIENT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," +
+                COLUMN_SOS + " TEXT" +
+                ");";
 
         db.execSQL(query);
+        db.execSQL(query2);
     }
 
     /**
@@ -75,6 +89,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_APPOINTMENTS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_PATIENTS);
         onCreate(db);
     }
 
@@ -341,5 +356,52 @@ public class MyDBHandler extends SQLiteOpenHelper {
         db.execSQL(clearDBQuery);
 
     }
+
+    /**
+     * This function  will insert if record is new, update otherwise
+     *
+     * @param phoneNumber Phone number of the emergency contact
+     */
+    public void addSOSContact(String phoneNumber){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_SOS, phoneNumber);
+
+
+        db.insertWithOnConflict(TABLE_PATIENTS, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
+
+    }
+
+    /**
+     * Goes through the database and returns the SOS number
+     *
+     * @return
+     */
+    public String getSOS(){
+
+        String dbString = "";
+        SQLiteDatabase db = getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_PATIENTS  +";" ; // 1 means every condition is met
+
+        //Cursor exposes results from a query on a SQLiteDatabase
+        Cursor cursor = db.rawQuery(query, null);
+        //move the cursor to the first row of the results
+        cursor.moveToFirst();
+
+        //See if there are anymore results
+        while (!cursor.isAfterLast()) {
+
+            if (cursor.getString(cursor.getColumnIndex("sos")) != null) {
+                dbString += cursor.getString(cursor.getColumnIndex("sos"));
+            }
+            cursor.moveToNext();
+        }
+        db.close();
+        return dbString;
+    }
+
+
 }
 

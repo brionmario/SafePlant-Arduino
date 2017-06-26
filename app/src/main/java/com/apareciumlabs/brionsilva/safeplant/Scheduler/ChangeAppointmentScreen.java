@@ -21,6 +21,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.apareciumlabs.brionsilva.safeplant.DBHandler.MyDBHandler;
 import com.apareciumlabs.brionsilva.safeplant.R;
 
 import java.text.SimpleDateFormat;

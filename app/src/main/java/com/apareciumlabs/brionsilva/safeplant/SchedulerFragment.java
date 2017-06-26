@@ -1,7 +1,6 @@
 package com.apareciumlabs.brionsilva.safeplant;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -19,7 +18,7 @@ import android.widget.Toast;
 
 import com.apareciumlabs.brionsilva.safeplant.Scheduler.ChangeAppointmentScreen;
 import com.apareciumlabs.brionsilva.safeplant.Scheduler.CreateAppointmentScreen;
-import com.apareciumlabs.brionsilva.safeplant.Scheduler.MyDBHandler;
+import com.apareciumlabs.brionsilva.safeplant.DBHandler.MyDBHandler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

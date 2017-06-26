@@ -1,6 +1,7 @@
 package com.apareciumlabs.brionsilva.safeplant;
 
 
+import android.Manifest;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
@@ -9,18 +10,24 @@ import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.apareciumlabs.brionsilva.safeplant.DBHandler.MyDBHandler;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,6 +43,9 @@ import java.util.UUID;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
+
+    //DB Handler instance
+    MyDBHandler myDBHandler;
 
     TextView heartRate, bodyTemperature , bloodPressure;
     Handler bluetoothIn;
@@ -53,6 +63,11 @@ public class HomeFragment extends Fragment {
     // String for MAC address, passed from the previous intent
     private static String address;
     private int UNIQUE_ID;
+
+    //Permission for SMS api
+    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS =100 ;
+    String phoneNo;
+    String message;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -74,6 +89,10 @@ public class HomeFragment extends Fragment {
         heartRate = (TextView) view.findViewById(R.id.tv_heartRate);
         bodyTemperature = (TextView) view.findViewById(R.id.tv_temp_value);
         bloodPressure = (TextView) view.findViewById(R.id.tv_pressure_status);
+
+        //creating a new db handler object
+        myDBHandler = new MyDBHandler(getContext(),null,null,1);
+
 
         bluetoothIn = new Handler() {
             public void handleMessage(android.os.Message msg) {
@@ -112,11 +131,11 @@ public class HomeFragment extends Fragment {
                             }
 
                             if(stateSOS.equals("1")){
-                                Toast.makeText(getContext(),"SOS not clicked",Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getContext(),"SOS not clicked",Toast.LENGTH_SHORT).show();
                             } else if (stateSOS.equals("0")){
                                 //send the distress SMS
-                                sendSMS();
-                                Toast.makeText(getContext(),"SOS clicked",Toast.LENGTH_SHORT).show();
+                                sendSMSMessage();
+                                //Toast.makeText(getContext(),"SOS clicked",Toast.LENGTH_SHORT).show();
                                 createNotification("Emergency", "Alert - SOS",
                                         "Hang on. Help is on the way. SMS sent to the emergency contact." , HomeScreen.class , R.raw.alert_sos);
                             }
@@ -126,9 +145,9 @@ public class HomeFragment extends Fragment {
                             bodyTemperature.setText(temperature);
                             bloodPressure.setText(pressure);
 
-                            new UpdateThingspeakTask("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field2="+temperature).execute();
+                            new UpdateThingspeakTask("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field1="+temperature).execute();
 
-                            new UpdateThingspeakTask2("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field1="+BPM).execute();
+                            new UpdateThingspeakTask2("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field2="+BPM).execute();
 
                             new UpdateThingspeakTask2("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field3="+ pressureToThingspeak(pressure)).execute();
 
@@ -338,16 +357,19 @@ public class HomeFragment extends Fragment {
     /**
      * This method sends a SMS when the SOS button is clicked
      **/
-    public void sendSMS(){
+    protected void sendSMSMessage() {
+        phoneNo = myDBHandler.getSOS();
+        message = "SOS button clicked. Patient is in danger.";
 
-        SmsManager smsManager = SmsManager.getDefault();
-        try {
-            smsManager.sendTextMessage("0777933830",null,"Test",null,null);
+        //Getting intent and PendingIntent instance
+        Intent intent=new Intent(this.getContext(),HomeScreen.class);
+        PendingIntent pi=PendingIntent.getActivity(getContext(), 0, intent,0);
 
-        } catch (Exception e){
-            errorDialog("Sorry! Couldn't send the SMS.");
-        }
+        //Get the SmsManager instance and call the sendTextMessage method to send message
+        SmsManager sms=SmsManager.getDefault();
+        sms.sendTextMessage(phoneNo, null, message, null,null);
 
+        errorDialog("A distress SMS has been sent to the emergency contact.");
     }
 
     /**

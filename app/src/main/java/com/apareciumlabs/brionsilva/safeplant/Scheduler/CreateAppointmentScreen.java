@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.apareciumlabs.brionsilva.safeplant.DBHandler.MyDBHandler;
 import com.apareciumlabs.brionsilva.safeplant.R;
 
 public class CreateAppointmentScreen extends AppCompatActivity implements View.OnClickListener {

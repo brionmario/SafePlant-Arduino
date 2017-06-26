@@ -19,9 +19,9 @@
         android:icon="@drawable/ic_feedback_black_24dp"
         android:title="Doctors' Feedback" />
         <item
-            android:id="@+id/nav_tips"
+            android:id="@+id/nav_sos"
             android:icon="@drawable/ic_priority_high_black_24dp"
-            android:title="Tips" />
+            android:title="Emergency SOS" />
     </group>
 
     <item android:title="Other">

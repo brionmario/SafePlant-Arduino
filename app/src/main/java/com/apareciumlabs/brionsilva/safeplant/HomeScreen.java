@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class HomeScreen extends AppCompatActivity
@@ -24,6 +25,7 @@ public class HomeScreen extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
 
         //default fragment (Home fragment)
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
@@ -77,7 +79,7 @@ public class HomeScreen extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_refresh) {
             return true;
         }
 
@@ -111,41 +113,54 @@ public class HomeScreen extends AppCompatActivity
         } else if (id == R.id.nav_askQuestion) {
             //Toast.makeText(getApplicationContext(),"You clicked Question",Toast.LENGTH_SHORT).show();
 
-            AskQuestionFragment schedulerFragment = new AskQuestionFragment();
+            AskQuestionFragment askQuestionFragment = new AskQuestionFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
-                    schedulerFragment,
-                    schedulerFragment.getTag()).commit();
+                    askQuestionFragment,
+                    askQuestionFragment.getTag()).commit();
         } else if (id == R.id.nav_feedback) {
-            Toast.makeText(getApplicationContext(),"You clicked Feedback",Toast.LENGTH_SHORT).show();
-        }else if (id == R.id.nav_tips) {
-            Toast.makeText(getApplicationContext(),"You clicked Tips",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"You clicked Feedback",Toast.LENGTH_SHORT).show();
+
+            FeedbackFragment feedbackFragment = new FeedbackFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
+                    feedbackFragment,
+                    feedbackFragment.getTag()).commit();
+        }else if (id == R.id.nav_sos) {
+            //Toast.makeText(getApplicationContext(),"You clicked SOS",Toast.LENGTH_SHORT).show();
+
+           SOSFragment sosFragment = new SOSFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
+                    sosFragment,
+                    sosFragment.getTag()).commit();
+
         }else if (id == R.id.nav_changeAccount) {
-            Toast.makeText(getApplicationContext(),"You clicked Change Account",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Coming Soon!",Toast.LENGTH_SHORT).show();
         }else if (id == R.id.nav_donate) {
             //Toast.makeText(getApplicationContext(),"You clicked Donate",Toast.LENGTH_SHORT).show();
 
-            DonateFragment schedulerFragment = new DonateFragment();
+            DonateFragment donateFragment = new DonateFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
-                    schedulerFragment,
-                    schedulerFragment.getTag()).commit();
+                    donateFragment,
+                    donateFragment.getTag()).commit();
         }else if (id == R.id.nav_about) {
             //Toast.makeText(getApplicationContext(),"You clicked About",Toast.LENGTH_SHORT).show();
 
-            AboutFragment schedulerFragment = new AboutFragment();
+            AboutFragment aboutFragment = new AboutFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
-                    schedulerFragment,
-                    schedulerFragment.getTag()).commit();
+                    aboutFragment,
+                    aboutFragment.getTag()).commit();
         }else if (id == R.id.nav_contact) {
             //Toast.makeText(getApplicationContext(),"You clicked Contact",Toast.LENGTH_SHORT).show();
 
-            ContactFragment schedulerFragment = new ContactFragment();
+            ContactFragment contactFragment = new ContactFragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
-                    schedulerFragment,
-                    schedulerFragment.getTag()).commit();
+                    contactFragment,
+                    contactFragment.getTag()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

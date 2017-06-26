@@ -16,7 +16,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh</string>
 
     <!--bluetooth activity strings-->
     <string name="status">Status</string>
@@ -111,4 +111,14 @@
     <string name="donateDialogButton">Donate via Dialog</string>
     <string name="poweredBy">Powered By</string>
 
+    <!--SOS Page-->
+    <string name="sosTitle">Emergency SOS</string>
+    <string name="sosSubTitle">When the SOS button is clicked on the SAFE PLANT device, the app will automatically send a SMS to a contact of your choice.</string>
+    <string name="sos_heading">Please enter a valid mobile number</string>
+    <string name="emergency_contact">You haven\'t selected any contact</string>
+    <string name="sos_button_text">ADD NUMBER</string>
+
+    <!--Feedback Page-->
+    <string name="doctorsFeedback">DOCTORS\' FEEDBACK</string>
+    <string name="feedbackHeading">Please check the following feedback and take necessary precautions</string>
 </resources>
