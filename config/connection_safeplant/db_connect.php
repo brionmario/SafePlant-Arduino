@@ -1,6 +1,6 @@
 <!--connection file-->
 <?php
-	$con=mysqli_connect("127.0.0.1:55112","azure","6#vWHD_$","localdb");
+	$con=mysqli_connect("127.0.0.1:55112","azure","6#vWHD_$","safeplant_db");
 	//mysql_query("SET NAMES 'utf8'"); 
 	//mysql_query("SET CHARACTER SET 'utf8'");
 
