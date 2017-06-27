@@ -16,7 +16,7 @@
   
 <head>
     <link rel="shortcut icon" href="images/favicon.png">
-    <title>Brion - Data | Safe Plant</title>
+    <title>John Doe - Data | Safe Plant</title>
     <!-- Mobile Specific Metas================================================== -->
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -111,6 +111,43 @@
 			<br class="clearfix">
 		</div>
           
+          <hr />
+          <div class="container">
+			<div class="row">
+				<h1 align="center">Give Feedback</h1>
+				<h6 align="center"> Please take a few moments to answer the following questions</h6>
+			</div>
+			<br class="clearfix">
+			<br class="clearfix">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="cart-shipping clearfix">
+						<h4 class="light"><span>Date - </span>24/586</h4>
+							<br>
+							<form>
+								<label class="col-md-2">Question - </label>
+								<div class="col-md-10">
+								<p>Test paragraph</p>
+								</div>
+
+								<label class="col-md-2">Feedback - </label>
+
+								<div class="col-md-10">
+
+									<input type="text" />
+
+								</div>
+
+								<input class="btn-danger" type="submit" value="SUBMIT"/>
+
+							</form>
+
+					</div> 
+				</div>
+			</div>
+			<br class="clearfix">
+			<br class="clearfix">
+		</div>
     	<div class="clr"></div>    
     </div><!--end sub-page-content-->
     
