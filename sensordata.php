@@ -16,7 +16,7 @@
   
 <head>
     <link rel="shortcut icon" href="images/favicon.png">
-    <title>John Doe - Data | Safe Plant</title>
+    <title>Brion Mario - Data | Safe Plant</title>
     <!-- Mobile Specific Metas================================================== -->
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -104,7 +104,7 @@
 			<center>
 				<iframe width="450" height="260" style="border: 1px solid #cccccc;margin-right: 50px" src="https://thingspeak.com/channels/208912/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Blood+Pressure&type=spline"></iframe>
 				
-				<iframe width="450" height="260" style="border: 1px solid #cccccc;margin-left: 50px" src="https://thingspeak.com/channels/208912/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Blood+Pressure&type=spline"></iframe>
+				<iframe width="450" height="260" style="border: 1px solid #cccccc;margin-left: 50px" src="https://thingspeak.com/channels/208912/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Blood+Pressure&type=spline"></iframe>
 			</center>	
 			</div>
 			<br class="clearfix">
@@ -119,34 +119,53 @@
 			</div>
 			<br class="clearfix">
 			<br class="clearfix">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="cart-shipping clearfix">
-						<h4 class="light"><span>Date - </span>24/586</h4>
-							<br>
-							<form>
-								<label class="col-md-2">Question - </label>
-								<div class="col-md-10">
-								<p>Test paragraph</p>
-								</div>
+			<?php
+					$sql = "SELECT * FROM feedback";
+					$result = $con->query($sql);
+				
+					if ($result->num_rows > 0) {
+					// output data of each row
+						while($row = $result->fetch_assoc()) {
+							
+							if($row["status"] == 0) {
+								$id = $row["status"];
+								echo '<div class="row">';
+								echo '<div class="col-md-12">';
+									echo '<div class="cart-shipping clearfix">';
+										if (is_null($row["date"])){
+											echo "<h4 class=\"light\"><span>Date - </span>Not Available</h4><br>";
+										} else {
+											echo "<h4 class=\"light\"><span>Date - </span>{$row["date"]}</h4><br>";
+										}
+										
+											echo '<form action="Forms/feedback_form.php" method="POST">';
+												echo "<input name=\"id\" type=\"hidden\" value=\"{$row['id']}\" />";
+												echo "<label class=\"col-md-2\">Question - </label>";
+												echo '<div class="col-md-10">';
+													echo "<p>{$row["question"]}</p>";
+												echo '</div>';
 
-								<label class="col-md-2">Feedback - </label>
+												echo "<label class=\"col-md-2\">Feedback - </label>";
+												
+												echo '<div class="col-md-10">';
 
-								<div class="col-md-10">
+													echo '<input name="feedback" type="text" required/>';
 
-									<input type="text" />
+												echo '</div>';
 
-								</div>
+												echo '<input name="submit" class="btn-danger" type="submit" value="SUBMIT"/>';
 
-								<input class="btn-danger" type="submit" value="SUBMIT"/>
+											echo '</form>';
 
-							</form>
-
-					</div> 
-				</div>
-			</div>
-			<br class="clearfix">
-			<br class="clearfix">
+									echo '</div> ';
+								echo '</div>';
+							echo '</div>';
+							echo '<br class="clearfix"><br class="clearfix">';
+							}
+						}
+					}
+			?>
+			
 		</div>
     	<div class="clr"></div>    
     </div><!--end sub-page-content-->
