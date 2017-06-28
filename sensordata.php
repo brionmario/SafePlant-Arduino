@@ -104,7 +104,7 @@
 			<center>
 				<iframe width="450" height="260" style="border: 1px solid #cccccc;margin-right: 50px" src="https://thingspeak.com/channels/208912/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Blood+Pressure&type=spline"></iframe>
 				
-				<iframe width="450" height="260" style="border: 1px solid #cccccc;margin-left: 50px" src="https://thingspeak.com/channels/208912/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Blood+Pressure&type=spline"></iframe>
+				<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/208912/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
 			</center>	
 			</div>
 			<br class="clearfix">
