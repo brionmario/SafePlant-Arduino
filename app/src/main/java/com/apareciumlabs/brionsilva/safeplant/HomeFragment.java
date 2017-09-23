@@ -74,7 +74,6 @@ public class HomeFragment extends Fragment {
     }
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -107,7 +106,39 @@ public class HomeFragment extends Fragment {
                         int dataLength = dataInPrint.length(); //get length of data received
                         //txtStringLength.setText("String Length = " + String.valueOf(dataLength));
 
-            
+                        if (recDataString.charAt(0) == '#')   //if it starts with # we know it is what we are looking for
+                        {
+                            String[] msgArray = recDataString.toString().split(",");
+                            String heartBeat = msgArray[0];
+                            String temperature = msgArray[1];
+                            String pressure = msgArray[2];
+                            String stateSOS = msgArray[3];
+
+                            //remove the # from the heartbeat
+                            String BPM = heartBeat.replaceAll("[#]","");
+
+                            //Notifying the user in case of any abnormalities
+                            if (Integer.parseInt(BPM) > 100) {
+
+                                createNotification("Heart rate is high", "Alert - Heart Rate",
+                                        "Your heart rate is quite high. Please consult a doctor." , HomeScreen.class , R.raw.alert_sound);
+
+                            } else if (Integer.parseInt(BPM) < 60) {
+
+                                createNotification("Heart rate is Low", "Alert - Heart Rate",
+                                        "Your heart rate is getting pretty low. Please consult a doctor." , HomeScreen.class , R.raw.alert_sound);
+
+                            }
+
+                            if(stateSOS.equals("1")){
+                                //Toast.makeText(getContext(),"SOS not clicked",Toast.LENGTH_SHORT).show();
+                            } else if (stateSOS.equals("0")){
+                                //send the distress SMS
+                                sendSMSMessage();
+                                //Toast.makeText(getContext(),"SOS clicked",Toast.LENGTH_SHORT).show();
+                                createNotification("Emergency", "Alert - SOS",
+                                        "Hang on. Help is on the way. SMS sent to the emergency contact." , HomeScreen.class , R.raw.alert_sos);
+                            }
 
                             //update the textviews with sensor values
                             heartRate.setText(BPM);
