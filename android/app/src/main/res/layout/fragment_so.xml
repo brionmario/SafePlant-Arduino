@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apareciumlabs.brionsilva.safeplant.DonateFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/helpTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/sosTitle"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TitletextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/helpTV"
+            android:layout_marginTop="11dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/sosSubTitle"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/Black" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/sos"
+            android:layout_below="@+id/TitletextView"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/sos_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sos_heading"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:layout_below="@+id/imageView5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/phone_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            android:layout_marginTop="22dp"
+            android:layout_below="@+id/sos_heading"
+            android:layout_centerHorizontal="true" />
+
+
+        <Button
+            android:id="@+id/sos_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sos_button_text"
+            android:padding="10dp"
+            android:background="@color/transparentGrey"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/phone_no"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/emergency_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/DarkRed"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:text="@string/emergency_contact"
+            android:layout_marginTop="28dp"
+            android:layout_below="@+id/sos_button"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</FrameLayout>
