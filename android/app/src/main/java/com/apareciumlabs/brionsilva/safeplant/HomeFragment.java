@@ -59,6 +59,7 @@ public class HomeFragment extends Fragment {
 
     // SPP UUID service - this should work for most devices
     private static final UUID BTMODULEUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1;
 
     // String for MAC address, passed from the previous intent
     private static String address;
@@ -133,8 +134,9 @@ public class HomeFragment extends Fragment {
                             if(stateSOS.equals("1")){
                                 //Toast.makeText(getContext(),"SOS not clicked",Toast.LENGTH_SHORT).show();
                             } else if (stateSOS.equals("0")){
-                                //send the distress SMS
+                                //send the distress SMS and make the call
                                 sendSMSMessage();
+                                emergencyCall();
                                 //Toast.makeText(getContext(),"SOS clicked",Toast.LENGTH_SHORT).show();
                                 createNotification("Emergency", "Alert - SOS",
                                         "Hang on. Help is on the way. SMS sent to the emergency contact." , HomeScreen.class , R.raw.alert_sos);
@@ -276,7 +278,7 @@ public class HomeFragment extends Fragment {
                 mmOutStream.write(msgBuffer);                //write bytes over BT connection via outstream
             } catch (IOException e) {
                 //if you cannot write, close the application
-                Toast.makeText(getActivity(), "Connection Failure", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getActivity(), "Connection Failure", Toast.LENGTH_LONG).show();
                 //finish();
 
             }
@@ -370,6 +372,54 @@ public class HomeFragment extends Fragment {
         sms.sendTextMessage(phoneNo, null, message, null,null);
 
         errorDialog("A distress SMS has been sent to the emergency contact.");
+    }
+
+    /**
+     * This method makes an automatic call when the SOS button is clicked
+     **/
+    protected void emergencyCall() {
+        phoneNo = myDBHandler.getSOS();
+
+        Intent mIntent = new Intent(Intent.ACTION_CALL);
+        mIntent.setData(Uri.parse("tel:" + phoneNo));
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.CALL_PHONE)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.CALL_PHONE},
+                    MY_PERMISSIONS_REQUEST_CALL_PHONE);
+        } else {
+            try {
+                startActivity(mIntent);
+            } catch(SecurityException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_CALL_PHONE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted
+                    emergencyCall();
+                } else {
+
+                    // permission denied
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
     }
 
     /**

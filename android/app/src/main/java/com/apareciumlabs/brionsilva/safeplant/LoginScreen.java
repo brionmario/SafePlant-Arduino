@@ -57,7 +57,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //empty field handling
+                /*//empty field handling
                 if(TextUtils.isEmpty(username.getText())){
 
                     username.setError("Please enter a username.");
@@ -69,8 +69,8 @@ public class LoginScreen extends AppCompatActivity {
                 } else if (!TextUtils.isEmpty(username.getText()) && !TextUtils.isEmpty(password.getText())){
 
                     //login validation
-                    if(username.getText().toString().equals("a") &&
-                            password.getText().toString().equals("a")) {
+                    if(username.getText().toString().equals("") &&
+                            password.getText().toString().equals("")) {
 
                         Toast.makeText(getApplicationContext(),
                                 "Redirecting...",Toast.LENGTH_SHORT).show();
@@ -83,9 +83,13 @@ public class LoginScreen extends AppCompatActivity {
                         errorDialog("Login failed. Please enter a valid username and password.");
 
                     }
-                }
+                }*/
 
-
+                Toast.makeText(getApplicationContext(),
+                        "Redirecting...",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getBaseContext(),
+                        Bluetooth.class);
+                startActivity(intent);
 
             }
         });
