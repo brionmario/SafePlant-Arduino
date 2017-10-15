@@ -22,6 +22,10 @@
             android:id="@+id/nav_sos"
             android:icon="@drawable/ic_priority_high_black_24dp"
             android:title="Emergency SOS" />
+        <item
+            android:id="@+id/nav_prescriptions"
+            android:icon="@drawable/ic_cloud_upload_black_24dp"
+            android:title="Save Prescriptions" />
     </group>
 
     <item android:title="Other">

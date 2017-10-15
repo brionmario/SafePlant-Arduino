@@ -39,6 +39,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/transparentGrey"
                     android:text="@string/createAppointment" />
 
 
@@ -48,6 +50,8 @@
                     android:layout_height="70dp"
                     android:layout_weight="1"
                     android:layout_marginTop="-8dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/transparentGrey"
                     android:text="@string/viewEdit" />
             </LinearLayout>
 
@@ -61,6 +65,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/transparentGrey"
                     android:text="@string/deleteAppointment" />
 
                 <Button
@@ -68,6 +75,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/transparentGrey"
                     android:text="@string/moveAppointment" />
             </LinearLayout>
 
