@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.apareciumlabs.brionsilva.safeplant.reportsFragments.BloodReportFragment;
+import com.apareciumlabs.brionsilva.safeplant.reportsFragments.PressureFragment;
 import com.apareciumlabs.brionsilva.safeplant.reportsFragments.SugarReportFragment;
 import com.apareciumlabs.brionsilva.safeplant.reportsFragments.UrineReportFragment;
 
@@ -59,6 +60,7 @@ public class ReportsFragment extends Fragment {
         adapter.addFragment(new BloodReportFragment(), "Blood");
         adapter.addFragment(new UrineReportFragment(), "Urine");
         adapter.addFragment(new SugarReportFragment(), "Sugar");
+        adapter.addFragment(new PressureFragment(), "Pressure");
         viewPager.setAdapter(adapter);
 
     }
