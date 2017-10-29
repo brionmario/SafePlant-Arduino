@@ -39,12 +39,12 @@
                 android:textColor="@color/Black" />
 
             <EditText
-                android:id="@+id/messageEditText"
+                android:id="@+id/askQuestionEditText"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/messageET"
+                android:layout_alignTop="@+id/messageTV"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="36dp"
                 android:ems="10"
@@ -52,18 +52,18 @@
                 android:textAlignment="center" />
 
             <Button
-                android:id="@+id/sendBtn"
+                android:id="@+id/submitQuestionBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:layout_below="@+id/messageEditText"
+                android:layout_below="@+id/askQuestionEditText"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="28dp"
                 android:background="@color/transparentGrey"
                 android:text="@string/submit" />
 
             <TextView
-                android:id="@+id/messageET"
+                android:id="@+id/messageTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView8"

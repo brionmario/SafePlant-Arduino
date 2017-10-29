@@ -36,7 +36,7 @@
             android:textColor="@color/Black" />
 
         <EditText
-            android:id="@+id/messageEditText"
+            android:id="@+id/askQuestionEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
@@ -48,26 +48,26 @@
             android:layout_alignStart="@+id/editText" />
 
         <Button
-            android:id="@+id/sendBtn"
+            android:id="@+id/submitQuestionBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
             android:text="@string/donate"
             android:padding="10dp"
             android:background="@color/transparentGrey"
-            android:layout_below="@+id/messageEditText"
+            android:layout_below="@+id/askQuestionEditText"
             android:layout_centerHorizontal="true" />
 
         <TextView
-            android:id="@+id/messageET"
+            android:id="@+id/messageTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:text="@string/cardNo"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_below="@+id/editText3"
-            android:layout_alignRight="@+id/sendBtn"
-            android:layout_alignEnd="@+id/sendBtn" />
+            android:layout_alignRight="@+id/submitQuestionBtn"
+            android:layout_alignEnd="@+id/submitQuestionBtn" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/editText3"
             android:layout_alignStart="@+id/editText3"
-            android:layout_below="@+id/messageET"
+            android:layout_below="@+id/messageTV"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="date" />
@@ -125,7 +125,7 @@
             android:layout_marginTop="14dp"
             android:text="@string/donateDialogTitle"
             android:textColor="@color/Black"
-            android:layout_below="@+id/sendBtn"
+            android:layout_below="@+id/submitQuestionBtn"
             android:layout_centerHorizontal="true" />
 
         <Button

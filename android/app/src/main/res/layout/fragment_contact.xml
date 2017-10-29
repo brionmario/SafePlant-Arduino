@@ -56,7 +56,7 @@
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/messageEditText"
+            android:id="@+id/askQuestionEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/mobileEditText"
@@ -68,10 +68,10 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/sendBtn"
+            android:id="@+id/submitQuestionBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/messageEditText"
+            android:layout_below="@+id/askQuestionEditText"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="56dp"
             android:background="@color/transparentGrey"
@@ -100,7 +100,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
-            android:id="@+id/messageET"
+            android:id="@+id/messageTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/mobileEditText"

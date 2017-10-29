@@ -2,7 +2,6 @@ package com.apareciumlabs.brionsilva.safeplant;
 
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -39,8 +38,8 @@ public class ContactFragment extends Fragment {
 
         Name = (EditText) view.findViewById(R.id.nameEditText);
         Mobile = (EditText) view.findViewById(R.id.mobileEditText);
-        Message = (EditText) view.findViewById(R.id.messageEditText);
-        Send=(Button) view.findViewById(R.id.sendBtn) ;
+        Message = (EditText) view.findViewById(R.id.askQuestionEditText);
+        Send=(Button) view.findViewById(R.id.submitQuestionBtn) ;
 
         Send.setOnClickListener(new View.OnClickListener() {
 

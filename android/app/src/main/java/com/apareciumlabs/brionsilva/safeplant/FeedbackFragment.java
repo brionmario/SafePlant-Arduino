@@ -13,17 +13,18 @@ import android.view.ViewGroup;
  */
 public class FeedbackFragment extends Fragment {
 
-
     public FeedbackFragment() {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_feedback, container, false);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_feedback, container, false);
+        return view;
     }
 
 }

@@ -28,4 +28,20 @@ public class Feedback {
     public Integer getId() {
         return id;
     }
+
+    public String getAnswer_date() {
+        return answer_date;
+    }
+
+    public String getAnswer_time() {
+        return answer_time;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public int getStatus() {
+        return status;
+    }
 }
