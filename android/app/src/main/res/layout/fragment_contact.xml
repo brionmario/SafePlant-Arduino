@@ -63,13 +63,13 @@
                 android:id="@+id/askQuestionEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/mobileEditText"
-                android:layout_alignStart="@+id/mobileEditText"
-                android:layout_below="@+id/mobileEditText"
-                android:layout_marginTop="65dp"
+                android:layout_marginTop="16dp"
                 android:ems="10"
                 android:inputType="textMultiLine"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:layout_below="@+id/messageTV"
+                android:layout_alignLeft="@+id/mobileEditText"
+                android:layout_alignStart="@+id/mobileEditText" />
 
             <Button
                 android:id="@+id/submitQuestionBtn"
