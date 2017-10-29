@@ -9,6 +9,7 @@ import com.apareciumlabs.brionsilva.safeplant.api.models.Distance;
 import com.apareciumlabs.brionsilva.safeplant.api.models.Feedback;
 import com.apareciumlabs.brionsilva.safeplant.api.models.HeartRate;
 import com.apareciumlabs.brionsilva.safeplant.api.models.Steps;
+import com.apareciumlabs.brionsilva.safeplant.api.models.UrineReport;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -49,5 +50,8 @@ public interface ApiClient {
 
     @POST("steps")
     Call<Steps> sendSteps(@Body Steps steps);
+
+    @POST("urines")
+    Call<UrineReport> sendUrineReport(@Body UrineReport urineReport);
 
 }
