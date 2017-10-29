@@ -25,7 +25,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity
-            android:name=".SplashScreen">
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,11 +34,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginScreen" />
+            android:name=".LoginScreen"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".HomeScreen" />
+            android:name=".HomeScreen"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".Bluetooth"/>
+            android:name=".Bluetooth"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

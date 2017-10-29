@@ -112,13 +112,19 @@
     <string name="poweredBy">Powered By</string>
 
     <!--SOS Page-->
-    <string name="sosTitle">Emergency SOS</string>
-    <string name="sosSubTitle">When the SOS button is clicked on the SAFE PLANT device, the app will automatically send a SMS to a contact of your choice.</string>
-    <string name="sos_heading">Please enter a valid mobile number</string>
-    <string name="emergency_contact">You haven\'t selected any contact</string>
-    <string name="sos_button_text">ADD NUMBER</string>
+    <string name="sosTitle">EMERGENCY SOS</string>
+    <string name="sosHeading">Notify a relative in emergency</string>
+    <string name="sosSubHeading">When the SOS button is clicked on the Safe Plant device, the app will automatically send a SMS to a contact of your choice</string>
+    <string name="sosInputTitle">Please enter a valid mobile number</string>
+    <string name="sosInputDefault">You haven\'t selected any contact</string>
+    <string name="sosButtonText">ADD NUMBER</string>
 
     <!--Feedback Page-->
     <string name="doctorsFeedback">DOCTORS\' FEEDBACK</string>
     <string name="feedbackHeading">Please check the following feedback and take necessary precautions</string>
+
+    <!-- Prescriptions page -->
+    <string name="prescriptionTitle">SAVE PRESCRIPTIONS</string>
+    <string name="prescriptionHeading">Keep your prescriptions safe</string>
+    <string name="prescriptionSubHeading">Safe Plant will automatically backup your prescriptions. Just take a snap and press upload</string>
 </resources>

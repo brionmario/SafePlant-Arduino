@@ -28,12 +28,27 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.apareciumlabs.brionsilva.safeplant.DBHandler.MyDBHandler;
+import com.apareciumlabs.brionsilva.safeplant.api.models.HeartRate;
+import com.apareciumlabs.brionsilva.safeplant.api.service.ApiClient;
+import com.apareciumlabs.brionsilva.safeplant.config.AppConfig;
+import com.apareciumlabs.brionsilva.safeplant.utility.DateTime;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Random;
+import java.util.TimeZone;
 import java.util.UUID;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by brionsilva on 07/03/2017.
@@ -146,6 +161,13 @@ public class HomeFragment extends Fragment {
                             heartRate.setText(BPM);
                             bodyTemperature.setText(temperature);
                             bloodPressure.setText(pressure);
+
+                            //create an instance of date time class
+                            DateTime dateTime = new DateTime();
+
+                            //Send heart rate to the rest api
+                            HeartRate heartRate = new HeartRate(dateTime.getDate(), dateTime.getTime(), Integer.parseInt(BPM));
+                            postHeartRate(heartRate);
 
                             new UpdateThingspeakTask("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field1="+temperature).execute();
 
@@ -443,5 +465,29 @@ public class HomeFragment extends Fragment {
 
         AlertDialog alert = builder.create();
         alert.show();
+    }
+
+    private void postHeartRate(HeartRate heartRate) {
+        Retrofit.Builder builder = new Retrofit.Builder()
+                .baseUrl(AppConfig.API_ENDPOINT)
+                .addConverterFactory(GsonConverterFactory.create());
+
+        Retrofit retrofit = builder.build();
+
+        ApiClient apiClient = retrofit.create(ApiClient.class);
+        Call<HeartRate> call = apiClient.sendHeartRate(heartRate);
+
+        call.enqueue(new Callback<HeartRate>() {
+            @Override
+            public void onResponse(Call<HeartRate> call, Response<HeartRate> response) {
+                Toast.makeText(getActivity(), "Success ID : " + response.body().getId(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<HeartRate> call, Throwable t) {
+                Toast.makeText(getActivity(), "Failure : ", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }
