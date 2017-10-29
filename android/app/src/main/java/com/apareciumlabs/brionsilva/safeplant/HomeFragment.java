@@ -29,6 +29,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.apareciumlabs.brionsilva.safeplant.DBHandler.MyDBHandler;
+import com.apareciumlabs.brionsilva.safeplant.api.models.BodyTemperature;
 import com.apareciumlabs.brionsilva.safeplant.api.models.HeartRate;
 import com.apareciumlabs.brionsilva.safeplant.api.service.ApiClient;
 import com.apareciumlabs.brionsilva.safeplant.config.AppConfig;
@@ -169,6 +170,10 @@ public class HomeFragment extends Fragment {
                             //Send heart rate to the rest api
                             HeartRate heartRate = new HeartRate(dateTime.getDate(), dateTime.getTime(), Integer.parseInt(BPM));
                             postHeartRate(heartRate);
+
+                            //send body temperature to the rest api
+                            BodyTemperature bodyTemperature = new BodyTemperature(dateTime.getDate(), dateTime.getTime(), Double.parseDouble(temperature));
+                            postBodyTemperature(bodyTemperature);
 
                             new UpdateThingspeakTask("https://api.thingspeak.com/update?api_key=KGH22CN1ARR9BERB&field1="+temperature).execute();
 
@@ -470,7 +475,7 @@ public class HomeFragment extends Fragment {
 
     /**
      * This method makes a POST request to the api to save heart rate data
-     * @param heartRate Instance of the heart rate object
+     * @param heartRate Instance of the heart rate class
      */
     private void postHeartRate(HeartRate heartRate) {
         Retrofit.Builder builder = new Retrofit.Builder()
@@ -491,6 +496,34 @@ public class HomeFragment extends Fragment {
             @Override
             public void onFailure(Call<HeartRate> call, Throwable t) {
                 //Log.d("Heart Rate POST failure " , t.toString());
+            }
+        });
+
+    }
+
+    /**
+     * This method makes a POST request to the api to save body temperature data
+     * @param bodyTemperature Instance of the bodyTemperature class
+     */
+    private void postBodyTemperature(BodyTemperature bodyTemperature) {
+        Retrofit.Builder builder = new Retrofit.Builder()
+                .baseUrl(AppConfig.API_ENDPOINT)
+                .addConverterFactory(GsonConverterFactory.create());
+
+        Retrofit retrofit = builder.build();
+
+        ApiClient apiClient = retrofit.create(ApiClient.class);
+        Call<BodyTemperature> call = apiClient.sendBodyTemperature(bodyTemperature);
+
+        call.enqueue(new Callback<BodyTemperature>() {
+            @Override
+            public void onResponse(Call<BodyTemperature> call, Response<BodyTemperature> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<BodyTemperature> call, Throwable t) {
+                //Log.d("Temperature POST failure " , t.toString());
             }
         });
 
