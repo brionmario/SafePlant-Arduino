@@ -4,6 +4,7 @@ import com.apareciumlabs.brionsilva.safeplant.api.models.BloodPressure;
 import com.apareciumlabs.brionsilva.safeplant.api.models.BloodReport;
 import com.apareciumlabs.brionsilva.safeplant.api.models.BloodSugar;
 import com.apareciumlabs.brionsilva.safeplant.api.models.BodyTemperature;
+import com.apareciumlabs.brionsilva.safeplant.api.models.Calories;
 import com.apareciumlabs.brionsilva.safeplant.api.models.HeartRate;
 
 import retrofit2.Call;
@@ -32,5 +33,8 @@ public interface ApiClient {
     Call<BloodReport> sendBloodReport(@Body BloodReport bloodReport);
 
     @POST("bloodsugars")
-    Call<BloodSugar> sendBloodReport(@Body BloodSugar bloodSugar);
+    Call<BloodSugar> sendBloodSugar(@Body BloodSugar bloodSugar);
+
+    @POST("calories")
+    Call<Calories> sendCalories(@Body Calories calories);
 }
