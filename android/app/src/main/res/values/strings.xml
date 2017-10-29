@@ -155,4 +155,7 @@
     <string name="bile">Bile Segments</string>
     <string name="others">Others</string>
 
+    <string name="sugarReportsTitle">FASTING BLOOD SUGAR</string>
+    <string name="fbs">FBS</string>
+
 </resources>
