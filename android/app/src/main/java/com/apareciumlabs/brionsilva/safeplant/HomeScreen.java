@@ -146,6 +146,15 @@ public class HomeScreen extends AppCompatActivity
                     prescriptionsFragment,
                     prescriptionsFragment.getTag()).commit();
 
+        //reports fragment navigation
+        }else if (id == R.id.nav_reports) {
+
+            ReportsFragment reportsFragment = new ReportsFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.relativelayout_for_fragment,
+                    reportsFragment,
+                    reportsFragment.getTag()).commit();
+
          /** Sub menu area **/
         //change account fragment navigation
         }else if (id == R.id.nav_changeAccount) {
