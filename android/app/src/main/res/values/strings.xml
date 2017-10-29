@@ -158,4 +158,8 @@
     <string name="sugarReportsTitle">FASTING BLOOD SUGAR</string>
     <string name="fbs">FBS</string>
 
+    <string name="pressureReportTitle">BLOOD PRESSURE</string>
+    <string name="systolic">Systolic</string>
+    <string name="diastolic">Diastolic</string>
+
 </resources>
