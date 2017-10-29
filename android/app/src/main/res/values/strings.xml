@@ -127,4 +127,16 @@
     <string name="prescriptionTitle">SAVE PRESCRIPTIONS</string>
     <string name="prescriptionHeading">Keep your prescriptions safe</string>
     <string name="prescriptionSubHeading">Safe Plant will automatically backup your prescriptions. Just take a snap and press upload</string>
+
+    <!-- Reports -->
+    <string name="bloodReportTitle">FULL BLOOD COUNT</string>
+    <string name="wbc">WBC Count</string>
+    <string name="rbc">RBC Count</string>
+    <string name="cellVolume">Packed Cell Volume</string>
+    <string name="hemoglobinConcentration">Hemoglobin Concentration</string>
+    <string name="corpuscularVolume">Mean Corpuscular Volume</string>
+    <string name="corpuscularHemoglobin">Mean Corpuscular Hemoglobin</string>
+    <string name="corpuscularHemoglobinConcentration">Mean Corpuscular Hemoglobin Concentration</string>
+    <string name="platelets">Platelet Count</string>
+
 </resources>

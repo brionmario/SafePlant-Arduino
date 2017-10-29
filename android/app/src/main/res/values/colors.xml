@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="transparentGrey">#11595959</color>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#eb232f</color>
+    <color name="colorPrimaryDark">#292929</color>
+    <color name="colorAccent">#eb232f</color>
     <color name="grey29">#111111</color>
     <color name="bgColor">#1e2744</color>
     <color name="customPurple">#273359</color>
