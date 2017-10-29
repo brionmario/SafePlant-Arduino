@@ -20,6 +20,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -467,6 +468,10 @@ public class HomeFragment extends Fragment {
         alert.show();
     }
 
+    /**
+     * This method makes a POST request to the api to save heart rate data
+     * @param heartRate Instance of the heart rate object
+     */
     private void postHeartRate(HeartRate heartRate) {
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl(AppConfig.API_ENDPOINT)
@@ -480,12 +485,12 @@ public class HomeFragment extends Fragment {
         call.enqueue(new Callback<HeartRate>() {
             @Override
             public void onResponse(Call<HeartRate> call, Response<HeartRate> response) {
-                Toast.makeText(getActivity(), "Success ID : " + response.body().getId(), Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
             public void onFailure(Call<HeartRate> call, Throwable t) {
-                Toast.makeText(getActivity(), "Failure : ", Toast.LENGTH_SHORT).show();
+                //Log.d("Heart Rate POST failure " , t.toString());
             }
         });
 
