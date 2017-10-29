@@ -25,7 +25,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:background="@drawable/textlines">
 
                 <ImageView
                     android:layout_width="wrap_content"
