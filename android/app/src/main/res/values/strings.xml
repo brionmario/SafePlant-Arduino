@@ -127,7 +127,7 @@
     <string name="prescriptionTitle">SAVE PRESCRIPTIONS</string>
     <string name="prescriptionHeading">Keep your prescriptions safe</string>
     <string name="prescriptionSubHeading">Safe Plant will automatically backup your prescriptions. Just take a snap and press upload</string>
-
+    <string name="upload">Upload</string>
     <!-- Reports -->
     <string name="bloodReportTitle">FULL BLOOD COUNT</string>
     <string name="wbc">WBC Count</string>
