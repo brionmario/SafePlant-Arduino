@@ -1,5 +1,6 @@
 package com.apareciumlabs.brionsilva.safeplant.reportsFragments;
 
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.apareciumlabs.brionsilva.safeplant.R;
+import com.apareciumlabs.brionsilva.safeplant.api.models.BloodPressure;
 import com.apareciumlabs.brionsilva.safeplant.api.models.BloodSugar;
 import com.apareciumlabs.brionsilva.safeplant.api.service.ApiClient;
 import com.apareciumlabs.brionsilva.safeplant.config.AppConfig;
@@ -25,23 +27,26 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SugarReportFragment extends Fragment {
+public class PressureFragment extends Fragment {
 
-    private EditText fbsET = null;
+    private EditText systolicET = null;
+    private EditText diastolicET = null;
     private Button submitBtn;
 
-    public SugarReportFragment() {
+    public PressureFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_sugar_report, container, false);
+        View view = inflater.inflate(R.layout.fragment_pressure, container, false);
 
-        fbsET = (EditText) view.findViewById(R.id.fbsEditText);
-        submitBtn = (Button) view.findViewById(R.id.submitSugarReportBtn);
+        systolicET = (EditText) view.findViewById(R.id.systolicEditText);
+        diastolicET = (EditText) view.findViewById(R.id.diastolicEditText);
+        submitBtn = (Button) view.findViewById(R.id.submitPressureReportBtn);
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,19 +54,24 @@ public class SugarReportFragment extends Fragment {
                 //create an instance of date time class
                 DateTime dateTime = new DateTime();
 
-                if(TextUtils.isEmpty(fbsET.getText())){
+                if(TextUtils.isEmpty(systolicET.getText())){
 
-                    fbsET.setError("Please fill this field");
+                    systolicET.setError("Please fill this field");
+
+                } else if(TextUtils.isEmpty(diastolicET.getText())){
+
+                    diastolicET.setError("Please fill this field");
 
                 } else {
-                    BloodSugar bloodSugar = new BloodSugar(dateTime.getDate(), dateTime.getTime(),
-                            Double.parseDouble(fbsET.getText().toString()));
+                    BloodPressure bloodPressure = new BloodPressure(dateTime.getDate(), dateTime.getTime(),
+                            Integer.parseInt(diastolicET.getText().toString()), Integer.parseInt(systolicET.getText().toString()));
 
-                    postSugarReport(bloodSugar);
+                    postPressureReport(bloodPressure);
 
-                    Toast.makeText(getActivity(), "Blood Sugar Report uploaded successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Blood Pressure Report uploaded successfully", Toast.LENGTH_SHORT).show();
 
-                    fbsET.setText("");
+                    systolicET.setText("");
+                    diastolicET.setText("");
                 }
             }
         });
@@ -70,10 +80,10 @@ public class SugarReportFragment extends Fragment {
     }
 
     /**
-     * This method makes a POST request to the api to save the blood sugar report
-     * @param bloodSugar Instance of the BloodSugar class
+     * This method makes a POST request to the api to save the blood pressure report
+     * @param bloodPressure Instance of the BloodPressure class
      */
-    private void postSugarReport(BloodSugar bloodSugar) {
+    private void postPressureReport(BloodPressure bloodPressure) {
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl(AppConfig.API_ENDPOINT)
                 .addConverterFactory(GsonConverterFactory.create());
@@ -81,19 +91,20 @@ public class SugarReportFragment extends Fragment {
         Retrofit retrofit = builder.build();
 
         ApiClient apiClient = retrofit.create(ApiClient.class);
-        Call<BloodSugar> call = apiClient.sendBloodSugar(bloodSugar);
+        Call<BloodPressure> call = apiClient.sendBloodPressure(bloodPressure);
 
-        call.enqueue(new Callback<BloodSugar>() {
+        call.enqueue(new Callback<BloodPressure>() {
             @Override
-            public void onResponse(Call<BloodSugar> call, Response<BloodSugar> response) {
+            public void onResponse(Call<BloodPressure> call, Response<BloodPressure> response) {
 
             }
 
             @Override
-            public void onFailure(Call<BloodSugar> call, Throwable t) {
+            public void onFailure(Call<BloodPressure> call, Throwable t) {
                 //Log.d("Report POST failure " , t.toString());
             }
         });
 
     }
+
 }

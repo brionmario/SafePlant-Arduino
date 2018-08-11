@@ -38,6 +38,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.UUID;
 
 import retrofit2.Call;
@@ -145,12 +147,21 @@ public class HomeFragment extends Fragment {
                             if(stateSOS.equals("1")){
                                 //Toast.makeText(getContext(),"SOS not clicked",Toast.LENGTH_SHORT).show();
                             } else if (stateSOS.equals("0")){
-                                //send the distress SMS and make the call
-                                sendSMSMessage();
-                                emergencyCall();
-                                //Toast.makeText(getContext(),"SOS clicked",Toast.LENGTH_SHORT).show();
+                                //Creates a notification and emits tthe alert sound
                                 createNotification("Emergency", "Alert - SOS",
                                         "Hang on. Help is on the way. SMS sent to the emergency contact." , HomeScreen.class , R.raw.alert_sos);
+
+                                //send the distress SMS
+                                sendSMSMessage();
+
+                                //Makes a call after 5 seconds
+                                new Timer().schedule(new TimerTask() {
+                                    @Override
+                                    public void run() {
+                                        emergencyCall();
+                                    }
+                                }, 5000);
+
                             }
 
                             //update the textviews with sensor values
