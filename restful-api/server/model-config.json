@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "feedback": {
+    "dataSource": "db",
+    "public": true
+  },
+  "heartrate": {
+    "dataSource": "db",
+    "public": true
+  },
+  "bodytemperature": {
+    "dataSource": "db",
+    "public": true
+  },
+  "bloodpressure": {
+    "dataSource": "db",
+    "public": true
+  },
+  "calories": {
+    "dataSource": "db",
+    "public": true
+  },
+  "steps": {
+    "dataSource": "db",
+    "public": true
+  },
+  "distance": {
+    "dataSource": "db",
+    "public": true
+  },
+  "bloodsugar": {
+    "dataSource": "db",
+    "public": true
+  },
+  "blood": {
+    "dataSource": "db",
+    "public": true
+  },
+  "urine": {
+    "dataSource": "db",
+    "public": true
+  }
+}

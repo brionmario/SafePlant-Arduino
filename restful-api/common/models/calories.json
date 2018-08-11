@@ -1,0 +1,26 @@
+{
+  "name": "calories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date" : {
+      "type": "string",
+      "required": false
+    },
+    "time" : {
+      "type": "string",
+      "required": false
+    },
+    "calorie_count": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

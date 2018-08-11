@@ -1,0 +1,68 @@
+{
+  "name": "urine",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date" : {
+      "type": "string",
+      "required": false
+    },
+    "time" : {
+      "type": "string",
+      "required": false
+    },
+    "appearance": {
+      "type": "string",
+      "required": true
+    },
+    "ph": {
+      "type": "number",
+      "required": true
+    },
+    "gravity": {
+      "type": "number"
+    },
+    "protein": {
+      "type": "string",
+      "required": true
+    },
+    "sugar": {
+      "type": "string",
+      "required": true
+    },
+    "red_cells": {
+      "type": "string",
+      "required": true
+    },
+    "pus_cells": {
+      "type": "string",
+      "required": true
+    },
+    "ephi_cells": {
+      "type": "string",
+      "required": true
+    },
+    "casts": {
+      "type": "string",
+      "required": true
+    },
+    "crystals": {
+      "type": "string",
+      "required": true
+    },
+    "bile_segments": {
+      "type": "string",
+      "required": true
+    },
+    "others": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "bloodsugar",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date" : {
+      "type": "string",
+      "required": false
+    },
+    "time" : {
+      "type": "string",
+      "required": false
+    },
+    "fasting_bs": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
