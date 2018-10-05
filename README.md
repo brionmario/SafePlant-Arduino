@@ -15,3 +15,4 @@ The project uses an Arduino Pro Mini micro-controller to communicate with the se
 # License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
