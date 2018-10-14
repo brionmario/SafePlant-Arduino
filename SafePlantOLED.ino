@@ -1,12 +1,4 @@
-/*<!--Developed by, 
-
-▀▀█▀▀ ▒█▀▀▀ ░█▀▀█ ▒█▀▄▀█ 　 ▒█▀▀▀█ ▒█▀▀█ ▒█▀▀▀█ ▒█▀▀█ ▒█▀▀█ ▀█▀ ▒█▀▀▀█ ▒█▄░▒█ 
-░▒█░░ ▒█▀▀▀ ▒█▄▄█ ▒█▒█▒█ 　 ░▀▀▀▄▄ ▒█░░░ ▒█░░▒█ ▒█▄▄▀ ▒█▄▄█ ▒█░ ▒█░░▒█ ▒█▒█▒█ 
-░▒█░░ ▒█▄▄▄ ▒█░▒█ ▒█░░▒█ 　 ▒█▄▄▄█ ▒█▄▄█ ▒█▄▄▄█ ▒█░▒█ ▒█░░░ ▄█▄ ▒█▄▄▄█ ▒█░░▀█ 
-
-© Aparecium Labs-->*/
-
-/*SAFE PLANT*/
+/*<!--Developed by Aparecium Labs-->*/
 
 /*-----( Import needed libraries )-----*/
 #include <Wire.h>  // Comes with Arduino IDE
@@ -42,14 +34,17 @@ int digitpos[] = {
 };
 int x = 0;
 
-int pulsePin = 0;                 // Data pin to analog pin 0
+// Data pin to analog pin 0
+int pulsePin = 0;
 
-float temperature; //temperature variable
+//temperature variable
+float temperature;
 
 //DS18S20 Signal pin on digital 2
 int DS18S20_Pin = 2;
 
-OneWire ds(DS18S20_Pin);  // on digital pin 2, Temperature chip i/o
+// on digital pin 2, Temperature chip i/o
+OneWire ds(DS18S20_Pin);
 
 // these variables are volatile because they are used during the interrupt service routine!
 volatile int BPM;                   // used to hold the pulse rate
@@ -217,8 +212,8 @@ void setup(void) {
   } while ( u8g.nextPage() );
   delay(2000);
 
-  Serial.begin(115200);             // we agree to talk fast!
-  interruptSetup();                 // sets up to read Pulse Sensor signal every 2mS
+  Serial.begin(115200); // we agree to talk fast!
+  interruptSetup(); // sets up to read Pulse Sensor signal every 2mS
 }
 
 //Heart Rate Page - Page 01
